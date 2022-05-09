@@ -9,7 +9,8 @@
 .primaryHeader {
     align-items: center;
     justify-content: space-between;
-    background-color: #f7eccd;
+    background-color: hsl(var(--clr-blue-gray),.6);
+    border-bottom: 5px solid hsl(var(--clr-blue-gray))
 }
 .primaryNavigation {
     margin: 0;

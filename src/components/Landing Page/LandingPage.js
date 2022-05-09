@@ -6,12 +6,14 @@ const LandingPage = () => {
 
 
     return (<Fragment>
-        <div className={'container'}>
-            <h2 className={styles.aboutText}>HELLO! </h2>
-            <div className={`${styles.darkDiv} flex`}>
-                <p className={styles.aboutText}>My name is Jacek Hacking and I am a fullstack web developer with an
-                    emphasis on Front-End web development. </p>
-                <img src={selfie} alt="selfie" className={styles.selfieDiv}/>
+        <div className={`${styles['container']}bg-light`}>
+            {/*<h2 className={`${styles['about-text']} text-dark fs-800`}>HELLO! </h2>*/}
+            <div className={`${styles['dark-div']} text-dark fs-800 uppercase ff-cursive`}>
+
+                    <img src={selfie} alt="selfie"
+                         className={`${styles['selfie-div']} `}/> <p className={`${styles['about-text']}`}>Hello! My name is
+                    Jacek Hacking and I am a Front-End Web Developer. </p>
+
 
             </div>
 

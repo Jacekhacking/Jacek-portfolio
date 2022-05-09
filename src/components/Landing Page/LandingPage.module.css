@@ -1,37 +1,25 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    flex: 1;
 
 
-}
 
-.darkDiv {
-    flex-direction: column;
-    background-color: black;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-.selfieDiv {
-    max-width: 50%;
-    height: auto;
-    width: 85%;
-    padding: 10px;
-    float: right;
-}
-
-.aboutText {
+.about-text {
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    background-color: hsl(var(--clr-dark-gray));
-    color: hsl(var(--clr-mint-offwhite));
+    padding: 3rem;
+    /*background-color: hsl(var(--clr-dark-gray));*/
+    /*color: hsl(var(--clr-mint-offwhite));*/
     justify-content: center;
-    font-size: clamp(1.75rem, 10vw, 3.5rem);
+    /*font-size: clamp(1.75rem, 10vw, 3.5rem);*/
 
 
+}
+
+.selfie-div {
+    margin-top: 3rem;
+    margin-right: 1rem;
+    border: 4px solid hsl(var(--clr-dark-gray));
+
+min-width: 400px;
+   max-width: 50vw;
+    height:auto;
+    float: right;
 }
