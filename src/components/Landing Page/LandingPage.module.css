@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     background-color: black;
     flex: 1;
-    background-image: url(../../UI/assets/massage);
+
 
 }
 
@@ -17,8 +17,7 @@
 }
 
 .selfieDiv {
-    box-shadow: -3px 5px 5px black;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     width: 85%;
     padding: 10px;
