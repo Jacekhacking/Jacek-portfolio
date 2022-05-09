@@ -1,0 +1,29 @@
+
+/*primary header*/
+
+.logo {
+    margin: 1rem;
+    color: black;
+    justify-content: center;
+}
+.primaryHeader {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7eccd;
+}
+.primaryNavigation {
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+    height: 100%;
+
+}
+
+.navItem{
+    margin: 1px 0;
+    line-height: 1.5em;
+    display: block;
+    width: auto;
+
+}
+
