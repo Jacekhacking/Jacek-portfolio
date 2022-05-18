@@ -3,6 +3,15 @@ import styles from "./Projects.module.css"
 const  Projects = () => {
     return (
         <Fragment>
+                <h2>Projects</h2>
+                <div>
+                    <p>
+                        Below you will find a small sample of my work.
+                    </p>
+                </div>
+
+
+
             <div className={`${styles['project-container']}`}>
 
                 <div className={`${styles['project-div']}`}>
