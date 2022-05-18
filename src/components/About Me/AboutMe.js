@@ -4,8 +4,8 @@ import styles from "./AboutMe.module.css"
 const AboutMe = () => {
     return (
         <Fragment>
-            <div className={`${styles.AboutMeBody}`}>
-                <p>testing</p>
+            <div className={`${styles['about-me']}`}>
+                <p></p>
             </div>
         </Fragment>
     )

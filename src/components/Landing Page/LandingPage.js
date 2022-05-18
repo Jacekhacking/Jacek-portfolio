@@ -11,13 +11,10 @@ const LandingPage = () => {
             <div className={`${styles['dark-div']} text-dark fs-800 uppercase ff-cursive`}>
 
                     <img src={selfie} alt="selfie"
-                         className={`${styles['selfie-div']} `}/> <p className={`${styles['about-text']}`}>Hello! My name is
-                    Jacek Hacking and I am a Front-End Web Developer. </p>
-
-
+                         className={`${styles['selfie-div']} `}/> <p
+                            className={`${styles['about-text']}`}><div>Hell0!</div> My name is
+                    Jacek Hacking. I am a Front-End Web Developer. </p>
             </div>
-
-
         </div>
 
     </Fragment>)

@@ -4,14 +4,14 @@ import styles from "./Nav.module.css"
 const Navigation = (props) => {
 
 
-    const tabs = ['Home', 'Projects', 'Resume']
+    const tabs = [ 'Projects', 'Resume']
 
     return (
 
 
             <nav className={`${styles.primaryHeader} + flex`}>
                 <div className={styles.logo}>
-                    <p>logo</p>
+                    <p onClick={()=> props.handlePageChange('/')}>logo</p>
                 </div>
             <ul className={`${styles.primaryNavigation} + flex`}>
 

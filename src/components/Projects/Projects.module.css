@@ -1,0 +1,17 @@
+
+.project-container{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-div{
+    border: 3px solid black;
+    margin: 1.5em;
+    height: 300px
+}
+
+.project-header{
+
+}
