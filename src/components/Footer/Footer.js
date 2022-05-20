@@ -3,9 +3,9 @@ import styles from "./Footer.module.css"
 const Footer = () => {
     return(
         <div className={styles['footer-container']}>
-            <p>Email: Jacekhacking@gmail.com</p>
-            <p>Github: @ blah blah blah</p>
-            <p>LinkedIn: @filler</p>
+            <section className={styles['footer-text']}>Email: Jacekhacking@gmail.com</section>
+            <section className={styles['footer-text']}>Github: @ blah blah blah</section>
+            <section className={styles['footer-text']}>LinkedIn: @filler</section>
         </div>
     )
 }

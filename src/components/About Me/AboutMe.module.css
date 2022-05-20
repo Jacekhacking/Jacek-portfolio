@@ -1,0 +1,13 @@
+.about-me{
+    min-height: 500px;
+}
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.logo{
+    max-width: 100px;
+    height: auto;
+}

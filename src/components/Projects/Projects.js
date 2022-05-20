@@ -6,7 +6,7 @@ const  Projects = () => {
                 <h2>Projects</h2>
                 <div>
                     <p>
-                        Below you will find a small sample of my work.
+                        Below you will find a small sample of my work. <section>Github Account if you want to see more.</section>
                     </p>
                 </div>
 
