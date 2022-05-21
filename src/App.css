@@ -121,28 +121,22 @@ select {
 
 a  {
     color: var(--clr-dark-gray);
-    font-weight: bold;
     border: 0;
-    margin: 0;
-    padding: 0;
     outline: none;
-}
-
-
-a {
     border-radius: 5px;
-    color: black;
     font-weight: 600;
     padding: 2px 4px;
     margin-left: -2px;
     margin-right: -2px;
     text-decoration: none;
 }
-a:visited {color:black !important;}
+a:visited {color:black}
 
-a:active {color: var ;}
+a:active {color: hsl(var(--clr-sandy-brown)) ;}
 
-a:hover {color: hsl(var(--clr-mint-offwhite)) !important;}
+a:hover {
+    color: hsl(var(--clr-mint-offwhite));
+}
 
 ul {
     list-style-type: none;
