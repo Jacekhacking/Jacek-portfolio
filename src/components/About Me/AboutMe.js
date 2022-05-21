@@ -17,7 +17,6 @@ const AboutMe = () => {
                     <img className={styles['logo']} src={javascript} alt="javascript logo"/>
                     <img className={styles['logo']} src={react} alt="react logo"/>
                 </div>
-
             </div>
         </Fragment>
     )
