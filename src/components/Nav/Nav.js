@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Nav.module.css"
-
+import logo from "../UI/Images/logo.png"
 const Navigation = (props) => {
 
 
@@ -9,14 +9,14 @@ const Navigation = (props) => {
     return (
 
 
-            <nav className={`${styles.primaryHeader} + flex`}>
+            <nav className={`${styles['primary-header']} + flex`}>
                 <div className={styles.logo}>
-                    <p onClick={()=> props.handlePageChange('/')}>logo</p>
+                    <img src={logo} alt="" onClick={()=> props.handlePageChange('/')}/>
                 </div>
-            <ul className={`${styles.primaryNavigation} + flex`}>
+            <ul className={`${styles['primary-navigation']} + flex`}>
 
                 {tabs.map(tab => (
-                    <li className={styles.navItem} key = {tab}>
+                    <li className={styles['nav-item']} key = {tab}>
                         <a href={'#' + tab.toLocaleLowerCase()}
 
                             onClick={() => props.handlePageChange(tab)}
