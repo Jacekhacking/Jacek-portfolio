@@ -8,11 +8,30 @@
 
 .project-div{
     border: 3px solid hsl(var(--clr-dark-gray));
-    margin: 1.5em;
-    height: 300px;
-    background-color: hsl(var(--clr-sandy-brown), .6);
+    margin: .5em;
+    width: 500px;
+    height: auto;
+    background-color: hsl(var(--clr-sandy-brown), .4);
+}
+.project-div>a{
+    padding: 0;
+    margin: 0;
 }
 
 .project-header{
-
+text-align: center;
+    border-bottom: 2px solid hsl(var(--clr-dark-gray));
 }
+.project-paragraph{
+    text-align: center;
+    font-size: var(--fs-300);
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.project-image{
+    width: 500px;
+    height: auto;
+   object-fit: cover;
+}
+

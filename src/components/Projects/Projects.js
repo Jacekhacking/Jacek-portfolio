@@ -1,6 +1,12 @@
 import React, {Fragment} from "react";
 import styles from "./Projects.module.css"
+import {projectData} from "../data";
+
+
+
 const  Projects = () => {
+let data = projectData[0]
+
     return (
         <Fragment>
                 <h2>Projects</h2>
@@ -14,10 +20,10 @@ const  Projects = () => {
 
             <div className={`${styles['project-container']}`}>
 
-                <div className={`${styles['project-div']}`}>
-                    <h2 className={`${styles['project-header']}`}>Project Name</h2>
-                    <p className={`${styles['project-paragraph']}`}>description of project   </p>
-                    <img src="#" alt="website screenshot"/>
+                <div className={`${styles['project-div']} `}>
+                    <h2 className={`${styles['project-header']} ff-cursive text-dark`}>{data.Name}</h2>
+                    <p className={`${styles['project-paragraph']}`}>{data.Description} </p>
+                    <a href={data.Link} target="_blank" rel="noreferrer"><img className={styles['project-image']} src={data.Image} alt="website screenshot"/></a>
                 </div>
 
                 <div className={`${styles['project-div']}`}>
@@ -32,7 +38,6 @@ const  Projects = () => {
                     <img src="#" alt="website screenshot"/>
                     <p>visit site</p>
                 </div>
-
             </div>
 
 
