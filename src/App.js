@@ -37,6 +37,8 @@ function App() {
                 <LandingPage currentPage={currentPage} handlPageChange={handlePageChange}/>
                 {renderPage(currentPage)}
                 <AboutMe/>
+                <Projects/>
+                <Resume/>
             </main>
             <FooterComponent/>
 

@@ -1,6 +1,10 @@
 .about-me{
     min-height: 500px;
 }
+.about-me-text{
+    text-align: center;
+    margin: 3em;
+}
 .logo-container{
     padding-top: 3em;
     display: flex;

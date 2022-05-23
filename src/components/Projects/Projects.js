@@ -9,20 +9,16 @@ let data = projectData[0]
 
     return (
         <Fragment>
-                <h2>Projects</h2>
-                <div>
-                    <p>
-                        Below you will find a small sample of my work. <section>Github Account if you want to see more.</section>
-                    </p>
-                </div>
+                <h2 className={`fs-700 ff-cursive text-dark`} style={{textAlign: 'center'}}>Projects</h2>
+
 
 
 
             <div className={`${styles['project-container']}`}>
 
                 <div className={`${styles['project-div']} `}>
-                    <h2 className={`${styles['project-header']} ff-cursive text-dark`}>{data.Name}</h2>
-                    <p className={`${styles['project-paragraph']}`}>{data.Description} </p>
+                    <h2 className={`${styles['project-header']} ff-cursive text-light`}>{data.Name}</h2>
+                    <p className={`${styles['project-paragraph']} text-light`}>{data.Description} </p>
                     <a href={data.Link} target="_blank" rel="noreferrer"><img className={styles['project-image']} src={data.Image} alt="website screenshot"/></a>
                 </div>
 
