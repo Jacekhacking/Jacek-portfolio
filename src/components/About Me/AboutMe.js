@@ -16,7 +16,7 @@ const AboutMe = () => {
     const [number, setNumber] = useState(59)
 
     // dropdown on click event for more about me content
-    const [dropdown, setDropdown] = useState('');
+    const [dropdown, setDropdown] = useState(false);
 
 
     useEffect(()=> {
@@ -35,10 +35,13 @@ const AboutMe = () => {
 
     const renderDropdown = () => {
         switch(dropdown){
-            case 'display':
+            case true :
                 return <DropDownAboutMe/>
 
-            default:
+            case false:
+                return ''
+
+            default :
                 return ''
         }
     }
@@ -63,7 +66,8 @@ const AboutMe = () => {
                 <p className={styles['about-me-text']}>
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021
                     and joined the University of Utah Fullstack Coding Bootcamp. Finished their program in October of 2021.
-                    And immediately went to work cementing everything I learned there and started to work doing freelance work. <button onClick={()=>setDropdown('display')}>show more</button></p>
+                    And immediately went to work cementing everything I learned there and started to work doing freelance work.
+                    <button className={`${styles['dropdown-toggle-button']} ff-cursive text-dark`} onClick={()=>setDropdown(prevState => !prevState)}>{dropdown===false ? 'More...':'Hide...'}</button></p>
 
 
                     {renderDropdown(dropdown)}

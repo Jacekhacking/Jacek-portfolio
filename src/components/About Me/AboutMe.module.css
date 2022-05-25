@@ -14,3 +14,13 @@
 .pokemon-logo:hover{
     border: 4px solid hsl(var(--clr-orange-soda));
 }
+.dropdown-toggle-button{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    
+}
+.dropdown-toggle-button:hover{
+    cursor: pointer;
+    border-bottom: 2px solid red
+}
