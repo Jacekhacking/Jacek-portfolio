@@ -3,7 +3,7 @@ import css from "../UI/Images/css_logo.png"
 import javascript from "../UI/Images/javascript_logo.png"
 import reactLogo from "../UI/Images/react_logo.png"
 import typeScript from "../UI/Images/typescript_logo.png"
-import styles from "./AboutMe.module.css";
+import styles from "./Skills.module.css";
 import React, {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 
@@ -33,7 +33,7 @@ const Skills = () => {
             <img className={styles['logo']} src={reactLogo} alt="react logo"/>
             <img className={styles['logo']} src={typeScript} alt="typescript logo"/>
             {/*  below is the randomizer for the setNumber useState chooses a random number between 1 and 386. 386 being the end of gen 3 and my practical endpoint for display.  */}
-            <img onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))} style={{cursor:'pointer'}} src={pokemon.sprites.front_default} alt={pokemon.name}/>
+            <img className={styles['pokemon-logo']} onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))} style={{cursor:'pointer'}} src={pokemon.sprites.front_default} alt={pokemon.name}/>
         </div>
 </Fragment>
     )

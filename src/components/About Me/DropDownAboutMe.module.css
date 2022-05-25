@@ -1,0 +1,9 @@
+.drop-down-container{
+    min-height: 300px;
+}
+.drop-down-picture{
+max-width: 400px;
+    height: auto;
+    border: 5px solid hsl(var(--clr-orange-soda));
+    border-radius: 5% 5% ;
+}

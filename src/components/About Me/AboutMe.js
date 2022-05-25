@@ -1,8 +1,7 @@
 import React, {useState, Fragment, useEffect} from "react";
 import styles from "./AboutMe.module.css";
 import Skills from "./Skills"
-import axios from "axios";
-
+import DropDownAboutMe from "./DropDownAboutMe";
 
 
 
@@ -13,7 +12,6 @@ const AboutMe = () => {
 
 
 
-// let displayPokemon = pokemon.sprites.front_default
     return (
         <Fragment>
             <div className={`${styles['about-me']}`}>
@@ -25,6 +23,7 @@ const AboutMe = () => {
                     and joined the University of Utah Fullstack Coding Bootcamp. Finished their program in October of 2021.
                     And immediately went to work cementing everything I learned there and started to work doing freelance work. </p>
                  <Skills/>
+                <DropDownAboutMe/>
 
             </div>
         </Fragment>
