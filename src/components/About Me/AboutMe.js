@@ -15,6 +15,10 @@ const AboutMe = () => {
     const [pokemon, setPokemon] = useState(null);
     const [number, setNumber] = useState(59)
 
+    // dropdown on click event for more about me content
+    const [dropdown, setDropdown] = useState('');
+
+
     useEffect(()=> {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${number}/`).then((response)=> {
             setPokemon(response.data)
@@ -28,9 +32,21 @@ const AboutMe = () => {
 
 
 
+
+    const renderDropdown = () => {
+        switch(dropdown){
+            case 'display':
+                return <DropDownAboutMe/>
+
+            default:
+                return ''
+        }
+    }
+
+
     return (
         <Fragment>
-            <div className={`${styles['about-me']}`}>
+            <div id={'about me'} className={`${styles['about-me']}`}>
                 <div >
                     <h2
                         className={'flex wrap ff-cursive text-dark fs-700'}  style={{justifyContent:'center', margin: '3rem'}}>About Me
@@ -47,8 +63,10 @@ const AboutMe = () => {
                 <p className={styles['about-me-text']}>
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021
                     and joined the University of Utah Fullstack Coding Bootcamp. Finished their program in October of 2021.
-                    And immediately went to work cementing everything I learned there and started to work doing freelance work. </p>
-                <DropDownAboutMe/>
+                    And immediately went to work cementing everything I learned there and started to work doing freelance work. <button onClick={()=>setDropdown('display')}>show more</button></p>
+
+
+                    {renderDropdown(dropdown)}
 
                 <Skills/>
             </div>

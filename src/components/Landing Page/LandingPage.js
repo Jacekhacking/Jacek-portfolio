@@ -6,7 +6,7 @@ const LandingPage = () => {
 
 
     return (<Fragment>
-        <div className={`${styles['container']} bg-light`}>
+        <div id={'landing page'} className={`${styles['container']} bg-light`}>
             {/*<h2 className={`${styles['about-text']} text-dark fs-800`}>HELLO! </h2>*/}
             <div className={`${styles['dark-div']} text-dark fs-800 uppercase ff-cursive`}>
 

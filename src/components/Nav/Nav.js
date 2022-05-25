@@ -9,17 +9,18 @@ const Navigation = (props) => {
     return (
 
 
-            <nav className={`${styles['primary-header']} + flex`}>
-                <div className={styles.logo}>
-                    <img src={logo} alt="" onClick={()=> props.handlePageChange('/')}/>
-                </div>
+
+        <nav className={`${styles['primary-header']} + flex`}>
+            <a href="#landing page"> <img className={styles.logo} src={logo} alt="" /></a>
+
+
+
             <ul className={`${styles['primary-navigation']} + flex`}>
 
                 {tabs.map(tab => (
                     <li className={styles['nav-item']} key = {tab}>
                         <a href={'#' + tab.toLocaleLowerCase()}
 
-                            onClick={() => props.handlePageChange(tab)}
                             className={
                             props.currentPage === tab ? 'nav-link active' : 'nav-link'
                            }

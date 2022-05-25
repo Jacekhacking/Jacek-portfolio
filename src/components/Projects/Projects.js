@@ -10,10 +10,7 @@ let data = projectData[0]
 
     return (
         <Fragment>
-                <h2 className={`fs-700 ff-cursive text-dark`} style={{textAlign: 'center'}}>Projects</h2>
-
-
-
+                <h2 id={'projects'} className={`fs-700 ff-cursive text-dark`} style={{textAlign: 'center'}}>Projects</h2>
 
             <div className={`${styles['project-container']}`}>
 

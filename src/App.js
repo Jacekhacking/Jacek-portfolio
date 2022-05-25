@@ -11,31 +11,14 @@ function App() {
 
 
 
-    const [currentPage, handlePageChange] = useState('Home');
 
-    const renderPage = () => {
-        switch (currentPage) {
-            case '/':
-                return ''
-
-            case 'Resume':
-                return< Resume/>
-
-            case  'Projects':
-                 return<Projects/>
-
-            default :
-                return  ''
-
-        }
-    }
 
     return (
         <Fragment className="App">
-            <header><Navigation LandingPage currentPage={currentPage} handlePageChange = {handlePageChange}/></header>
+            <header><Navigation /></header>
             <main>
-                <LandingPage currentPage={currentPage} handlPageChange={handlePageChange}/>
-                {renderPage(currentPage)}
+                <LandingPage />
+
                 <AboutMe/>
                 <Projects/>
                 <Resume/>

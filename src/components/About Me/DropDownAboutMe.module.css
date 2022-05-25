@@ -1,16 +1,17 @@
 .drop-down-container{
     min-height: 1000px;
     padding-bottom: 5em;
-    background-color: hsl(var(--clr-sandy-brown),.6);
+    background-color: hsl(var(--clr-blue-gray));
     margin-left: 2em;
     margin-right: 2em;
     border: 5px solid hsl(var(--clr-dark-gray));
-    border-radius: 1% 1%;
+
 }
 .drop-down-paragraph{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2em;
 }
 
 .drop-down-picture{
@@ -19,5 +20,5 @@
     height: auto;
     border: 5px solid hsl(var(--clr-orange-soda));
     border-radius: 5% 5% ;
-    margin: 1em ;
+    margin-right: 2em;
 }

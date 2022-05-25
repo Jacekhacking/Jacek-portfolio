@@ -4,7 +4,9 @@ import styles from "./Resume.module.css";
 const Resume = () => {
     return (
         <div>
-<p className={`${styles['resume-link']}`}>
+<p
+    id={'resume'}
+    className={`${styles['resume-link']}`}>
 
     <a
         href={Pdf}
