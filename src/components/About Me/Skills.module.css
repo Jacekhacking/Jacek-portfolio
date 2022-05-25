@@ -9,10 +9,3 @@
     max-width: 100px;
     height: auto;
 }
-.pokemon-logo{
-    border: 4px solid transparent;
-    border-radius: 25% 10%;
-}
-.pokemon-logo:hover{
-    border: 4px solid hsl(var(--clr-orange-soda));
-}

@@ -15,12 +15,12 @@ const DropDownAboutMe = () => {
                 I love to be outside doing fun stuff. Skiing, hiking, playing volleyball, basketball, golf
                 and most recently going on white water rafting trips with my girlfriend.
                 I also love to play video games and board games with my family and friends. I'm a huge dog person.
-                lasdfl;kjghjda;lg jkas;lkjg as;lkjasdgklasd asdflkafds
-                lasdfl;kjghjda;l gjkas;lkjgas;lk jasdgklasd asdflkafds
+                lasdfl;kjghjda;lg jkas;lkjg as;lkjasdgk lasd asdflkafds
+                lasd fl;k jghjda;l gjkas;lkj gas;lk jasdgklasd asdflkafds
                 lasdfl;kjghjda;l gjkas;lkjgas; lkjasdgklasd asdflkafds
                 <img className={styles['drop-down-picture']} style={{float:'right'}} src={AuriPic} alt=""/>
-                lasdfl;kjghjda;lgjkas;lkjgas;lkjasdgklasd asdflkafds
-                lasdfl;kjghjda;lgjkas;lkjgas;lkjasdgklasd asdflkafds
+                lasdfl;kjghjd a;lgjkas;lkjg as;lkja sdgklasd asdflkafds
+                lasdfl;kjghj da;lgjkas;lkjgas;lkja sdgklasd asdflkafds
             </p>
         </div>
     )
