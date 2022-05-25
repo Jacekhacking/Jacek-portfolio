@@ -12,7 +12,7 @@ const Skills = () => {
 
 
     return(<Fragment>
-            <h2 className={`ff-cursive fs-700 text-dark`} style={{textAlign:'center'}}>Skills</h2>
+            <h2  className={`fs-700 ff-cursive text-dark`} style={{textAlign:'center'}}>Skills</h2>
     <div className={styles['logo-container']}>
             <img className={styles['logo']} src={html} alt="html logo"/>
             <img className={styles['logo']} src={css} alt="css logo"/>

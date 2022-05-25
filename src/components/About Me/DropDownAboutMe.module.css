@@ -1,13 +1,23 @@
 .drop-down-container{
-    min-height: 500px;
+    min-height: 1000px;
     padding-bottom: 5em;
-    margin-bottom: 9em;
-    margin-top: 5em;
+    background-color: hsl(var(--clr-sandy-brown),.6);
+    margin-left: 2em;
+    margin-right: 2em;
+    border: 5px solid hsl(var(--clr-dark-gray));
+    border-radius: 1% 1%;
 }
+.drop-down-paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .drop-down-picture{
+    display: block;
     max-width: 400px;
     height: auto;
     border: 5px solid hsl(var(--clr-orange-soda));
     border-radius: 5% 5% ;
-    margin: .3em ;
+    margin: 1em ;
 }

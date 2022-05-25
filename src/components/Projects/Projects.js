@@ -5,6 +5,7 @@ import {projectData} from "../data";
 
 
 const  Projects = () => {
+
 let data = projectData[0]
 
     return (
@@ -22,18 +23,7 @@ let data = projectData[0]
                     <a href={data.Link} target="_blank" rel="noreferrer"><img className={styles['project-image']} src={data.Image} alt="website screenshot"/></a>
                 </div>
 
-                <div className={`${styles['project-div']}`}>
-                    <h2 className={`${styles['project-header']}`}>Project Name</h2>
-                    <p className={`${styles['project-paragraph']}`}>description of project   </p>
-                    <img src="#" alt="website screenshot"/>
-                </div>
 
-                <div className={`${styles['project-div']}`}>
-                    <h2 className={`${styles['project-header']}`}>Project Name</h2>
-                    <p className={`${styles['project-paragraph']}`}>description of project   </p>
-                    <img src="#" alt="website screenshot"/>
-                    <p>visit site</p>
-                </div>
             </div>
 
 

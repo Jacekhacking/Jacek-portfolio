@@ -31,9 +31,9 @@ const AboutMe = () => {
     return (
         <Fragment>
             <div className={`${styles['about-me']}`}>
-                <div className={'flex ff-cursive text-dark fs-700'} style={{justifyContent:'center'}}>
+                <div >
                     <h2
-                        style={{alignItems:'center', marginTop: '3rem'}}>A Little Bit About Me
+                        className={'flex wrap ff-cursive text-dark fs-700'}  style={{justifyContent:'center', margin: '3rem'}}>About Me
                         {/*  below is the randomizer for the setNumber useState chooses a random number between 1 and 386.
             386 being the end of gen 3 and my practical endpoint for display.  */}
                         <img
@@ -48,9 +48,9 @@ const AboutMe = () => {
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021
                     and joined the University of Utah Fullstack Coding Bootcamp. Finished their program in October of 2021.
                     And immediately went to work cementing everything I learned there and started to work doing freelance work. </p>
-                 <Skills/>
                 <DropDownAboutMe/>
 
+                <Skills/>
             </div>
         </Fragment>
     )
