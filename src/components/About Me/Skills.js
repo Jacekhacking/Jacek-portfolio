@@ -32,8 +32,14 @@ const Skills = () => {
             <img className={styles['logo']} src={javascript} alt="javascript logo"/>
             <img className={styles['logo']} src={reactLogo} alt="react logo"/>
             <img className={styles['logo']} src={typeScript} alt="typescript logo"/>
-            {/*  below is the randomizer for the setNumber useState chooses a random number between 1 and 386. 386 being the end of gen 3 and my practical endpoint for display.  */}
-            <img className={styles['pokemon-logo']} onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))} style={{cursor:'pointer'}} src={pokemon.sprites.front_default} alt={pokemon.name}/>
+            {/*/!*  below is the randomizer for the setNumber useState chooses a random number between 1 and 386.*/}
+            {/*386 being the end of gen 3 and my practical endpoint for display.  *!/*/}
+            {/*<img*/}
+            {/*    className={styles['pokemon-logo']}*/}
+            {/*    onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))}*/}
+            {/*    style={{cursor:'pointer'}}*/}
+            {/*    src={pokemon.sprites.front_default}*/}
+            {/*    alt={pokemon.name}/>*/}
         </div>
 </Fragment>
     )

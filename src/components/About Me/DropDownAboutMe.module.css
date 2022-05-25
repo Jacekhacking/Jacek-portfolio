@@ -1,9 +1,13 @@
 .drop-down-container{
-    min-height: 300px;
+    min-height: 500px;
+    padding-bottom: 5em;
+    margin-bottom: 9em;
+    margin-top: 5em;
 }
 .drop-down-picture{
-max-width: 400px;
+    max-width: 400px;
     height: auto;
     border: 5px solid hsl(var(--clr-orange-soda));
     border-radius: 5% 5% ;
+    margin: .3em ;
 }

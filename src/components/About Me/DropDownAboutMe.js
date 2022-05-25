@@ -10,13 +10,18 @@ const DropDownAboutMe = () => {
                 hello!
             </section>
             <p>
+                <img className={styles['drop-down-picture']} style={{float:'left'}} src={GCPic} alt=""/>
                 My name is Jacek Hacking 28 years old. I'm from Salt Lake City, Utah.
                 I love to be outside doing fun stuff. Skiing, hiking, playing volleyball, basketball, golf
                 and most recently going on white water rafting trips with my girlfriend.
                 I also love to play video games and board games with my family and friends. I'm a huge dog person.
-                <img className={styles['drop-down-picture']} src={AuriPic} alt=""/>
+                lasdfl;kjghjda;lg jkas;lkjg as;lkjasdgklasd asdflkafds
+                lasdfl;kjghjda;l gjkas;lkjgas;lk jasdgklasd asdflkafds
+                lasdfl;kjghjda;l gjkas;lkjgas; lkjasdgklasd asdflkafds
+                <img className={styles['drop-down-picture']} style={{float:'right'}} src={AuriPic} alt=""/>
+                lasdfl;kjghjda;lgjkas;lkjgas;lkjasdgklasd asdflkafds
+                lasdfl;kjghjda;lgjkas;lkjgas;lkjasdgklasd asdflkafds
             </p>
-            <img className={styles['drop-down-picture']} src={GCPic} alt=""/>
         </div>
     )
 }

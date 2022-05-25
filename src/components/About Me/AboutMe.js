@@ -2,6 +2,7 @@ import React, {useState, Fragment, useEffect} from "react";
 import styles from "./AboutMe.module.css";
 import Skills from "./Skills"
 import DropDownAboutMe from "./DropDownAboutMe";
+import axios from "axios";
 
 
 
@@ -10,14 +11,39 @@ import DropDownAboutMe from "./DropDownAboutMe";
 const AboutMe = () => {
 
 
+    //  axios call to pokeAPI for a random pokemon sprite to be displayed inline with the technology pngs. initial state of number is 59 because that's my favorite pokemon
+    const [pokemon, setPokemon] = useState(null);
+    const [number, setNumber] = useState(59)
+
+    useEffect(()=> {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${number}/`).then((response)=> {
+            setPokemon(response.data)
+
+        });
+    }, [number]);
+
+
+    if(!pokemon)return null;
+
+
 
 
     return (
         <Fragment>
             <div className={`${styles['about-me']}`}>
-                <h2
-                    className={`ff-cursive text-dark fs-700`}
-                    style={{textAlign:'center', marginTop: '3rem'}}>A Little Bit About Me</h2>
+                <div className={'flex ff-cursive text-dark fs-700'} style={{justifyContent:'center'}}>
+                    <h2
+                        style={{alignItems:'center', marginTop: '3rem'}}>A Little Bit About Me
+                        {/*  below is the randomizer for the setNumber useState chooses a random number between 1 and 386.
+            386 being the end of gen 3 and my practical endpoint for display.  */}
+                        <img
+                            className={styles['pokemon-logo']}
+                            onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))}
+                            style={{cursor:'pointer', float:'right'}}
+                            src={pokemon.sprites.front_default}
+                            alt={pokemon.name}/></h2>
+                </div>
+
                 <p className={styles['about-me-text']}>
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021
                     and joined the University of Utah Fullstack Coding Bootcamp. Finished their program in October of 2021.
