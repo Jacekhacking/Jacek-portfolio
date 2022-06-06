@@ -2,7 +2,7 @@
 /*primary header*/
 
 .logo {
-  width: 95px;
+    width: 95px;
     height: auto;
 }
 .logo:hover{
@@ -19,14 +19,15 @@
     margin: 0;
     list-style: none;
     height: 100%;
-    padding-right: 1em;
+    padding-right: .5em;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .nav-item{
 
-    /*line-height: 1.5em;*/
-    display: block;
+    font-size: var(--fs-200);
     width: auto;
     border-bottom: 3px solid transparent;
 

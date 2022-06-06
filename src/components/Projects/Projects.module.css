@@ -1,16 +1,16 @@
 
 .project-container{
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
-    justify-content: center;
+justify-content: center;
     flex-wrap: wrap;
 }
 
 .project-div{
     border: 3px solid hsl(var(--clr-dark-gray));
     margin: .5em;
-    width: 500px;
-    height: auto;
+    width: 400px;
+    height: 500px;
     background-color: hsl(var(--clr-blue-gray));
 }
 .project-div>a{
@@ -23,14 +23,18 @@ text-align: center;
     border-bottom: 2px solid hsl(var(--clr-sandy-brown));
 }
 .project-paragraph{
+    align-items: center;
     text-align: center;
     font-size: var(--fs-300);
     padding-right: 1em;
     padding-left: 1em;
+    height: 177px;
+
 }
 
 .project-image{
-    width: 500px;
+    margin-bottom: auto;
+   width: 400px;
     height: auto;
    object-fit: cover;
 }

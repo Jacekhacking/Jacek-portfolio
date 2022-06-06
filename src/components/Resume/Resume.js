@@ -3,10 +3,10 @@ import Pdf from "../UI/Resume.pdf";
 import styles from "./Resume.module.css";
 const Resume = () => {
     return (
-        <div>
+        <div className={'bg-blue-grey flex'} style={{justifyContent:'center', alignItems:'center'}}>
 <p
     id={'resume'}
-    className={`${styles['resume-link']}`}>
+    className={`${styles['resume-link']} flex`}>
 
     <a
         href={Pdf}

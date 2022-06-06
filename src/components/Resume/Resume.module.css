@@ -1,3 +1,9 @@
+.resume-link>a {
+    color: hsl(var(--clr-mint-offwhite))
+}
+
 .resume-link>a:hover{
     color: hsl(var(--clr-sandy-brown));
+
+
 }

@@ -1,24 +1,32 @@
 .drop-down-container{
-    min-height: 1000px;
+    min-height: 500px;
     padding-bottom: 5em;
     background-color: hsl(var(--clr-blue-gray));
     margin-left: 2em;
     margin-right: 2em;
+    margin-bottom: 2em;
     border: 5px solid hsl(var(--clr-dark-gray));
-
 }
 .drop-down-paragraph{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2em;
+    margin: .5em;
+    font-size: var(--fs-200);
 }
 
 .drop-down-picture{
     display: block;
-    max-width: 400px;
+    width: 35%;
     height: auto;
+    object-fit: cover;
+
     border: 5px solid hsl(var(--clr-orange-soda));
-    border-radius: 5% 5% ;
-    margin-right: 2em;
+    border-radius: 5px ;
+    margin-right: 1em;
+}
+
+@media(min-width: 500px){
+
 }

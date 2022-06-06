@@ -49,19 +49,24 @@ const AboutMe = () => {
 
     return (
         <Fragment>
-            <div id={'about me'} className={`${styles['about-me']}`}>
+            <div id={'about me'} className={`${styles['about-me']} flex `} style={{flexDirection:'column', alignItems:'center'}}>
                 <div >
                     <h2
-                        className={'flex wrap ff-cursive text-dark fs-700'}  style={{justifyContent:'center', margin: '3rem'}}>About Me
+                        className={`header-style flex wrap ff-cursive text-dark`}  style={{justifyContent:'center', margin: '1rem'}}>About Me
                         {/*  below is the randomizer for the setNumber useState chooses a random number between 1 and 386.
             386 being the end of gen 3 and my practical endpoint for display.  */}
-                        <img
-                            className={styles['pokemon-logo']}
-                            onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))}
-                            style={{cursor:'pointer', float:'right'}}
-                            src={pokemon.sprites.front_default}
-                            alt={pokemon.name}/></h2>
+                        </h2>
+
                 </div>
+                <div>
+                    <img
+                        className={styles['pokemon-logo']}
+                        onClick={()=> setNumber(Math.round(Math.random()*(386-1)+1))}
+                        style={{cursor:'pointer', float:'right'}}
+                        src={pokemon.sprites.front_default}
+                        alt={pokemon.name}/>
+                </div>
+
 
                 <p className={styles['about-me-text']}>
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021
