@@ -9,5 +9,10 @@ export const projectData =
   "Name": "Keaton's Portfolio",
     "Description": "Website for up and coming artist. Client designed the site himself and needed someone with technical skills to apply it.",
     "Image" : require("./UI/Images/keaton-port-ss.png"),
-}
+},
+  {
+    "Name":"OneWaveGolf",
+    "Description": "Website for OneWaveGolf located in Bandon Oregon",
+
+  }
 ]

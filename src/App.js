@@ -1,6 +1,6 @@
 import LandingPage from "./components/Landing Page/LandingPage";
 import './App.css';
-import React, {Fragment, useState} from "react";
+import React, {Fragment} from "react";
 import Navigation from "./components/Nav/Nav"
 import AboutMe from "./components/About Me/AboutMe";
 import Projects from "./components/Projects/Projects";
@@ -18,14 +18,11 @@ function App() {
             <header><Navigation /></header>
             <main>
                 <LandingPage />
-
                 <AboutMe/>
                 <Projects/>
                 <Resume/>
             </main>
             <FooterComponent/>
-
-
         </Fragment>
     );
 }

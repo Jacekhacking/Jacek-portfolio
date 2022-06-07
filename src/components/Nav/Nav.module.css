@@ -26,8 +26,7 @@
 }
 
 .nav-item{
-
-    font-size: var(--fs-200);
+    font-size: var(--fs-300);
     width: auto;
     border-bottom: 3px solid transparent;
 

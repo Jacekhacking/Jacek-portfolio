@@ -4,7 +4,7 @@ import logo from "../UI/Images/logo.png"
 const Navigation = (props) => {
 
 
-    const tabs = [ 'Projects', 'Resume']
+    const tabs = [ 'Projects', 'Resume', 'About', 'Skills']
 
     return (
 
