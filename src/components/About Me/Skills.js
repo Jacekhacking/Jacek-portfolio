@@ -12,7 +12,7 @@ const Skills = () => {
 
 
     return(<Fragment>
-            <h2  className={`header-style ff-cursive text-dark`} style={{textAlign:'center'}}>Skills</h2>
+            <h2 id = "skills" className={`header-style ff-cursive text-dark`} style={{textAlign:'center'}}>Skills</h2>
     <div className={styles['logo-container']}>
             <img className={styles['logo']} src={html} alt="html logo"/>
             <img className={styles['logo']} src={css} alt="css logo"/>

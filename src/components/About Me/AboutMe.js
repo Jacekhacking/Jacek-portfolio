@@ -11,7 +11,7 @@ import axios from "axios";
 const AboutMe = () => {
 
 
-    //  axios call to pokeAPI for a random pokemon sprite to be displayed inline with the technology pngs. initial state of number is 59 because that's my favorite pokemon
+    //  axios call to pokeAPI for a random Pokémon sprite to be displayed inline with the technology pngs. initial state of number is 59 because that's my favorite pokemon
     const [pokemon, setPokemon] = useState(null);
     const [number, setNumber] = useState(59)
 
@@ -22,7 +22,6 @@ const AboutMe = () => {
     useEffect(()=> {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${number}/`).then((response)=> {
             setPokemon(response.data)
-
         });
     }, [number]);
 
@@ -49,7 +48,7 @@ const AboutMe = () => {
 
     return (
         <Fragment>
-            <div id={'about me'} className={`${styles['about-me']} flex `} style={{flexDirection:'column', alignItems:'center'}}>
+            <div id={'about'} className={`${styles['about-me']} flex `} style={{flexDirection:'column', alignItems:'center'}}>
                 <div >
                     <h2
                         className={`header-style flex wrap ff-cursive text-dark`}  style={{justifyContent:'center', margin: '1rem'}}>About Me

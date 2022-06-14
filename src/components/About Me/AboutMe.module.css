@@ -3,7 +3,7 @@
 }
 .about-me-text{
     text-align: center;
-    margin: .2em;
+    margin: 2em;
     font-size: clamp(var(--fs-100), 5.5vw, var(--fs-500));
 
 }

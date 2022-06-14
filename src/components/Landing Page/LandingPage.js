@@ -12,7 +12,7 @@ const LandingPage = () => {
 
                     <img src={selfie} alt="selfie"
                          className={`${styles['selfie-div']} `}/> <p
-                            className={`${styles['about-text']}`}><div>Hell0!</div> My name is
+                            className={`${styles['about-text']}`}><div style={{justifyContent:'center', alignItems:'center'}}>Hell0!</div> My name is
                     Jacek Hacking. I am a Front-End Web Developer. </p>
             </div>
         </div>

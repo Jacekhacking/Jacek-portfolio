@@ -19,29 +19,21 @@ const DropDownAboutMe = () => {
 
                 <img className={styles['drop-down-picture']}  src={GCPic} alt=""/>
                 I'm from Salt Lake City, Utah.
-                I love to be outside doing fun stuff. Skiing, hiking, playing volleyball, basketball, golf
+                I love to be outside. Skiing, hiking, playing volleyball, basketball, golf, rock climbing,
                 and most recently going on white water rafting trips with my girlfriend.
-                I also love to play video games and board games with my family and friends. I'm a dog person
-                and raised and trained a deaf puppy which is hands down the hardest thing I've ever done.
+                I also love to play video games and board games with my family and friends. I'm a very competitive person and I'm a dog person.
+                I raised and trained a deaf puppy which is hands down the hardest thing I've ever done.
             </p>
         </section>
 
         <section className={'flex wrap'}>
             <div className={styles['drop-down-paragraph-bottom']}><img className={styles['drop-down-picture']}  src={AuriPic} alt=""/>
-                <p>I'm from Salt Lake City, Utah.
-                    I love to be outside doing fun stuff. Skiing, hiking, playing volleyball, basketball, golf
-                    and most recently going on white water rafting trips with my girlfriend.
-                    I also love to play video games and board games with my family and friends. I'm a dog person
-                    and raised and trained a deaf puppy which is hands down the hardest thing I've ever done.</p></div>
-
-
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, iste, repellat. Aspernatur,
+                    cumque ducimus eius eum fugiat laboriosam nam nemo odio officiis vitae! Debitis eaque laborum
+                    necessitatibus porro temporibus velit.</p></div>
         </section>
     </div>
-
-
 </div>
-
-
         </div>
         </Fragment>
     )
