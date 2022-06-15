@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
 
+
 }
 
 .nav-item{
@@ -35,21 +36,30 @@
     border-bottom: 3px solid hsl(var(--clr-orange-soda));
 }
 .toggle-dropdown{
-display: none;
+    display: none;
 }
 
+/*special media query to keep navbar
+visible when not in collapsed
+do not alter this!
+                            */
+@media(min-width: 700px){
+.primary-navigation{
+    visibility: visible !important;
+}
+}
 
 
 @media(max-width: 700px){
     .toggle-dropdown{
         position: relative;
         display: block;
-        background-color: blue;
+        background-color: transparent;
         top: 100px;
+        border: none
 
     }
 .primary-navigation{
-
     position: relative;
     right: 0;
     top: 99px;
