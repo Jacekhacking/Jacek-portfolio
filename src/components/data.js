@@ -12,7 +12,7 @@ export const projectData =
 },
   {
     "Name":"OneWaveGolf",
-    "Description": "Website for OneWaveGolf located in Bandon Oregon",
+    "Description": "Website for OneWaveGolf. A company based out of Bandon Oregon specializing in recyclable golf goods, professional caddying, and lessons.",
     "Image" : require("./UI/Images/onewavegolf.png"),
     "Link": "https://onewavegolf.com"
   }
