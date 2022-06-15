@@ -29,9 +29,34 @@
     font-size: var(--fs-300);
     width: auto;
     border-bottom: 3px solid transparent;
-
 }
 
 .nav-item:hover{
     border-bottom: 3px solid hsl(var(--clr-orange-soda));
+}
+.toggle-dropdown{
+display: none;
+}
+
+
+
+@media(max-width: 700px){
+    .toggle-dropdown{
+        position: relative;
+        display: block;
+        background-color: blue;
+        top: 100px;
+
+    }
+.primary-navigation{
+
+    position: relative;
+    right: 0;
+    top: 99px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 150px;
+    background-color: red;
+    }
 }

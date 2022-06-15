@@ -71,7 +71,13 @@ const AboutMe = () => {
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021
                     and joined the University of Utah Fullstack Coding Bootcamp. Finished their program in October of 2021.
                     And immediately went to work cementing everything I learned there and started to work doing freelance work.
-                    <button className={`${styles['dropdown-toggle-button']} ff-cursive text-dark`} onClick={()=>setDropdown(prevState => !prevState)}>{dropdown===false ? 'More...':'Hide...'}</button></p>
+                    <button
+                        className={`${styles['dropdown-toggle-button']} ff-cursive text-dark`}
+                        onClick={
+                        ()=>setDropdown(prevState => !prevState)}
+                        >{dropdown===false ? 'More...':'Hide...'}
+                    </button>
+                </p>
 
 
                     {renderDropdown(dropdown)}

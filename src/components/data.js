@@ -13,6 +13,7 @@ export const projectData =
   {
     "Name":"OneWaveGolf",
     "Description": "Website for OneWaveGolf located in Bandon Oregon",
-
+    "Image" : require("./UI/Images/onewavegolf.png"),
+    "Link": "https://onewavegolf.com"
   }
 ]
