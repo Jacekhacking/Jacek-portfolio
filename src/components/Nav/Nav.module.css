@@ -26,7 +26,8 @@
 
 .nav-item{
     font-size: var(--fs-300);
-    border-bottom: 1px solid transparent;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
     padding: .3rem;
 }
 
@@ -41,14 +42,14 @@
 visible when not in collapsed
 do not alter this!
                             */
-@media(min-width: 700px){
+@media(min-width: 500px){
 .primary-navigation{
     visibility: visible !important;
 }
 }
 
 
-@media(max-width: 700px){
+@media(max-width: 500px){
     .toggle-dropdown{
         display: block;
         position: relative !important;
@@ -61,12 +62,13 @@ do not alter this!
 
     position: relative;
     top: 129px;
-
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 200px;
-    width: 200px;
+    width: 160px;
     background-color: hsl(var(--clr-blue-gray));
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
     }
 }
