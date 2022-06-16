@@ -1,9 +1,14 @@
 .resume-link>a {
-    color: hsl(var(--clr-mint-offwhite))
+    color: hsl(var(--clr-mint-offwhite));
+    font-size: var(--fs-400);
 }
 
 .resume-link>a:hover{
     color: hsl(var(--clr-sandy-brown));
+}
 
-
+@media(max-width: 300px){
+    .resume-link>a{
+        font-size: var(--fs-200);
+    }
 }
