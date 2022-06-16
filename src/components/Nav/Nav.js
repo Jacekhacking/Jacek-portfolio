@@ -10,7 +10,7 @@ const Navigation = () => {
 
     return (
 
-        <nav className={`${styles['primary-header']} + flex`}>
+        <nav className={`${styles['primary-header']}`}>
             <a href="#landing page"> <img className={styles.logo} src={logo} alt="" /></a>
 
             <NavItems/>

@@ -1,5 +1,6 @@
-import React, {useState} from "react";
-import styles from "./Nav.module.css"
+import React, {Fragment, useState} from "react";
+import styles from "./Nav.module.css";
+import hamburger from "../UI/Images/hamburger.png"
 
 
 const NavItems = () => {
@@ -17,9 +18,15 @@ const NavItems = () => {
     }
 
     return (
-        <div className={styles['nav-responsive-container']}>
-            <button onClick={renderNavDropdown}  className={styles['toggle-dropdown']}> {navVisibility=== false? 'dropdown' :'hide'}</button>
-            <ul className={`${styles['primary-navigation']} + flex`}
+        <Fragment >
+
+            <button
+                onClick={renderNavDropdown}
+                className={styles['toggle-dropdown']}>
+                {navVisibility=== false? <img style={{height: '30px', width:'50px'}} src={hamburger} alt=""/> :'hide'}
+            </button>
+
+            <ul className={`${styles['primary-navigation']}`}
                 style={{
                     visibility: navVisibility ? "hidden" : "visible"
                 }}>
@@ -32,7 +39,7 @@ const NavItems = () => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </Fragment>
     )
 }
 export default NavItems;
