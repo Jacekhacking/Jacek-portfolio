@@ -1,9 +1,9 @@
 .logo-container{
-    padding-top: 3em;
+    padding-top: 1em;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin:3em;
+    margin:2em;
 }
 .logo{
     max-width: 100px;

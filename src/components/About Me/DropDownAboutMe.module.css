@@ -1,7 +1,7 @@
 .drop-down-container{
     background-color: hsl(var(--clr-blue-gray));
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 2em;
     border: 5px solid hsl(var(--clr-dark-gray));
 }
@@ -33,12 +33,13 @@
     border-radius: 5px ;
 
 }
-@media(min-width: 500px){
 
-}
 
 @media(min-width: 725px){
-
+    .drop-down-container{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
     .drop-down-picture{
         width: 100%;
         margin-right: 1em;

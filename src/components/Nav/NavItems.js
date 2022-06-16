@@ -23,7 +23,7 @@ const NavItems = () => {
             <button
                 onClick={renderNavDropdown}
                 className={styles['toggle-dropdown']}>
-                {navVisibility=== false? <img style={{height: '30px', width:'50px'}} src={hamburger} alt=""/> :'hide'}
+                {navVisibility=== false?  'hide' :<img style={{height: '30px', width:'50px'}} src={hamburger} alt=""/> }
             </button>
 
             <ul className={`${styles['primary-navigation']}`}
