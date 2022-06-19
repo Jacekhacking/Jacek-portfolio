@@ -14,23 +14,37 @@ const DropDownAboutMe = () => {
 <div className={'text-light'}>
 
     <div className={'flex wrap'}>
-        <section className={' flex wrap'}>
+        <section className={' flex'}>
             <p className={styles['drop-down-paragraph-top']}>
 
-                <img className={styles['drop-down-picture']}  src={GCPic} alt=""/>
-                I'm from Salt Lake City, Utah.
-                I love to be outside. Skiing, hiking, playing volleyball, basketball, golf, rock climbing,
-                and most recently going on white water rafting trips with my girlfriend.
-                I also love to play video games and board games with my family and friends. I'm a very competitive person and I'm a dog person.
-                I raised and trained a deaf puppy which is hands down the hardest thing I've ever done.
+
+
+                <p  >
+                    <img className={styles['drop-down-picture']} style={{float:'left'}}  src={GCPic} alt=""/>
+                    I'm from Salt Lake City, Utah.
+                    I love to be outside. Skiing, hiking, playing volleyball, basketball, golf, rock climbing,
+                    and most recently going on white water rafting trips with my girlfriend.
+                    I also love to play video games and board games with my family and friends.
+                </p>
             </p>
         </section>
 
-        <section className={'flex wrap'}>
-            <div className={styles['drop-down-paragraph-bottom']}><img className={styles['drop-down-picture']}  src={AuriPic} alt=""/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, iste, repellat. Aspernatur,
-                    cumque ducimus eius eum fugiat laboriosam nam nemo odio officiis vitae! Debitis eaque laborum
-                    necessitatibus porro temporibus velit.</p></div>
+        <section className={'flex'}>
+            <div className={styles['drop-down-paragraph-bottom']}>
+
+                <p >
+                    <img className={styles['drop-down-picture']}
+                         src={AuriPic} alt=""
+                         style={{float:'right'}}
+                    />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur cupiditate
+                        distinctio dolorem eaque earum fugit hic illo impedit labore laudantium nisi nostrum officia,
+                        pariatur placeat porro quam reiciendis repudiandae!
+                    </p>
+
+
+                </p>
+               </div>
         </section>
     </div>
 </div>
