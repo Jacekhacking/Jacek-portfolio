@@ -31,7 +31,7 @@ const NavItems = () => {
                     visibility: navVisibility ? "hidden" : "visible"
                 }}>
                 {tabs.map(tab => (
-                    <li className={styles['nav-item']} key = {tab}>
+                    <li className={`${styles['nav-item']} ff-cursive`} key = {tab}>
                         <a href={'#' + tab.toLocaleLowerCase()}
                         >
                             {tab}
