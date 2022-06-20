@@ -37,9 +37,14 @@ const DropDownAboutMe = () => {
                          src={AuriPic} alt=""
                          style={{float:'right'}}
                     />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur cupiditate
-                        distinctio dolorem eaque earum fugit hic illo impedit labore laudantium nisi nostrum officia,
-                        pariatur placeat porro quam reiciendis repudiandae!
+                    <p>
+                        <h2>Fun Facts!</h2>
+                        My favorite genre of books is fantasy <span className={'text-brown'}>|</span>
+                        I have a licence to practice massage therapy in the state of Utah <span className={'text-brown'}>|</span>
+                        My favorite childhood video game was Pokémon Puzzle <span className={'text-brown'}>|</span>
+                        Favorite food is Sushi <span className={'text-brown'}>|</span>
+                        Favorite book series is the Wheel of Time <span className={'text-brown'}>|</span>
+                        Grew up on Blizzard games like WoW and D2
                     </p>
 
 
