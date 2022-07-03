@@ -6,7 +6,6 @@
 }
 
 .about-text {
-
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
@@ -34,6 +33,11 @@
 }
 
 
-
+@media(min-width: 1700px){
+    .container{
+        padding-right: 10vw;
+        padding-left:  10vw;
+    }
+}
 
 
