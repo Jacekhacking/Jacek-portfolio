@@ -1,11 +1,11 @@
 import React, {Fragment, useState} from "react";
 import styles from "./Nav.module.css";
 import hamburger from "../UI/Images/hamburger.png"
-
+import Pdf from "../UI/Jacek's Portfolio Resume.pdf";
 
 const NavItems = () => {
 
-    const tabs = [ 'Projects', 'Resume', 'About', 'Skills'];
+    const tabs = [ 'Projects',  'About', 'Skills'];
 
 
 
@@ -38,6 +38,19 @@ const NavItems = () => {
                         </a>
                     </li>
                 ))}
+                <li className={`${styles['nav-item']} ff-cursive`}
+                    style={{
+                        visibility: navVisibility ? "hidden" : "visible"
+                    }}>
+
+                    <a
+                        href={Pdf}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+
+                        }}> Resume</a>
+                </li>
             </ul>
         </Fragment>
     )
