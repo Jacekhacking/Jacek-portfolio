@@ -10,6 +10,14 @@
       "StackName": "amplify-jacekportfolio-dev-152001",
       "StackId": "arn:aws:cloudformation:us-west-1:416705624742:stack/amplify-jacekportfolio-dev-152001/c31cf110-e770-11ec-9673-02d6897b6699",
       "AmplifyAppId": "d3sxm7h66aby4v"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3sxm7h66aby4v",
+          "type": "manual"
+        }
+      }
     }
   }
 }
