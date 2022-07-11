@@ -19,7 +19,7 @@
     height: auto;
 }
 .pokemon-logo:hover{
-    border: 4px solid hsl(var(--clr-sandy-brown));
+    border: 3px solid hsl(var(--clr-sandy-brown));
 }
 .dropdown-toggle-button{
     background-color: transparent;
