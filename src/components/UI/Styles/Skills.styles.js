@@ -7,21 +7,17 @@ export const StyledSkillsDiv = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 2em;
-
-
+  
   @media (max-width: 402px) {
-    max-width: 50px;
-    margin: .1em;
+    margin: 1.5em;
   }
 `
-
 
 export const StyledSkillsImage = styled.img`
   max-width: 100px;
   height: auto;
   margin: .3em;
-
-
+  
   @media (max-width: 402px) {
     max-width: 50px;
     margin: .1em;
