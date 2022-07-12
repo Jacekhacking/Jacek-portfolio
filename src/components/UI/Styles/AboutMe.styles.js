@@ -14,15 +14,30 @@ export const DropDownContainer = styled.div`
   }
 `
 
-export const DropDownParagraph = styled.div`
+export const TopParagraphDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1vw;
-  font-size: clamp(var(--fs-200), 2.5vw, var(--fs-500));
+  
+  @media(min-width: 725px) {
+    flex-direction: row;
+  }
 `
 
+export const BottomParagraphDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1vw;
+  
+  @media(min-width: 725px){
+    flex-direction: row-reverse;
+  }
+
+`
 
 export const DropDownPicture = styled.img`
   display: block;
@@ -49,9 +64,9 @@ export const DropDownPicture = styled.img`
     height: auto;
     max-height: 600px;
     margin-right: 1em;
-
   }
-  
-  
-  
+`
+
+export const DropDownText = styled.p`
+  font-size: clamp(var(--fs-300), 3.5vw, 2rem);
 `
