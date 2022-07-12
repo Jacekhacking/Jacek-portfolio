@@ -1,7 +1,7 @@
 import styles from "./DropDownAboutMe.module.css";
 import GCPic from "../UI/Images/gc-rafting-picture.jpeg";
 import AuriPic from "../UI/Images/AuriPic_2.jpeg";
-import {DropDownContainer} from "../UI/Styles/AboutMe.styles";
+import {DropDownContainer, DropDownPicture} from "../UI/Styles/AboutMe.styles";
 
 const DropDownAboutMe = () => {
     return (
@@ -13,21 +13,21 @@ const DropDownAboutMe = () => {
     <div className={'flex wrap'}>
         <section className={' flex'}>
             <p className={styles['drop-down-paragraph-top']}>
-                <p>
-                    <img className={styles['drop-down-picture']} style={{float:'left'}}  src={GCPic} alt=""/>
+
+                    <DropDownPicture  style={{float:'left'}}  src={GCPic} alt=""/>
                     I'm from Salt Lake City, Utah.
                     I love to be outside. Skiing, hiking, playing volleyball, basketball, golf, rock climbing,
                     and most recently going on white water rafting trips with my girlfriend.
                     I also love to play video games and board games with my family and friends.
-                </p>
+
             </p>
         </section>
 
         <section className={'flex'}>
             <div className={styles['drop-down-paragraph-bottom']}>
 
-                <p >
-                    <img className={styles['drop-down-picture']}
+
+                    <DropDownPicture
                          src={AuriPic} alt=""
                          style={{float:'right'}}
                     />
@@ -42,7 +42,7 @@ const DropDownAboutMe = () => {
                     </p>
 
 
-                </p>
+
                </div>
         </section>
     </div>

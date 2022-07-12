@@ -28,9 +28,30 @@ export const DropDownPicture = styled.img`
   display: block;
   width: 100%;
   height: auto;
-  max-height: 400px;
-  min-width: 250px;
   object-fit: cover;
   border: 2px solid hsl(var(--clr-orange-soda));
   border-radius: 5px;
+  
+  @media(min-width: 725px){
+    width: 400px;
+    height: auto;
+    margin-right: 1em;
+  }
+  
+  @media(min-width: 1500px){
+    width: 400px;
+    height: auto;
+    margin-right: 1em;
+  }
+  
+  @media(min-width: 1700px) {
+    width: 400px;
+    height: auto;
+    max-height: 600px;
+    margin-right: 1em;
+
+  }
+  
+  
+  
 `
