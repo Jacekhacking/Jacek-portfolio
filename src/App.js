@@ -1,6 +1,5 @@
 import LandingPage from "./components/Landing Page/LandingPage";
-import './App.css';
-import React, {Fragment} from "react";
+import GlobalStyles from "./components/UI/Styles/Global.styles";
 import Navigation from "./components/Nav/Nav"
 import AboutMe from "./components/About Me/AboutMe";
 import Projects from "./components/Projects/Projects";
@@ -14,7 +13,8 @@ function App() {
 
 
     return (
-        <Fragment className="App">
+        <>
+            <GlobalStyles/>
             <header><Navigation /></header>
             <main>
                 <LandingPage />
@@ -23,7 +23,7 @@ function App() {
                 <Resume/>
             </main>
             <FooterComponent/>
-        </Fragment>
+        </>
     );
 }
 
