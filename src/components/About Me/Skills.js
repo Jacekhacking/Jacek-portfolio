@@ -20,8 +20,6 @@ const Skills = () => {
                     <StyledSkillsImage src={javascript} alt="html logo"/>
                     <StyledSkillsImage src={reactLogo} alt="html logo"/>
                     <StyledSkillsImage src={typeScript} alt="html logo"/>
-
-
                     <StyledSkillsImage src={UofUPng} alt="html logo"/>
                 </StyledSkillsDiv>
 

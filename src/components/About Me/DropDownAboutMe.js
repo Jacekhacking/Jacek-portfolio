@@ -1,25 +1,19 @@
-import React, {Fragment} from "react";
 import styles from "./DropDownAboutMe.module.css";
 import GCPic from "../UI/Images/gc-rafting-picture.jpeg";
 import AuriPic from "../UI/Images/AuriPic_2.jpeg";
+import {DropDownContainer} from "../UI/Styles/AboutMe.styles";
 
 const DropDownAboutMe = () => {
     return (
-        <Fragment>
-
-        <div className={`${styles['drop-down-container']}`}>
+        <>
+        <DropDownContainer>
             <h2  className={`fs-600 ff-cursive text-light`} style={{textAlign:'center',borderBottom: '5px solid hsl(var(--clr-dark-gray))'} }>
                 A Little more about me
             </h2>
-<div className={'text-light'}>
-
     <div className={'flex wrap'}>
         <section className={' flex'}>
             <p className={styles['drop-down-paragraph-top']}>
-
-
-
-                <p  >
+                <p>
                     <img className={styles['drop-down-picture']} style={{float:'left'}}  src={GCPic} alt=""/>
                     I'm from Salt Lake City, Utah.
                     I love to be outside. Skiing, hiking, playing volleyball, basketball, golf, rock climbing,
@@ -52,9 +46,9 @@ const DropDownAboutMe = () => {
                </div>
         </section>
     </div>
-</div>
-        </div>
-        </Fragment>
+</DropDownContainer>
+
+        </>
     )
 }
 
