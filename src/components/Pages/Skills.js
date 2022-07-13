@@ -14,14 +14,14 @@ const Skills = () => {
     return (
         <>
             <Header2 id="skills">Skills</Header2>
-                <StyledSkillsDiv>
-                    <StyledSkillsImage src={html} alt="html logo"/>
-                    <StyledSkillsImage src={css} alt="html logo"/>
-                    <StyledSkillsImage src={javascript} alt="html logo"/>
-                    <StyledSkillsImage src={reactLogo} alt="html logo"/>
-                    <StyledSkillsImage src={typeScript} alt="html logo"/>
-                    <StyledSkillsImage src={UofUPng} alt="html logo"/>
-                </StyledSkillsDiv>
+            <StyledSkillsDiv>
+                <StyledSkillsImage src={html} alt="html logo"/>
+                <StyledSkillsImage src={css} alt="html logo"/>
+                <StyledSkillsImage src={javascript} alt="html logo"/>
+                <StyledSkillsImage src={reactLogo} alt="html logo"/>
+                <StyledSkillsImage src={typeScript} alt="html logo"/>
+                <StyledSkillsImage src={UofUPng} alt="html logo"/>
+            </StyledSkillsDiv>
         </>
     )
 }

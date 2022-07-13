@@ -5,7 +5,6 @@ import {
     ProjectImage,
     ProjectParagraph,
     ProjectDiv,
-    SectionHeader,
 } from "../UI/Styles/Projects.styles"
 import {Header2} from "../UI/Styles/Global.styles";
 

@@ -322,6 +322,9 @@ export const FlexWrapContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 `
+export const FlexContainer = styled.div`
+  display: flex
+`
 
 export const Header2 = styled.h2`
   font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
