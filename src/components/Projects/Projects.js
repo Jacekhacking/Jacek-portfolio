@@ -1,33 +1,41 @@
-import React, {Fragment} from "react";
-import styles from "./Projects.module.css"
 import {projectData} from "../data";
+import {FlexWrapContainer} from "../UI/Styles/Global.styles";
+import {
+    ProjectHeader,
+    ProjectImage,
+    ProjectParagraph,
+    ProjectDiv,
+    ProjectATag,
+    SectionHeader
+} from "../UI/Styles/Projects.styles"
 
-
-
-const  Projects = () => {
+const Projects = () => {
 
 
     return (
-        <Fragment>
-                <h2 id={'projects'} className={`header-style ff-cursive text-dark`} style={{textAlign: 'center'}}>Projects</h2>
+        <>
+            <SectionHeader>Projects</SectionHeader>
 
-            <div className={`${styles['project-container']}`}>
+            <FlexWrapContainer>
                 {projectData.map(project => (
-                    <div className={`${styles['project-div']}`}>
-                        <h2 className={`${styles['project-header']} ff-cursive text-light`}>{project.Name}</h2>
-                        <p className={`${styles['project-paragraph']} text-light`}>{project.Description} </p>
-                        <a href={project.Link}
-                           target="_blank"
-                           rel="noreferrer">
-                            <img className={styles['project-image']}
-                                 src={project.Image}
-                                 alt="website screenshot"/></a>
-                    </div>
+                    <ProjectDiv>
+                        <ProjectHeader>{project.Name}</ProjectHeader>
+                        <ProjectParagraph>{project.Description} </ProjectParagraph>
+                        <ProjectATag
+                            href={project.Link}
+                            target="_blank"
+                            rel="noreferrer">
+                            <ProjectImage
+                                src={project.Image}
+                                alt="website screenshot"
+                            />
+                        </ProjectATag>
+                    </ProjectDiv>
                 ))}
-            </div>
+            </FlexWrapContainer>
 
 
-        </Fragment>
+        </>
     )
 }
 
