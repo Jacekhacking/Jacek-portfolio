@@ -19,7 +19,6 @@ const Footer = () => {
                 <a href="https://github.com/Jacekhacking"><SocialMediaImg src={github} alt="github"/></a>
                 <a href="https://www.linkedin.com/in/jacek-hacking-708007210"><SocialMediaImg src={linkedin} alt="linked in "/></a>
             </FlexContainer>
-
         </FooterContainer>
     )
 }

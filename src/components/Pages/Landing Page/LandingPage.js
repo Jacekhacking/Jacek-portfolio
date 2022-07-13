@@ -1,42 +1,25 @@
-import React from "react";
 import styles from "./LandingPage.module.css";
 import selfie from "../../UI/Images/Selfie_large.jpeg"
+import {Container} from "../../UI/Styles/Global.styles";
+import {SelfieImg, AboutText} from "../../UI/Styles/LandingPage.styles";
 
 const LandingPage = () => {
 
-
     return (
-
-        <div style={{
-            alignItems:'center',
-            justifyContent:'center'
-        }}>
-            <div id={'landing page flex'} className={`${styles['container']} bg-light`}>
-                {/*<h2 className={`${styles['about-text']} text-dark fs-800`}>HELLO! </h2>*/}
+        <>
+            <Container>
                 <div className={`${styles['dark-div']} text-dark fs-800 uppercase ff-cursive`}>
-
-                    <img src={selfie} alt="selfie"
-                         className={`${styles['selfie-div']} `}/>
-                    <p
-                    className={`${styles['about-text']}`}>
-
-                    <div
-                        style={{
-                            justifyContent:'center',
-                            alignItems:'center'}}
-                    >Hell0!
-                    </div>
-                        <div>
-                            My name is
-                            Jacek Hacking. I am a Front-End Web Developer.
-                        </div>
-
-                    </p>
+                    <SelfieImg
+                        src={selfie}
+                        alt="selfie"
+                    />
+                    <AboutText>
+                        <p>Hello!</p>
+                        My name is Jacek Hacking. I am a Front-End Web Developer.
+                    </AboutText>
                 </div>
-            </div>
-        </div>
-
-
+            </Container>
+        </>
     )
 }
 

@@ -85,7 +85,6 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: 0.1em;
     background-color: hsl(var(--clr-mint-offwhite));
     font-family: var(--ff-sans-serif);
-
   }
 
   html {
@@ -100,7 +99,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /*make form elements easier to work with*/
-
   input,
   button,
   textarea,
@@ -108,9 +106,7 @@ const GlobalStyles = createGlobalStyle`
     font: inherit;
   }
 
-
   /* remove animations for people who've turned them off */
-
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -121,7 +117,6 @@ const GlobalStyles = createGlobalStyle`
       scroll-behavior: auto !important;
     }
   }
-
 
   a {
     color: var(--clr-dark-gray);
@@ -151,7 +146,6 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-
   .flex {
     display: flex;
     gap: var(--gap, 1rem);
@@ -166,16 +160,9 @@ const GlobalStyles = createGlobalStyle`
     gap: var(--gap, 1rem);
   }
 
-
   /* targets any element that has a previous sibling */
   .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
-  }
-
-  .container {
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 80rem;
   }
 
 
@@ -317,11 +304,13 @@ const GlobalStyles = createGlobalStyle`
 `
 export default GlobalStyles
 
+
 export const FlexWrapContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 `
+
 export const FlexContainer = styled.div`
   display: flex
 `
@@ -333,4 +322,11 @@ export const Header2 = styled.h2`
   justify-content: center;
   margin: 1rem;
   text-align: center;
+`
+
+export const Container = styled.div`
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 90rem;
+  background-color: ${props => props.bgColor || 'hsl(var(--clr-mint-offwhite))'}  ;
 `
