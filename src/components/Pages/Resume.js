@@ -1,6 +1,6 @@
 import React from "react";
 import Pdf from "../UI/Jacek\'s Portfolio Resume.pdf";
-import { ResumeContainer, ResumeLinkParagraph } from "../UI/Styles/Resume.styles";
+import {ResumeContainer, ResumeLinkParagraph} from "../UI/Styles/Resume.styles";
 
 
 const Resume = () => {

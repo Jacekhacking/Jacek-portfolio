@@ -7,11 +7,6 @@ import Resume from "./components/Pages/Resume";
 import FooterComponent from "./components/Pages/Footer/Footer"
 
 function App() {
-
-
-
-
-
     return (
         <>
             <GlobalStyles/>
@@ -26,5 +21,4 @@ function App() {
         </>
     );
 }
-
 export default App;
