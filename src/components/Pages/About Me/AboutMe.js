@@ -1,7 +1,7 @@
 import React, {useState, Fragment, useEffect} from "react";
 import styles from "./AboutMe.module.css";
-import Skills from "./Skills"
-import DropDownAboutMe from "./DropDownAboutMe";
+import Skills from "../Skills"
+import DropDownAboutMe from "../DropDownAboutMe";
 import axios from "axios";
 
 

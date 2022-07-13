@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./LandingPage.module.css";
-import selfie from "../UI/Images/Selfie_large.jpeg"
+import selfie from "../../UI/Images/Selfie_large.jpeg"
 
 const LandingPage = () => {
 

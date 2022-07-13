@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from "react";
 import styles from "./Nav.module.css";
-import hamburger from "../UI/Images/hamburger.png"
-import Pdf from "../UI/Jacek's Portfolio Resume.pdf";
+import hamburger from "../../UI/Images/hamburger.png"
+import Pdf from "../../UI/Jacek\'s Portfolio Resume.pdf";
 
 const NavItems = () => {
 

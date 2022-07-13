@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Footer.module.css"
-import twitter from "../UI/social logos/twitter.png"
-import github from "../UI/social logos/GitHub-Mark-64px.png"
-import linkedin from "../UI/social logos/linkedin.png"
+import twitter from "../../UI/social logos/twitter.png"
+import github from "../../UI/social logos/GitHub-Mark-64px.png"
+import linkedin from "../../UI/social logos/linkedin.png"
 
 const Footer = () => {
     return(
