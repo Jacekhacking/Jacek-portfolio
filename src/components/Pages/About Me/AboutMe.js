@@ -1,7 +1,7 @@
 import React, {useState, Fragment, useEffect} from "react";
 import styles from "./AboutMe.module.css";
 import Skills from "../Skills"
-import DropDownAboutMe from "../DropDownAboutMe";
+import DropDownAboutMe from "./DropDownAboutMe";
 import axios from "axios";
 
 
@@ -11,7 +11,7 @@ import axios from "axios";
 const AboutMe = () => {
 
 
-    //  axios call to pokeAPI for a random Pokémon sprite to be displayed inline with the technology pngs. initial state of number is 59 because that's my favorite pokemon
+    //  axios call to pokeAPI for a random pokemon sprite initial state of number is 59 because that's my favorite pokemon//
     const [pokemon, setPokemon] = useState(null);
     const [number, setNumber] = useState(59)
 
@@ -25,11 +25,7 @@ const AboutMe = () => {
         });
     }, [number]);
 
-
     if(!pokemon)return null;
-
-
-
 
 
     const renderDropdown = () => {
@@ -65,7 +61,6 @@ const AboutMe = () => {
                         src={pokemon.sprites.front_default}
                         alt={pokemon.name}/>
                 </div>
-
 
                 <p className={styles['about-me-text']}>
                     Started teaching myself how to write code at the beginning of 2019. Decided to take it seriously in 2021

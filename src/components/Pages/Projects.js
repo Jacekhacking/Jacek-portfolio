@@ -5,8 +5,7 @@ import {
     ProjectImage,
     ProjectParagraph,
     ProjectDiv,
-    ProjectATag,
-    SectionHeader
+    SectionHeader,
 } from "../UI/Styles/Projects.styles"
 
 const Projects = () => {
@@ -21,7 +20,7 @@ const Projects = () => {
                     <ProjectDiv>
                         <ProjectHeader>{project.Name}</ProjectHeader>
                         <ProjectParagraph>{project.Description} </ProjectParagraph>
-                        <ProjectATag
+                        <a
                             href={project.Link}
                             target="_blank"
                             rel="noreferrer">
@@ -29,7 +28,7 @@ const Projects = () => {
                                 src={project.Image}
                                 alt="website screenshot"
                             />
-                        </ProjectATag>
+                        </a>
                     </ProjectDiv>
                 ))}
             </FlexWrapContainer>
