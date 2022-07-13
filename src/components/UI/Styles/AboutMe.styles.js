@@ -9,10 +9,6 @@ export const AboutMeBody = styled.div`
   align-items: center;
 `
 
-export const AboutMeHeader = styled.h2`
-
-`
-
 export const AboutMeText = styled.p`
   text-align: center;
   margin: 2em;
@@ -21,34 +17,34 @@ export const AboutMeText = styled.p`
   padding-left: 5rem;
   max-width: 1200px;
 `
+
 export const DropDownToggleButton = styled.button`
   background-color: transparent;
   border: none;
   border-bottom: 2px solid transparent;
   font-family: var(--ff-cursive);
   color: hsl(var(--clr-dark-gray));
-  
-  :hover{
+
+  :hover {
     cursor: pointer;
     border-bottom: 2px solid hsl(var(--clr-sandy-brown))
   }
 `
+
 export const PokemonButton = styled.img`
   border: 4px solid transparent;
   border-radius: 25% 10%;
   max-width: 80px;
   height: auto;
-  
-  :hover{
+
+  :hover {
     border: 3px solid hsl(var(--clr-sandy-brown));
   }
 `
 
 
-
 // -----------------------DROPDOWN ABOUT ME COMPONENT --------------------
 export const DropDownContainer = styled.div`
-
   margin: 2em 0;
   background-color: hsl(var(--clr-blue-gray));
   border: 5px solid hsl(var(--clr-dark-gray));
@@ -59,6 +55,7 @@ export const DropDownContainer = styled.div`
     margin-right: 2em;
   }
 `
+
 
 export const TopParagraphDiv = styled.div`
   display: flex;
@@ -72,6 +69,7 @@ export const TopParagraphDiv = styled.div`
   }
 `
 
+
 export const BottomParagraphDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -84,6 +82,10 @@ export const BottomParagraphDiv = styled.div`
   }
 
 `
+// export const TestingText = styled.p`
+//     max-width: 1000px;
+// `
+
 
 export const DropDownPicture = styled.img`
   display: block;

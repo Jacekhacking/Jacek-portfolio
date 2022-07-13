@@ -1,4 +1,4 @@
-import LandingPage from "./components/Pages/Landing Page/LandingPage";
+import LandingPage from "./components/Pages/LandingPage";
 import GlobalStyles from "./components/UI/Styles/Global.styles";
 import Navigation from "./components/Pages/Nav/Nav"
 import AboutMe from "./components/Pages/About Me/AboutMe";
