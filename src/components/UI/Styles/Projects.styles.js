@@ -1,14 +1,6 @@
 import styled from "styled-components"
 
 
-export const SectionHeader = styled.h2`
-  font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
-  text-align: center;
-
-  color: hsl(var(--clr-dark-gray));
-  font-family: var(--ff-cursive);
-`
-
 export const ProjectDiv = styled.div`
   border: 3px solid hsl(var(--clr-dark-gray));
   margin: .5em;

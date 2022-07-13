@@ -7,14 +7,14 @@ import {
     ProjectDiv,
     SectionHeader,
 } from "../UI/Styles/Projects.styles"
+import {Header2} from "../UI/Styles/Global.styles";
 
 const Projects = () => {
 
 
     return (
         <>
-            <SectionHeader>Projects</SectionHeader>
-
+            <Header2 id = "projects">Projects</Header2>
             <FlexWrapContainer>
                 {projectData.map(project => (
                     <ProjectDiv>

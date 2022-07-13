@@ -8,21 +8,21 @@ export const ResumeContainer = styled.div`
 `
 
 export const ResumeLinkParagraph = styled.p`
-    display: flex;
-    
-  
-  a{
+  display: flex;
+
+
+  a {
     color: hsl(var(--clr-mint-offwhite));
     font-size: var(--fs-400);
   }
-  a:hover{
+
+  a:hover {
     color: hsl(var(--clr-sandy-brown));
   }
-  
-  @media(max-width: 300px){
-    a{
+
+  @media (max-width: 300px) {
+    a {
       font-size: var(--fs-200);
     }
   }
-  
 `

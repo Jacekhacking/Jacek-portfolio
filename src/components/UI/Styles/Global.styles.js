@@ -322,3 +322,12 @@ export const FlexWrapContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 `
+
+export const Header2 = styled.h2`
+  font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
+  font-family: var(--ff-cursive);
+  color: hsl(var(--clr-dark-gray));
+  justify-content: center;
+  margin: 1rem;
+  text-align: center;
+`
