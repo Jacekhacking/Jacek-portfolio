@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 // -------------------------ABOUT ME COMPONENT----------------------
 export const AboutMeBody = styled.div`
@@ -7,7 +6,7 @@ export const AboutMeBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const AboutMeText = styled.p`
   text-align: center;
@@ -16,7 +15,7 @@ export const AboutMeText = styled.p`
   padding-right: 5rem;
   padding-left: 5rem;
   max-width: 1200px;
-`
+`;
 
 export const DropDownToggleButton = styled.button`
   background-color: transparent;
@@ -27,9 +26,9 @@ export const DropDownToggleButton = styled.button`
 
   :hover {
     cursor: pointer;
-    border-bottom: 2px solid hsl(var(--clr-sandy-brown))
+    border-bottom: 2px solid hsl(var(--clr-sandy-brown));
   }
-`
+`;
 
 export const PokemonButton = styled.img`
   border: 4px solid transparent;
@@ -40,8 +39,7 @@ export const PokemonButton = styled.img`
   :hover {
     border: 3px solid hsl(var(--clr-sandy-brown));
   }
-`
-
+`;
 
 // -----------------------DROPDOWN ABOUT ME COMPONENT --------------------
 export const DropDownContainer = styled.div`
@@ -54,8 +52,7 @@ export const DropDownContainer = styled.div`
     margin-left: 2em;
     margin-right: 2em;
   }
-`
-
+`;
 
 export const TopParagraphDiv = styled.div`
   display: flex;
@@ -67,8 +64,7 @@ export const TopParagraphDiv = styled.div`
   @media (min-width: 725px) {
     flex-direction: row;
   }
-`
-
+`;
 
 export const BottomParagraphDiv = styled.div`
   display: flex;
@@ -80,12 +76,10 @@ export const BottomParagraphDiv = styled.div`
   @media (min-width: 725px) {
     flex-direction: row-reverse;
   }
-
-`
+`;
 // export const TestingText = styled.p`
 //     max-width: 1000px;
 // `
-
 
 export const DropDownPicture = styled.img`
   display: block;
@@ -113,8 +107,8 @@ export const DropDownPicture = styled.img`
     max-height: 600px;
     margin-right: 1em;
   }
-`
+`;
 
 export const DropDownText = styled.p`
   font-size: clamp(var(--fs-300), 3.5vw, 2rem);
-`
+`;

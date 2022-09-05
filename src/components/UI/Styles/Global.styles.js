@@ -1,5 +1,5 @@
-import {createGlobalStyle} from "styled-components"
-import styled from "styled-components"
+import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -32,8 +32,8 @@ const GlobalStyles = createGlobalStyle`
     --spacing-five: calc(2.5rem);
 
     /*Fonts*/
-    --ff-cursive: 'Koulen', cursive;
-    --ff-sans-serif: 'Lato', sans-serif;
+    --ff-cursive: Koulen, cursive;
+    --ff-sans-serif: Lato, sans-serif;
   }
 
 
@@ -44,8 +44,6 @@ const GlobalStyles = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-
-
   }
 
 
@@ -301,19 +299,18 @@ const GlobalStyles = createGlobalStyle`
   .header-style {
     font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
   }
-`
-export default GlobalStyles
-
+`;
+export default GlobalStyles;
 
 export const FlexWrapContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-`
+`;
 
 export const FlexContainer = styled.div`
-  display: flex
-`
+  display: flex;
+`;
 
 export const Header2 = styled.h2`
   font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
@@ -322,11 +319,12 @@ export const Header2 = styled.h2`
   justify-content: center;
   margin: 1rem;
   text-align: center;
-`
+`;
 
 export const Container = styled.div`
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 90rem;
-  background-color: ${props => props.bgColor || 'hsl(var(--clr-mint-offwhite))'}  ;
-`
+  background-color: ${(props) =>
+    props.bgColor || "hsl(var(--clr-mint-offwhite))"};
+`;

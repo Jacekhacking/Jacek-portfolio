@@ -7,20 +7,17 @@ export const FooterContainer = styled.div`
   justify-content: space-around;
   background-color: hsl(var(--clr-dark-gray));
 
-
   @media (max-width: 700px) {
     .footer-container {
       flex-direction: column;
       align-items: center;
       height: 100px;
     }
-
   }
-  
-`
+`;
 
 export const FooterText = styled.p`
-  padding: .2rem;
+  padding: 0.2rem;
   font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
   display: flex;
   color: hsl(var(--clr-mint-offwhite));
@@ -30,10 +27,10 @@ export const FooterText = styled.p`
     font-size: inherit;
   }
 
-  @media(max-width: 300px){
+  @media (max-width: 300px) {
     font-size: 1vh;
   }
-`
+`;
 
 export const SocialMediaImg = styled.img`
   height: 40px;
@@ -45,4 +42,4 @@ export const SocialMediaImg = styled.img`
   @media (max-width: 300px) {
     height: 20px;
   }
-`
+`;
