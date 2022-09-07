@@ -17,13 +17,25 @@ const Footer = () => {
       </FooterText>
 
       <FlexContainer>
-        <a href="https://twitter.com/JH_WebDev">
+        <a
+          href="https://twitter.com/JH_WebDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SocialMediaImg src={twitter} alt="twitter" />
         </a>
-        <a href="https://github.com/Jacekhacking">
+        <a
+          href="https://github.com/Jacekhacking"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SocialMediaImg src={github} alt="github" />
         </a>
-        <a href="https://www.linkedin.com/in/jacek-hacking-708007210">
+        <a
+          href="https://www.linkedin.com/in/jacek-hacking-708007210"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SocialMediaImg src={linkedin} alt="linked in " />
         </a>
       </FlexContainer>

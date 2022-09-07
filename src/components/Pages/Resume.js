@@ -10,7 +10,6 @@ const Resume = () => {
     <ResumeContainer>
       <ResumeLinkParagraph id={"resume"}>
         <a href={Pdf} target="_blank" rel="noreferrer" style={{}}>
-          {" "}
           Download resume here!
         </a>
       </ResumeLinkParagraph>

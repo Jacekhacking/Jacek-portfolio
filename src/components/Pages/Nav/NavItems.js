@@ -2,8 +2,9 @@ import { useState } from "react";
 import styles from "./Nav.module.css";
 import hamburger from "../../UI/Images/hamburger.png";
 import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
+import { Link } from "@tanstack/react-location";
 const NavItems = () => {
-  const tabs = ["Projects", "About", "Skills"];
+  const tabs = ["Projects", "About"];
   const [navVisibility, setNavVisibility] = useState(false);
 
   const renderNavDropdown = () => {
@@ -31,9 +32,13 @@ const NavItems = () => {
         }}
       >
         {tabs.map((tab) => (
-          <li className={`${styles["nav-item"]} ff-cursive`} key={tab}>
-            <a href={"#" + tab.toLocaleLowerCase()}>{tab}</a>
-          </li>
+          <Link
+            to={tab}
+            className={`${styles["nav-item"]} ff-cursive`}
+            key={tab}
+          >
+            {tab}
+          </Link>
         ))}
         <li
           className={`${styles["nav-item"]} ff-cursive`}
