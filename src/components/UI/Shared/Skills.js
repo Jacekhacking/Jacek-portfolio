@@ -4,7 +4,6 @@ import javascript from "../Images/javascript_logo.png";
 import reactLogo from "../Images/react_logo.png";
 import typeScript from "../Images/typescript_logo.png";
 import UofUPng from "../Images/coding-bootcamp-full-stack-developer-certificate.1.png";
-
 import styled from "styled-components";
 
 const Skills = () => {

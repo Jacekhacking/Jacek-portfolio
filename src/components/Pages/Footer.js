@@ -1,6 +1,7 @@
-import twitter from "../UI/Images/social logos/twitter.png";
-import github from "../UI/Images/social logos/GitHub-Mark-64px.png";
-import linkedin from "../UI/Images/social logos/linkedin.png";
+import twitter from "../UI/Images/SocialLogos/twitter.png";
+import github from "../UI/Images/SocialLogos/GitHub-Mark-64px.png";
+import linkedin from "../UI/Images/SocialLogos/linkedin.png";
+import githubOrange from "../UI/Images/SocialLogos/githubOrange.png";
 
 import styled from "styled-components";
 
@@ -8,9 +9,10 @@ const Footer = () => {
   const FooterContainer = styled.div`
     width: 100%;
     height: 80px;
-    padding-top: 1rem;
+
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: hsl(var(--clr-dark-gray));
 
     @media (max-width: 700px) {
@@ -22,7 +24,6 @@ const Footer = () => {
     }
 
     p {
-      padding: 0.2rem;
       font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
       display: flex;
       color: hsl(var(--clr-mint-offwhite));
@@ -46,8 +47,9 @@ const Footer = () => {
         display: flex;
         justify-content: center;
         align-items: center;
+
         &:hover {
-          background-color: black;
+          background-color: hsl(var(--clr-sandy-brown));
           box-shadow: 0 0 10px hsl(var(--clr-sandy-brown));
         }
       }
