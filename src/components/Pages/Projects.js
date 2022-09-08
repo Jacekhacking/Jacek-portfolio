@@ -7,6 +7,7 @@ import {
   ProjectDiv,
 } from "../UI/Styles/Projects.styles";
 import { Header2 } from "../UI/Styles/Global.styles";
+import Skills from "./Skills";
 
 const Projects = () => {
   return (
@@ -23,6 +24,7 @@ const Projects = () => {
           </ProjectDiv>
         ))}
       </FlexWrapContainer>
+      <Skills />
     </>
   );
 };
