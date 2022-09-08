@@ -66,7 +66,6 @@ const AboutMe = () => {
           And immediately went to work cementing everything I learned there and
           started to work doing freelance work.
           <DropDownToggleButton onClick={changeSetDropdown}>
-            {" "}
             {dropdown === false ? "More..." : "Hide..."}{" "}
           </DropDownToggleButton>
         </AboutMeText>
