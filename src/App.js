@@ -1,10 +1,7 @@
-import LandingPage from "./components/Pages/LandingPage";
 import GlobalStyles from "./components/UI/Styles/Global.styles";
 import Navigation from "./components/Pages/Nav/Nav";
-import AboutMe from "./components/Pages/About/AboutMe";
-import Projects from "./components/Pages/Projects";
-import Resume from "./components/Pages/Resume";
 import FooterComponent from "./components/Pages/Footer";
+
 import { Router, ReactLocation, Outlet } from "@tanstack/react-location";
 
 function App() {

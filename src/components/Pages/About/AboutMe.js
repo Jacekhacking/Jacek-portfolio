@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-import Skills from "../Skills";
 import DropDownAboutMe from "./DropDownAboutMe";
 import axios from "axios";
 import {

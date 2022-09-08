@@ -44,7 +44,7 @@ const Skills = () => {
         <LogoImg src={javascript} alt="javascript logo" />
         <LogoImg src={reactLogo} alt="react logo" />
         <LogoImg src={typeScript} alt="typescript logo" />
-        <LogoImg src={UofUPng} alt="typescript logo" />
+        <LogoImg src={UofUPng} alt="University of Utah Bootcamp badge" />
       </LogoContainer>
     </>
   );
