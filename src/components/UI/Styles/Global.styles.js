@@ -78,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
   /* set up body */
   body {
     line-height: 2;
-    min-height: 100vh;
+  
     font-size: var(--fs-500);
     letter-spacing: 0.1em;
     background-color: hsl(var(--clr-mint-offwhite));
@@ -93,7 +93,7 @@ const GlobalStyles = createGlobalStyle`
   img,
   picture {
     max-width: 100%;
-    display: block;
+   
   }
 
   /*make form elements easier to work with*/
