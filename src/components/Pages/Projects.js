@@ -102,15 +102,14 @@ const Projects = () => {
     <>
       <Header2 id="projects">Projects</Header2>
       <FlexWrapContainer>
-        {projectData.map((project) => (
-          <ProjectDiv inputImg={project.Image}>
+        {projectData.map(({ Image, Name, Description, GitHub, Link }) => (
+          <ProjectDiv inputImg={Image}>
             <ProjectInfoDiv>
-              <h2>{project.Name}</h2>
-              <p>{project.Description} </p>
+              <h2>{Name}</h2>
+              <p>{Description} </p>
               <FlexContainer>
-                <a href={project.GitHub}>GitHub</a>
-
-                <a href={project.Link}>Live Site</a>
+                <a href={GitHub}>GitHub</a>
+                <a href={Link}>Live Site</a>
               </FlexContainer>
             </ProjectInfoDiv>
           </ProjectDiv>

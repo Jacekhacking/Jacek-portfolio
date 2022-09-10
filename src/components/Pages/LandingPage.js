@@ -7,20 +7,12 @@ const LandingPage = () => {
     justify-content: center;
     flex-direction: row-reverse;
     min-height: 95vh;
+    padding: 0 2rem;
     img {
-      height: 70rem;
-      width: 50rem;
+      height: 50rem;
+      width: auto;
       border: 4px solid hsl(var(--clr-dark-gray));
     }
-  `;
-
-  const SelfieDiv = styled.div`
-    height: 70rem;
-    width: 50rem;
-    border: 4px solid hsl(var(--clr-dark-gray));
-    background-image: url(${SelfieImg});
-    background-repeat: no-repeat;
-    background-size: cover;
   `;
 
   const AboutText = styled.div`

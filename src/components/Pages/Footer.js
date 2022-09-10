@@ -40,6 +40,8 @@ const Footer = () => {
 
     div {
       display: flex;
+      justify-content: center;
+      align-items: center;
       div {
         height: 60px;
         width: 60px;
@@ -57,8 +59,8 @@ const Footer = () => {
   `;
 
   const SocialMediaImg = styled.img`
-    height: 40px;
-    width: auto;
+    height: auto;
+    width: 40px;
     @media (max-width: 700px) {
       height: 30px;
     }
@@ -75,35 +77,41 @@ const Footer = () => {
         <a href="mailto:Jacekhacking@gmail.com"> JacekHacking@gmail.com</a>
       </p>
 
-      <div>
-        <div>
-          <a
-            href="https://twitter.com/JH_WebDev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <a
+          href="https://twitter.com/JH_WebDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
             <SocialMediaImg src={twitter} alt="twitter" />
-          </a>
-        </div>
-        <div>
-          <a
-            href="https://github.com/Jacekhacking"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          </div>
+        </a>
+        <a
+          href="https://github.com/Jacekhacking"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
             <SocialMediaImg src={github} alt="github" />
-          </a>
-        </div>
+          </div>
+        </a>
 
-        <div>
-          <a
-            href="https://www.linkedin.com/in/jacek-hacking-708007210"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <a
+          href="https://www.linkedin.com/in/jacek-hacking-708007210"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
             <SocialMediaImg src={linkedin} alt="linked in " />
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </FooterContainer>
   );
