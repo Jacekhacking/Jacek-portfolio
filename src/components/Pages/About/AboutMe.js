@@ -1,16 +1,52 @@
 import { useState, useEffect } from "react";
-
-import DropDownAboutMe from "./DropDownAboutMe";
 import axios from "axios";
-import {
-  AboutMeText,
-  AboutMeBody,
-  DropDownToggleButton,
-  PokemonButton,
-} from "../../UI/Styles/AboutMe.styles";
+import DropDownAboutMe from "./DropDownAboutMe";
+
+import styled from "styled-components";
 import { Header2 } from "../../UI/Styles/Global.styles";
 
 const AboutMe = () => {
+  //CSS and styled components
+  const AboutMeBody = styled.div`
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const AboutMeText = styled.p`
+    text-align: center;
+    margin: 1em;
+    font-size: clamp(var(--fs-300), 3.5vw, var(--fs-600));
+
+    max-width: 1200px;
+  `;
+
+  const DropDownToggleButton = styled.button`
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: var(--ff-cursive);
+    color: hsl(var(--clr-dark-gray));
+
+    :hover {
+      cursor: pointer;
+      border-bottom: 2px solid hsl(var(--clr-sandy-brown));
+    }
+  `;
+
+  const PokemonButton = styled.img`
+    border: 4px solid transparent;
+    border-radius: 25% 10%;
+    width: 180px;
+    height: 180px;
+
+    :hover {
+      border: 3px solid hsl(var(--clr-sandy-brown));
+    }
+  `;
+
   //  axios call to pokeAPI for a random pokemon sprite initial state of number is 59 because that's my favorite pokemon//
   const [pokemon, setPokemon] = useState(null);
   const [number, setNumber] = useState(59);
@@ -50,7 +86,7 @@ const AboutMe = () => {
 
   return (
     <>
-      <AboutMeBody id={"about"}>
+      <AboutMeBody>
         <Header2>About Me</Header2>
         <PokemonButton
           onClick={changeSetNumber}
