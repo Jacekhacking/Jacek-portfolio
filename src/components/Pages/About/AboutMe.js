@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import DropDownAboutMe from "./DropDownAboutMe";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import styled from "styled-components";
 import { Header2 } from "../../UI/Styles/Global.styles";
@@ -36,6 +37,8 @@ const AboutMe = () => {
     }
   `;
 
+  const [listRef] = useAutoAnimate();
+
   const PokemonButton = styled.img`
     border: 4px solid transparent;
     border-radius: 25% 10%;
@@ -50,6 +53,7 @@ const AboutMe = () => {
   //  axios call to pokeAPI for a random pokemon sprite initial state of number is 59 because that's my favorite pokemon//
   const [pokemon, setPokemon] = useState(null);
   const [number, setNumber] = useState(59);
+
   // dropdown on click event for more about me content
   const [dropdown, setDropdown] = useState(false);
 
@@ -67,22 +71,7 @@ const AboutMe = () => {
     setNumber(Math.round(Math.random() * (386 - 1) + 1));
   };
 
-  const changeSetDropdown = () => {
-    setDropdown((prevState) => !prevState);
-  };
-
-  const renderDropdown = () => {
-    switch (dropdown) {
-      case true:
-        return <DropDownAboutMe />;
-
-      case false:
-        return "";
-
-      default:
-        return "";
-    }
-  };
+  const toggleDropdown = () => setDropdown(!dropdown);
 
   return (
     <>
@@ -100,11 +89,11 @@ const AboutMe = () => {
           Fullstack Coding Bootcamp. Finished their program in October of 2021 .
           And immediately went to work cementing everything I learned there and
           started to work doing freelance work.
-          <DropDownToggleButton onClick={changeSetDropdown}>
-            {dropdown === false ? "More..." : "Hide..."}{" "}
+          <DropDownToggleButton onClick={toggleDropdown}>
+            {dropdown === false ? "More..." : "Hide..."}
           </DropDownToggleButton>
+          <div ref={listRef}>{dropdown && <DropDownAboutMe />}</div>
         </AboutMeText>
-        {renderDropdown(dropdown)}
       </AboutMeBody>
     </>
   );
