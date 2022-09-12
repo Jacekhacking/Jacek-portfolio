@@ -1,9 +1,21 @@
 import { useState } from "react";
-import styles from "./Nav.module.css";
-import hamburger from "../../UI/Images/hamburger.png";
 import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
+import styled from "styled-components";
+
 const NavItems = () => {
+  const NavItemContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  `;
+
   const tabs = ["Projects", "About"];
   const [navVisibility, setNavVisibility] = useState(false);
 
@@ -12,46 +24,20 @@ const NavItems = () => {
   };
 
   return (
-    <>
-      <button onClick={renderNavDropdown} className={styles["toggle-dropdown"]}>
-        {navVisibility === false ? (
-          "hide"
-        ) : (
-          <img
-            style={{ height: "30px", width: "50px" }}
-            src={hamburger}
-            alt=""
-          />
-        )}
-      </button>
-
-      <ul
-        className={`${styles["primary-navigation"]}`}
-        style={{
-          visibility: navVisibility ? "hidden" : "visible",
-        }}
-      >
+    <NavItemContainer>
+      <ul>
         {tabs.map((tab) => (
-          <Link
-            to={tab}
-            className={`${styles["nav-item"]} ff-cursive`}
-            key={tab}
-          >
+          <Link to={tab} key={tab} style={{ paddingRight: "15px" }}>
             {tab}
           </Link>
         ))}
-        <li
-          className={`${styles["nav-item"]} ff-cursive`}
-          style={{
-            visibility: navVisibility ? "hidden" : "visible",
-          }}
-        >
+        <li>
           <a href={Pdf} target="_blank" rel="noreferrer" style={{}}>
             Resume
           </a>
         </li>
       </ul>
-    </>
+    </NavItemContainer>
   );
 };
 export default NavItems;

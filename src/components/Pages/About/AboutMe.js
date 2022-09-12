@@ -18,7 +18,7 @@ const AboutMe = () => {
   const AboutMeText = styled.p`
     text-align: center;
     margin: 1em;
-    font-size: clamp(var(--fs-300), 3.5vw, var(--fs-600));
+    font-size: clamp(var(--fs-300), 2.5vw, var(--fs-500));
 
     max-width: 1200px;
   `;

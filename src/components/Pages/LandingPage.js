@@ -8,6 +8,7 @@ const LandingPage = () => {
     flex-direction: row-reverse;
     min-height: 95vh;
     padding: 0 2rem;
+    color: hsl(var(--clr-dark-gray));
     img {
       height: 50rem;
       width: auto;
