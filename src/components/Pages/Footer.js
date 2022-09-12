@@ -1,7 +1,6 @@
 import twitter from "../UI/Images/SocialLogos/twitter.png";
 import github from "../UI/Images/SocialLogos/GitHub-Mark-64px.png";
 import linkedin from "../UI/Images/SocialLogos/linkedin.png";
-import githubOrange from "../UI/Images/SocialLogos/githubOrange.png";
 
 import styled from "styled-components";
 
