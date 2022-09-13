@@ -27,7 +27,6 @@ const NavItems = () => {
 
   const tabs = ["Projects", "About"];
 
-  const [sideDrawer, setSideDrawer] = useState(false);
   return (
     <NavItemContainer>
       <ul>

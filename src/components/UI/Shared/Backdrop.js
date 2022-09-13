@@ -1,32 +1,24 @@
+import ReactDOM from "react-dom";
 import styled from "styled-components";
 
-const SideDrawer = (props) => {
-  const SideDrawerContainer = styled.div`
+const Backdrop = (props) => {
+  const BackdropDiv = styled.div`
     position: fixed;
-    right: 0;
     top: 0;
-
+    left: 0;
+    width: 100%;
     height: 100vh;
-    width: 80%;
-    background: black;
-    box-shadow: -3px 5px 20px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
     @media (min-width: 1200px) {
       display: none;
     }
-    @media (max-width: 800px) {
-    }
   `;
-  return (
-    <SideDrawerContainer onClick={props.onClick}>
-      {props.children}
-    </SideDrawerContainer>
-  );
 
-  // return ReactDOM.createPortal(content, document.getElementById("drawer-hook"));
+  return ReactDOM.createPortal(
+    <BackdropDiv onClick={props.onClick}></BackdropDiv>,
+    document.getElementById("backdrop-hook")
+  );
 };
-export default SideDrawer;
+
+export default Backdrop;
