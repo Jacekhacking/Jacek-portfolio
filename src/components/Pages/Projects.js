@@ -10,8 +10,6 @@ import styled from "styled-components";
 
 const Projects = () => {
   const ProjectDiv = styled.div`
-    position: relative;
-    display: block;
     border: 3px solid hsl(var(--clr-dark-gray));
     margin: 0.5em;
     width: 50rem;
@@ -21,7 +19,7 @@ const Projects = () => {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    z-index: 100;
+
     a {
       padding: 0;
       margin: 0;
@@ -51,7 +49,7 @@ const Projects = () => {
     visibility: hidden;
     height: 100%;
     width: 100%;
-    display: block;
+
     text-align: center;
     background-color: hsl(var(--clr-blue-gray), 0.95);
     color: hsl(var(--clr-mint-offwhite));

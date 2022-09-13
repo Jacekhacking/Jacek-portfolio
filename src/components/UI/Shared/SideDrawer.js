@@ -5,10 +5,10 @@ const SideDrawer = (props) => {
     position: fixed;
     right: 0;
     top: 0;
-
     height: 100vh;
     width: 80%;
-    background: black;
+
+    background: hsl(var(--clr-light-gray));
     box-shadow: -3px 5px 20px black;
     display: flex;
     align-items: center;

@@ -1,34 +1,11 @@
-import { useState } from "react";
 import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
-import styled from "styled-components";
 
 const NavItems = () => {
-  const NavItemContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 4 15px;
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      > * {
-        padding: 3 15px;
-        border-radius: 3px;
-        border: 4px solid transparent;
-        &:hover {
-          background-color: hsl(var(--clr-sandy-brown));
-        }
-      }
-    }
-  `;
-
   const tabs = ["Projects", "About"];
 
   return (
-    <NavItemContainer>
+    <>
       <ul>
         {tabs.map((tab) => (
           <Link to={tab} key={tab} getActiveProps={getActiveProps}>
@@ -41,10 +18,9 @@ const NavItems = () => {
           </a>
         </li>
       </ul>
-    </NavItemContainer>
+    </>
   );
 };
-export default NavItems;
 
 function getActiveProps() {
   return {
@@ -54,3 +30,5 @@ function getActiveProps() {
     },
   };
 }
+
+export default NavItems;
