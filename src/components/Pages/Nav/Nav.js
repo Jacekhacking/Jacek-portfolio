@@ -2,6 +2,7 @@ import logo from "../../UI/Images/logo.png";
 import NavItems from "./NavItems";
 import { Link } from "@tanstack/react-location";
 import styled from "styled-components";
+import { useState } from "react";
 
 const Navigation = () => {
   const NavWrapper = styled.div`
@@ -18,12 +19,16 @@ const Navigation = () => {
       width: auto;
     }
   `;
+  //state and toggle for sideDrawer
+  const [sideDrawer, setSideDrawer] = useState(false);
+  const toggleSideDrawer = () => setSideDrawer(!sideDrawer);
 
   return (
     <NavWrapper>
       <Link to="/">
         <img src={logo} alt="Logo" />
       </Link>
+
       <NavItems />
     </NavWrapper>
   );
