@@ -8,7 +8,8 @@ import Backdrop from "../../UI/Shared/Backdrop";
 
 const Navigation = () => {
   const NavWrapper = styled.div`
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1;
     height: 50px;
@@ -20,23 +21,27 @@ const Navigation = () => {
 
     img {
       padding-top: 10px;
-      height: 40px;
+      height: 50px;
       width: auto;
     }
   `;
 
   const NavContainer = styled.div`
-    justify-content: space-evenly;
+    display: flex;
+
     align-items: center;
     padding: 4 15px;
+    font-family: var(--ff-cursive);
+    color: hsl(var(--clr-dark-gray));
+    font-size: 1.2rem;
     ul {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       > * {
-        padding: 3 15px;
+        padding: 0 15px;
         border-radius: 3px;
-        border: 4px solid transparent;
+        border: 2px solid transparent;
         &:hover {
           background-color: hsl(var(--clr-sandy-brown));
         }
@@ -50,6 +55,7 @@ const Navigation = () => {
   const NavSideDrawer = styled(NavContainer)`
     @media (max-width: 800px) {
       display: flex;
+      font-size: 1.5rem;
       ul {
         flex-direction: column;
       }
@@ -69,11 +75,11 @@ const Navigation = () => {
       <button onClick={toggleSideDrawer} style={{ zIndex: "2" }}>
         toggle
       </button>
-      {sideDrawer && <Backdrop />}
+      {sideDrawer && <Backdrop onClick={toggleSideDrawer} />}
       {sideDrawer && (
         <SideDrawer>
           <NavSideDrawer>
-            <NavItems />
+            <NavItems toggleSideDrawer={toggleSideDrawer} />
           </NavSideDrawer>
         </SideDrawer>
       )}

@@ -1,14 +1,19 @@
 import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
 
-const NavItems = () => {
+const NavItems = ({ toggleSideDrawer }) => {
   const tabs = ["Projects", "About"];
 
   return (
     <>
       <ul>
         {tabs.map((tab) => (
-          <Link to={tab} key={tab} getActiveProps={getActiveProps}>
+          <Link
+            to={tab}
+            key={tab}
+            getActiveProps={getActiveProps}
+            onClick={toggleSideDrawer}
+          >
             {tab}
           </Link>
         ))}
@@ -25,7 +30,7 @@ const NavItems = () => {
 function getActiveProps() {
   return {
     style: {
-      borderBottom: "4px solid hsl(var(--clr-sandy-brown))",
+      backgroundColor: "hsl(var(--clr-sandy-brown))",
       color: "white",
     },
   };
