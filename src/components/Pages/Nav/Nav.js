@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-location";
 import { useState } from "react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import SideDrawer from "../../UI/Shared/SideDrawer";
 import logo from "../../UI/Images/logo.png";
 import NavItems from "./NavItems";
@@ -47,13 +48,13 @@ const Navigation = () => {
         }
       }
     }
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
       display: none;
     }
   `;
 
   const NavSideDrawer = styled(NavContainer)`
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
       display: flex;
       font-size: 1.5rem;
       ul {
@@ -62,19 +63,56 @@ const Navigation = () => {
     }
   `;
 
+  const NavHamburger = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    transition: all 0.4s ease-in-out;
+    z-index: 101;
+    span {
+      height: 2px;
+      width: 28px;
+      background-color: white;
+      transition: all 0.4s ease-in-out;
+    }
+    span:not(:last-child) {
+      margin-bottom: 7px;
+    }
+
+    :hover {
+      cursor: pointer;
+      span {
+        background-color: hsl(var(--clr-sandy-brown));
+      }
+    }
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  `;
+
   //state and toggle for sideDrawer
   const [sideDrawer, setSideDrawer] = useState(false);
-  const toggleSideDrawer = () => setSideDrawer(!sideDrawer);
+  const [hamburger, setHamburger] = useState(false);
+  const toggleSideDrawer = () => {
+    setSideDrawer(!sideDrawer);
+    setHamburger(!hamburger);
+  };
 
+  let hamburgerActive = hamburger ? "hamburger-active" : null;
+
+  const [listRef] = useAutoAnimate();
   return (
-    <NavWrapper>
+    <NavWrapper ref={listRef}>
       <Link to="/">
         <img src={logo} alt="Logo" />
       </Link>
 
-      <button onClick={toggleSideDrawer} style={{ zIndex: "2" }}>
-        toggle
-      </button>
+      <NavHamburger className={hamburgerActive} onClick={toggleSideDrawer}>
+        <span />
+        <span />
+        <span />
+      </NavHamburger>
+
       {sideDrawer && <Backdrop onClick={toggleSideDrawer} />}
       {sideDrawer && (
         <SideDrawer>

@@ -299,6 +299,32 @@ const GlobalStyles = createGlobalStyle`
   .header-style {
     font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
   }
+
+
+  .hamburger-active{
+  transition-delay: 0.8s;
+  transform: rotate(45deg);
+}
+.hamburger-active, .hamburger-active > span{
+transition: all .4s ease-in-out;
+}
+.hamburger-active > span:nth-child(2){
+  width: 0
+}
+.hamburger-active > span:nth-child(1),
+.hamburger-active > span:nth-child(3){
+  transition-delay: .4s;
+}
+.hamburger-active > span:nth-child(1){
+  transform: translateY(9px);
+}
+.hamburger-active > span:nth-child(3){
+  transform: translateY(-9px) rotate(90deg);
+}
+.show{
+  display:flex
+}
+
 `;
 export default GlobalStyles;
 
