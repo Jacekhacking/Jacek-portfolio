@@ -102,7 +102,7 @@ const Navigation = () => {
 
   const [listRef] = useAutoAnimate();
   return (
-    <NavWrapper ref={listRef}>
+    <NavWrapper ref={listRef} onClick={toggleSideDrawer}>
       <Link to="/">
         <img src={logo} alt="Logo" />
       </Link>

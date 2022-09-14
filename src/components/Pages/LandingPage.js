@@ -14,6 +14,21 @@ const LandingPage = () => {
       width: auto;
       border: 4px solid hsl(var(--clr-dark-gray));
     }
+    @media (max-width: 1000px) {
+      padding: 0rem;
+      flex-direction: column;
+      img {
+        width: auto;
+        height: 40rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   `;
 
   const AboutText = styled.div`
@@ -23,6 +38,18 @@ const LandingPage = () => {
       line-height: 1.2;
       font-family: var(--ff-cursive);
       font-size: 7rem;
+    }
+
+    @media (max-width: 1300px) {
+      p {
+        font-size: 5rem;
+      }
+    }
+    @media (max-width: 1000px) {
+      p {
+        font-size: 4rem;
+        text-align: center;
+      }
     }
   `;
 
