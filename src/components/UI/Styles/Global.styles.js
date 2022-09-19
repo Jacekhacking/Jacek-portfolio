@@ -339,7 +339,7 @@ export const FlexContainer = styled.div`
 `;
 
 export const Header2 = styled.h2`
-  font-size: clamp(var(--fs-500), 8.5vw, var(--fs-900));
+  font-size: clamp(var(--fs-500), 8vw, var(--fs-800));
   font-family: var(--ff-cursive);
   color: hsl(var(--clr-dark-gray));
   justify-content: center;

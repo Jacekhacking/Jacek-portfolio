@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import DropDownAboutMe from "./DropDownAboutMe";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
@@ -19,9 +19,8 @@ const AboutMe = () => {
   const AboutMeText = styled.p`
     text-align: center;
     margin: 1em;
-    font-size: clamp(var(--fs-300), 2.5vw, var(--fs-500));
-
-    max-width: 1200px;
+    font-size: clamp(var(--fs-300), 2vw, var(--fs-500));
+    max-width: 1000px;
   `;
 
   const DropDownToggleButton = styled.button`

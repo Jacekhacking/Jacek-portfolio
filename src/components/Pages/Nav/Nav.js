@@ -9,6 +9,7 @@ import Backdrop from "../../UI/Shared/Backdrop";
 
 const Navigation = () => {
   const NavWrapper = styled.div`
+    padding: 5px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -21,7 +22,7 @@ const Navigation = () => {
     border-bottom: 6px solid hsl(var(--clr-blue-gray));
 
     img {
-      padding-top: 10px;
+      padding-top: 15px;
       height: 50px;
       width: auto;
     }
@@ -29,7 +30,6 @@ const Navigation = () => {
 
   const NavContainer = styled.div`
     display: flex;
-
     align-items: center;
     padding: 4 15px;
     font-family: var(--ff-cursive);

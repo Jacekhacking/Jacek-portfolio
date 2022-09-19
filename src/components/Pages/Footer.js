@@ -7,11 +7,11 @@ import styled from "styled-components";
 const Footer = () => {
   const FooterContainer = styled.div`
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: hsl(var(--clr-dark-gray));
+    padding: 0 2rem;
 
     p {
       font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
@@ -25,6 +25,7 @@ const Footer = () => {
 
       @media (max-width: 300px) {
         font-size: 1vh;
+        padding: 0;
       }
     }
 
