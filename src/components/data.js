@@ -27,6 +27,7 @@ export const projectData = [
     Description:
       "Professional Website for LC Bodyworks. A local massage therapist looking for a professional website.",
     Image: require("./UI/Images/LCBodyworkSC.png"),
+    Link: "https://www.lcbodywork.com",
     GitHub: "https://github.com/jacekhacking/lc-bodywork",
   },
 ];

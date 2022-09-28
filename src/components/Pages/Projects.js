@@ -106,8 +106,12 @@ const Projects = () => {
               <h2>{Name}</h2>
               <p>{Description} </p>
               <FlexContainer>
-                <a href={GitHub}>GitHub</a>
-                <a href={Link}>Live Site</a>
+                <a href={GitHub} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+                <a href={Link} target="_blank" rel="noopener noreferrer">
+                  Live Site
+                </a>
               </FlexContainer>
             </ProjectInfoDiv>
           </ProjectDiv>

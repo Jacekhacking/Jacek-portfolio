@@ -8,7 +8,6 @@ const DropDownAboutMe = () => {
     background-color: hsl(var(--clr-blue-gray));
     border: 5px solid hsl(var(--clr-dark-gray));
     color: hsl(var(--clr-mint-offwhite));
-    max-width: 100rem;
 
     @media (min-width: 725px) {
       margin-left: 2em;
@@ -49,6 +48,7 @@ const DropDownAboutMe = () => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 100rem;
   `;
   const ImgParagraphDiv = styled.div`
     display: flex;

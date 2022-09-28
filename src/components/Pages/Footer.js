@@ -10,13 +10,13 @@ const Footer = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(var(--clr-dark-gray));
+    background-color: hsl(var(--clr-light-gray));
     padding: 0 2rem;
 
     p {
       font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
       display: flex;
-      color: hsl(var(--clr-mint-offwhite));
+      color: black;
 
       a {
         color: inherit;

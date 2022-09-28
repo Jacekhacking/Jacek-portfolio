@@ -20,7 +20,7 @@ const AboutMe = () => {
     text-align: center;
     margin: 1em;
     font-size: clamp(var(--fs-300), 2vw, var(--fs-500));
-    max-width: 1000px;
+    width: 100%;
   `;
 
   const DropDownToggleButton = styled.button`
@@ -83,16 +83,18 @@ const AboutMe = () => {
           alt={pokemon.name}
         />
         <AboutMeText>
-          Started teaching myself how to write code at the beginning of 2019.
-          Decided to take it seriously in 2021 and joined the University of Utah
-          Fullstack Coding Bootcamp. Finished their program in October of 2021 .
-          And immediately went to work cementing everything I learned there and
-          started to work doing freelance work.
-          <DropDownToggleButton onClick={toggleDropdown}>
-            {dropdown === false ? "More..." : "Hide..."}
-          </DropDownToggleButton>
-          <div ref={listRef}>{dropdown && <DropDownAboutMe />}</div>
+          I started teaching myself how to write code at the beginning of 2019.
+          About halfway through the covid pandemic I had some extra time and
+          decided to start going further with it. In the spring of 2021 I signed
+          up for the University of Utah's Fullstack Coding Boot-camp. I finished
+          their program in October of 2021. When I graduated I immediately went
+          to work cementing everything I learned there and started doing
+          freelance work to get practical experience.
         </AboutMeText>
+        <DropDownToggleButton onClick={toggleDropdown}>
+          {dropdown === false ? "More About Me..." : "Show Less..."}
+        </DropDownToggleButton>
+        <div ref={listRef}>{dropdown && <DropDownAboutMe />}</div>
       </AboutMeBody>
     </>
   );
