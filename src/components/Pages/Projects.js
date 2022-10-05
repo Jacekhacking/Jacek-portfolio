@@ -99,7 +99,7 @@ const Projects = () => {
   `;
   return (
     <>
-      <Header2 id="projects">Projects</Header2>
+      <Header2 styles={{ paddingTop: "5rem" }}>Projects</Header2>
       <Skills />
 
       <FlexWrapContainer>

@@ -19,7 +19,7 @@ const DropDownAboutMe = () => {
     }
 
     p {
-      font-size: 2rem;
+      font-size: clamp(var(--fs-400), 5vw, var(--fs-500));
       max-width: 1200px;
       text-align: center;
     }

@@ -13,18 +13,13 @@ const Skills = () => {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 2em;
-
-    @media (max-width: 402px) {
-      max-width: 50px;
-      margin: 0.1em;
-    }
   `;
   const LogoImg = styled.img`
     width: 80px;
     height: auto;
     margin: 0.3em;
     @media (max-width: 402px) {
-      margin: 1.5em;
+      width: 50px;
     }
   `;
 

@@ -343,7 +343,7 @@ export const Header2 = styled.h2`
   font-family: var(--ff-cursive);
   color: hsl(var(--clr-dark-gray));
   justify-content: center;
-  margin: 1rem;
+  margin: 3rem;
   text-align: center;
 `;
 
