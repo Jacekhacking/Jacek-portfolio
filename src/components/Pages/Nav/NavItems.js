@@ -1,7 +1,7 @@
 import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
 
-const NavItems = ({ toggleSideDrawer }) => {
+const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
   const tabs = ["Projects", "About"];
 
   return (
@@ -12,7 +12,10 @@ const NavItems = ({ toggleSideDrawer }) => {
             to={tab}
             key={tab}
             getActiveProps={getActiveProps}
-            onClick={toggleSideDrawer}
+            onClick={() => {
+              toggleSideDrawer(false);
+              toggleHamburger();
+            }}
           >
             {tab}
           </Link>
