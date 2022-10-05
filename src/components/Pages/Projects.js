@@ -25,14 +25,10 @@ const Projects = () => {
       margin: 0;
     }
 
-    @media (max-width: 430px) {
-      width: 300px;
-      height: 415px;
-    }
-
-    @media (max-width: 330px) {
-      width: 230px;
-      height: 362px;
+    @media (max-width: 600px) {
+      background-image: url(${(props) => props.mobileImage});
+      width: 100%;
+      height: 30rem;
     }
 
     &:hover {
@@ -71,6 +67,11 @@ const Projects = () => {
       padding: 1rem;
       padding-bottom: 4rem;
     }
+    @media (max-width: 600px) {
+      p {
+        font-size: var(--fs-300);
+      }
+    }
 
     div {
       display: flex;
@@ -99,25 +100,28 @@ const Projects = () => {
   return (
     <>
       <Header2 id="projects">Projects</Header2>
-      <FlexWrapContainer>
-        {projectData.map(({ Image, Name, Description, GitHub, Link }) => (
-          <ProjectDiv inputImg={Image}>
-            <ProjectInfoDiv>
-              <h2>{Name}</h2>
-              <p>{Description} </p>
-              <FlexContainer>
-                <a href={GitHub} target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-                <a href={Link} target="_blank" rel="noopener noreferrer">
-                  Live Site
-                </a>
-              </FlexContainer>
-            </ProjectInfoDiv>
-          </ProjectDiv>
-        ))}
-      </FlexWrapContainer>
       <Skills />
+
+      <FlexWrapContainer>
+        {projectData.map(
+          ({ Image, Name, Description, GitHub, Link, MobileImage }) => (
+            <ProjectDiv inputImg={Image} mobileImage={MobileImage}>
+              <ProjectInfoDiv>
+                <h2>{Name}</h2>
+                <p>{Description} </p>
+                <FlexContainer>
+                  <a href={GitHub} target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                  <a href={Link} target="_blank" rel="noopener noreferrer">
+                    Live Site
+                  </a>
+                </FlexContainer>
+              </ProjectInfoDiv>
+            </ProjectDiv>
+          )
+        )}
+      </FlexWrapContainer>
     </>
   );
 };

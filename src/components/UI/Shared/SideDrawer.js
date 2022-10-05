@@ -8,7 +8,7 @@ const SideDrawer = (props) => {
     height: 100vh;
     width: 80%;
 
-    background: hsl(var(--clr-light-gray));
+    background: hsl(var(--clr-light-gray), 0.95);
     box-shadow: -3px 5px 20px black;
     display: flex;
     align-items: center;

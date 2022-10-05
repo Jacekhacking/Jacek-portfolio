@@ -20,7 +20,7 @@ const Skills = () => {
     }
   `;
   const LogoImg = styled.img`
-    max-width: 100px;
+    width: 80px;
     height: auto;
     margin: 0.3em;
     @media (max-width: 402px) {
@@ -30,13 +30,13 @@ const Skills = () => {
 
   return (
     <>
-      <h2
+      {/* <h2
         id="skills"
         className={`header-style ff-cursive text-dark`}
-        style={{ textAlign: "center" }}
+        style={{ textAlign: "center", paddingTop: "2rem" }}
       >
         Skills
-      </h2>
+      </h2> */}
       <LogoContainer>
         <LogoImg src={html} alt="html logo" />
         <LogoImg src={css} alt="css logo" />

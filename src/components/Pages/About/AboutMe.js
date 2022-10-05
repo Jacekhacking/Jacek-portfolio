@@ -20,7 +20,7 @@ const AboutMe = () => {
     text-align: center;
     margin: 1em;
     font-size: clamp(var(--fs-300), 2vw, var(--fs-500));
-    width: 100%;
+    width: 80%;
   `;
 
   const DropDownToggleButton = styled.button`

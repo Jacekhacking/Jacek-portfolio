@@ -4,6 +4,7 @@ export const projectData = [
     Description:
       "Website for local massage therapist business Bee Better Massage. Client came in with a theme and general feel for website. ReactJS CSS and hosted with AWS Amplify",
     Image: require("./UI/Images/bee-better-ss.png"),
+    MobileImage: require("./UI/Images/Small-bee-better-ss.png"),
     Link: "https://www.Beebettermassage.com",
     GitHub: "https://github.com/Jacekhacking/BeeBetter",
   },
@@ -12,6 +13,7 @@ export const projectData = [
     Description:
       "Website for up and coming artist. Client designed the site himself and needed someone with technical skills to apply it.",
     Image: require("./UI/Images/keaton-port-ss.png"),
+    MobileImage: require("./UI/Images/Small-keaton-port-ss.png"),
     GitHub: "https://github.com/jacekhacking/Keaton_Portfolio",
   },
   {
@@ -19,6 +21,7 @@ export const projectData = [
     Description:
       "Website for OneWaveGolf. A company based out of Bandon Oregon specializing in recyclable golf goods, professional caddying, and lessons.",
     Image: require("./UI/Images/onewavegolf.png"),
+    MobileImage: require("./UI/Images/Small-onewavegolf.png"),
     Link: "https://www.onewavegolf.com",
     GitHub: "https://github.com/jacekhacking/OneWaveGolf",
   },
@@ -27,6 +30,7 @@ export const projectData = [
     Description:
       "Professional Website for LC Bodyworks. A local massage therapist looking for a professional website.",
     Image: require("./UI/Images/LCBodyworkSC.png"),
+    MobileImage: require("./UI/Images/Small-LCBodyworkSC.png"),
     Link: "https://www.lcbodywork.com",
     GitHub: "https://github.com/jacekhacking/lc-bodywork",
   },
