@@ -34,6 +34,13 @@ function App() {
             )),
         },
         {
+          path: "resume",
+          element: () =>
+            import("./components/Pages/About/Resume").then((module) => (
+              <module.default />
+            )),
+        },
+        {
           element: () =>
             import("./components/Pages/LandingPage").then((module) => (
               <module.default />

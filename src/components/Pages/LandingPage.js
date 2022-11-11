@@ -4,11 +4,14 @@ const LandingPage = () => {
   const LandingPageWrapper = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
     min-height: 95vh;
     padding: 0 2rem;
     color: hsl(var(--clr-dark-gray));
+    p {
+    }
+
     img {
       height: 50rem;
       width: auto;
@@ -32,22 +35,26 @@ const LandingPage = () => {
   `;
 
   const AboutText = styled.div`
-    max-width: 800px;
+    /* max-width: 800px; */
     padding-right: 2rem;
     p {
+      -webkit-text-stroke: 0.75px var(--clr-3);
+      -webkit-text-fill-color: transparent;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      font-size: 9rem;
       line-height: 1.2;
       font-family: var(--ff-cursive);
-      font-size: 7rem;
     }
 
     @media (max-width: 1300px) {
       p {
-        font-size: 5rem;
+        /* font-size: 5rem; */
       }
     }
     @media (max-width: 1000px) {
       p {
-        font-size: 4rem;
+        /* font-size: 4rem; */
         text-align: center;
       }
     }
@@ -59,8 +66,8 @@ const LandingPage = () => {
         <img src={SelfieImg} alt="Me Camping" />
 
         <AboutText>
-          <p>Hello!</p>
-          <p> My name is Jacek Hacking. I am a Front-End Web Developer</p>
+          <p>Hi, I'm Jacek!</p>
+          {/* <p> My name is Jacek Hacking. I am a Front-End Web Developer</p> */}
         </AboutText>
       </LandingPageWrapper>
     </>

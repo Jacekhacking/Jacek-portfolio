@@ -3,17 +3,21 @@ import styled from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
-
-
   :root {
 
     /*Colors*/
-    --clr-dark-gray: 0, 0%, 33%;
+    --clr-dark-gray: 200, 8%, 7%;
     --clr-blue-gray: 205, 8%, 45%;
     --clr-mint-offwhite: 113, 31%, 95%;
     --clr-light-gray: 205, 8%, 65%;
     --clr-sandy-brown: 28, 83%, 61%;
     --clr-orange-soda: 10, 94%, 60%;
+
+    --clr-1: #41436a;
+    --clr-2: #974063;
+    --clr-3: #F54468;
+    --clr-4: #FF9677;
+
 
     /*font-sizes*/
     --fs-900: 9.375rem;
@@ -55,9 +59,11 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   p,
+  div,
   figure,
   picture {
     margin: 0;
+    padding: 0;
   }
 
   body::backdrop {
@@ -78,10 +84,9 @@ const GlobalStyles = createGlobalStyle`
   /* set up body */
   body {
     line-height: 2;
-  
     font-size: var(--fs-500);
     letter-spacing: 0.1em;
-    background-color: hsl(var(--clr-mint-offwhite));
+    background-color: hsl(var(--clr-dark-gray));
     font-family: var(--ff-sans-serif);
   }
 

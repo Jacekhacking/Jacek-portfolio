@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const LandingPageContainer = styled.div`
-  text-transform: uppercase;
-  color: hsl(var(--clr-dark-gray));
-  font-size: var(--fs-800);
-  font-family: var(--ff-cursive);
-  line-height: 1;
-
   @media (min-width: 600px) {
     display: flex;
     flex-direction: row-reverse;
