@@ -9,6 +9,7 @@ import { Header2 } from "../../UI/Styles/Global.styles";
 const AboutMe = () => {
   //CSS and styled components
   const AboutMeBody = styled.div`
+    color: hsl(var(--clr-mint-offwhite));
     min-height: 95vh;
     display: flex;
     flex-direction: column;
@@ -28,7 +29,7 @@ const AboutMe = () => {
     border: none;
     border-bottom: 2px solid transparent;
     font-family: var(--ff-cursive);
-    color: hsl(var(--clr-dark-gray));
+    color: hsl(var(--clr-mint-offwhite));
 
     :hover {
       cursor: pointer;
@@ -38,37 +39,7 @@ const AboutMe = () => {
 
   const [listRef] = useAutoAnimate();
 
-  const PokemonButton = styled.img`
-    border: 4px solid transparent;
-    border-radius: 25% 10%;
-    width: 180px;
-    height: 180px;
-
-    :hover {
-      border: 3px solid hsl(var(--clr-sandy-brown));
-    }
-  `;
-
-  //  axios call to pokeAPI for a random pokemon sprite initial state of number is 59 because that's my favorite pokemon//
-  const [pokemon, setPokemon] = useState(null);
-  const [number, setNumber] = useState(59);
-
-  // dropdown on click event for more about me content
   const [dropdown, setDropdown] = useState(false);
-
-  useEffect(() => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${number}/`)
-      .then((response) => {
-        setPokemon(response.data);
-      });
-  }, [number]);
-
-  if (!pokemon) return null;
-
-  const changeSetNumber = () => {
-    setNumber(Math.round(Math.random() * (386 - 1) + 1));
-  };
 
   const toggleDropdown = () => setDropdown(!dropdown);
 
@@ -76,20 +47,16 @@ const AboutMe = () => {
     <>
       <AboutMeBody>
         <Header2>About Me</Header2>
-        <PokemonButton
-          onClick={changeSetNumber}
-          style={{ cursor: "pointer", float: "right" }}
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-        />
+
         <AboutMeText>
           I started teaching myself how to write code at the beginning of 2019.
           About halfway through the covid pandemic I had some extra time and
           decided to start going further with it. In the spring of 2021 I signed
           up for the University of Utah's Fullstack Coding Boot-camp. I finished
-          their program in October of 2021. When I graduated I immediately went
-          to work cementing everything I learned there and started doing
-          freelance work to get practical experience.
+          their program in October of 2021. I then began doing freelance work
+          for people and companies in my immediate community. I'm currently
+          working as a Teaching Assistant through 2U as well as working as a Jr.
+          Dev for Aceiss Security.
         </AboutMeText>
         <DropDownToggleButton onClick={toggleDropdown}>
           {dropdown === false ? "More About Me..." : "Show Less..."}

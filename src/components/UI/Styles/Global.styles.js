@@ -14,10 +14,14 @@ const GlobalStyles = createGlobalStyle`
     --clr-orange-soda: 10, 94%, 60%;
 
     --clr-1: #41436a;
+    --clr-1-hsl: 	237, 24%, 34%;
     --clr-2: #974063;
+    --clr-2-hsl: 336, 40%, 42%;
     --clr-3: #F54468;
+    --clr-3-hsl: 348, 90%, 61%;
     --clr-4: #FF9677;
-
+    --clr-4-hsl: 14, 100%, 73%;
+    --clr-5: #FAF9F6;
 
     /*font-sizes*/
     --fs-900: 9.375rem;
