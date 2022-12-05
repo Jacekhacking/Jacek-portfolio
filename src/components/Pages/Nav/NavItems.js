@@ -33,7 +33,7 @@ const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
 function getActiveProps() {
   return {
     style: {
-      backgroundColor: "hsl(var(--clr-sandy-brown))",
+      backgroundColor: "hsl(var(--clr-3-hsl))",
       color: "white",
     },
   };
