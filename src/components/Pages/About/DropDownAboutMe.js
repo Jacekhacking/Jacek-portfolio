@@ -6,12 +6,12 @@ import axios from "axios";
 
 const DropDownAboutMe = () => {
   const DropDownContainerWrapper = styled.div`
-    margin: 2em 0;
+    margin: 2em 0.5em;
     background-color: hsl(var(--clr-blue-gray), 0.2);
     border: 5px solid hsl(var(--clr-dark-gray));
     color: hsl(var(--clr-mint-offwhite));
 
-    @media (min-width: 725px) {
+    @media (min-width: 900px) {
       margin-left: 2em;
       margin-right: 2em;
     }
@@ -31,19 +31,19 @@ const DropDownAboutMe = () => {
   `;
   const DropDownImg = styled.img`
     display: block;
-    width: 100%;
-    height: 600px;
+    width: 95%;
+    height: 400px;
     object-fit: cover;
     border: 2px solid hsl(var(--clr-orange-soda));
     border-radius: 5px;
 
     @media (min-width: 900px) {
       width: 80%;
-      height: auto;
+      height: 500px;
     }
     @media (min-width: 1200px) {
       width: 600px;
-      height: auto;
+      height: 600px;
       margin: 1em;
     }
   `;

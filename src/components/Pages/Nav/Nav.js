@@ -18,7 +18,7 @@ const Navigation = () => {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(var(--clr-light-gray));
+    background-color: hsl(var(--clr-blue-gray));
     border-bottom: 6px solid hsl(var(--clr-blue-gray));
 
     img {
@@ -33,7 +33,7 @@ const Navigation = () => {
     align-items: center;
     padding: 4 15px;
     font-family: var(--ff-cursive);
-    color: hsl(var(--clr-dark-gray));
+    color: hsl(var(--clr-mint-offwhite));
     font-size: 1.2rem;
     ul {
       display: flex;

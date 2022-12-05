@@ -363,3 +363,11 @@ export const Container = styled.div`
   background-color: ${(props) =>
     props.bgColor || "hsl(var(--clr-mint-offwhite))"};
 `;
+
+export const OutLineStyledHeader = styled.h2`
+  -webkit-text-stroke: 0.75px var(--clr-3);
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 9rem;
+  font-family: var(--ff-cursive);
+`;
