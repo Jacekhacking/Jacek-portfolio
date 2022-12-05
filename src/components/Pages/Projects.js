@@ -4,7 +4,7 @@ import Skills from "../UI/Shared/Skills";
 import {
   FlexWrapContainer,
   FlexContainer,
-  Header2,
+  OutLineStyledHeader,
 } from "../UI/Styles/Global.styles";
 import styled from "styled-components";
 
@@ -32,6 +32,7 @@ const Projects = () => {
     }
 
     &:hover {
+      cursor: pointer;
       border: 2px solid hsl(var(--clr-4-hsl));
       div {
         opacity: 1;
@@ -101,7 +102,9 @@ const Projects = () => {
   `;
   return (
     <>
-      <Header2 styles={{ paddingTop: "5rem" }}>Projects</Header2>
+      <OutLineStyledHeader styles={{ paddingTop: "5rem" }}>
+        Projects
+      </OutLineStyledHeader>
       <Skills />
 
       <FlexWrapContainer>

@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
+
 import DropDownAboutMe from "./DropDownAboutMe";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import styled from "styled-components";
-import { Header2 } from "../../UI/Styles/Global.styles";
+import { OutLineStyledHeader } from "../../UI/Styles/Global.styles";
 
 const AboutMe = () => {
   //CSS and styled components
@@ -20,7 +20,7 @@ const AboutMe = () => {
   const AboutMeText = styled.p`
     text-align: center;
     margin: 1em;
-    font-size: clamp(var(--fs-300), 2vw, var(--fs-500));
+    font-size: clamp(var(--fs-400), 2vw, var(--fs-500));
     width: 80%;
   `;
 
@@ -46,7 +46,7 @@ const AboutMe = () => {
   return (
     <>
       <AboutMeBody>
-        <Header2>About Me</Header2>
+        <OutLineStyledHeader>About Me</OutLineStyledHeader>
 
         <AboutMeText>
           I started teaching myself how to write code at the beginning of 2019.
