@@ -15,11 +15,11 @@ const Navigation = () => {
     width: 100%;
     top: 0;
     z-index: 1;
-    height: 50px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(var(--clr-dark-gray));
+    background-color: hsl(var(--clr-6-hsl), 0.99);
     /* border-bottom: 6px solid hsl(var(--clr-blue-gray)); */
 
     img {
@@ -42,6 +42,7 @@ const Navigation = () => {
       justify-content: space-evenly;
       > * {
         padding: 0 15px;
+        margin: 0 5px;
         border-radius: 3px;
         border: 2px solid transparent;
         &:hover {
@@ -68,6 +69,20 @@ const Navigation = () => {
           margin-top: 1rem;
         }
       }
+    }
+  `;
+
+  const NavLogo = styled.div`
+    background-image: url(${logoLight});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90px;
+    width: 90px;
+    margin-top: 5px;
+
+    :hover {
+      background-image: url(${logoDark});
     }
   `;
 
@@ -126,7 +141,7 @@ const Navigation = () => {
   return (
     <NavWrapper>
       <Link to="/">
-        <img src={logoDark} alt="Logo" />
+        <NavLogo />
       </Link>
 
       <NavHamburger

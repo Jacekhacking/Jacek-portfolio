@@ -105,7 +105,7 @@ const Projects = () => {
       <OutLineStyledHeader styles={{ paddingTop: "5rem" }}>
         Projects
       </OutLineStyledHeader>
-      <Skills />
+      {/* <Skills /> */}
 
       <FlexWrapContainer>
         {projectData.map(

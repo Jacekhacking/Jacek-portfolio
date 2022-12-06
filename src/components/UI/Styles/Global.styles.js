@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-sandy-brown: 28, 83%, 61%;
     --clr-orange-soda: 10, 94%, 60%;
 
+
     --clr-1: #41436a;
     --clr-1-hsl: 	237, 24%, 34%;
     --clr-2: #974063;
@@ -22,6 +23,9 @@ const GlobalStyles = createGlobalStyle`
     --clr-4: #FF9677;
     --clr-4-hsl: 14, 100%, 73%;
     --clr-5: #FAF9F6;
+    --clr-6:#1e2024;
+    --clr-6-hsl: 220, 9%, 13%;
+
 
     /*font-sizes*/
     --fs-900: 9.375rem;
@@ -90,7 +94,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 2;
     font-size: var(--fs-500);
     letter-spacing: 0.1em;
-    background-color: hsl(var(--clr-dark-gray));
+    background-color: var(--clr-6);
     font-family: var(--ff-sans-serif);
   }
 

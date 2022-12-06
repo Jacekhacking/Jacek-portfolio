@@ -34,7 +34,7 @@ function getActiveProps() {
   return {
     style: {
       backgroundColor: "hsl(var(--clr-3-hsl))",
-      color: "white",
+      color: "hsl(var(--clr-mint-offwhite))",
     },
   };
 }
