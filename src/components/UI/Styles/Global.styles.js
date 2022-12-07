@@ -8,10 +8,33 @@ const GlobalStyles = createGlobalStyle`
     /*Colors*/
     --clr-dark-gray: 200, 8%, 7%;
     --clr-blue-gray: 205, 8%, 45%;
-    --clr-mint-offwhite: 113, 31%, 95%;
+    --clr-mint-offwhite: 351, 8%, 92%;
     --clr-light-gray: 205, 8%, 65%;
     --clr-sandy-brown: 28, 83%, 61%;
     --clr-orange-soda: 10, 94%, 60%;
+
+
+   --white-100: 351, 8%, 92%;
+
+   --grey-100: ;
+   --grey-200: ;
+   --grey-300: ;
+   --grey-400: ;
+   --grey-500: ;
+   --grey-600: ;
+   --grey-700: ;
+   --grey-800: ;
+   --grey-900: ;
+
+   --primary-100: ;
+   --primary-200: ;
+   --primary-300: ;
+   --primary-400: ;
+   --primary-500: ;
+   --primary-600: ;
+   --primary-700: ;
+   --primary-800: ;
+   --primary-900: ;
 
     --clr-1: #41436a;
     --clr-1-hsl: 	237, 24%, 34%;
@@ -22,6 +45,9 @@ const GlobalStyles = createGlobalStyle`
     --clr-4: #FF9677;
     --clr-4-hsl: 14, 100%, 73%;
     --clr-5: #FAF9F6;
+    --clr-6:#1e2024;
+    --clr-6-hsl: 220, 9%, 13%;
+
 
     /*font-sizes*/
     --fs-900: 9.375rem;
@@ -90,7 +116,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 2;
     font-size: var(--fs-500);
     letter-spacing: 0.1em;
-    background-color: hsl(var(--clr-dark-gray));
+    background-color: var(--clr-6);
     font-family: var(--ff-sans-serif);
   }
 

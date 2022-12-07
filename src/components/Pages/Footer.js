@@ -10,7 +10,7 @@ const Footer = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(var(--clr-blue-gray), 0.1);
+    background-color: var(--clr-6);
     padding: 10px 20px;
 
     p {

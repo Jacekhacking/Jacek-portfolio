@@ -10,7 +10,7 @@ const AboutMe = () => {
   //CSS and styled components
   const AboutMeBody = styled.div`
     color: hsl(var(--clr-mint-offwhite));
-    min-height: 95vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,13 +50,13 @@ const AboutMe = () => {
 
         <AboutMeText>
           I started teaching myself how to write code at the beginning of 2019.
-          About halfway through the covid pandemic I had some extra time and
-          decided to start going further with it. In the spring of 2021 I signed
-          up for the University of Utah's Fullstack Coding Boot-camp. I finished
-          their program in October of 2021. I then began doing freelance work
-          for people and companies in my immediate community. I'm currently
-          working as a Teaching Assistant through 2U as well as working as a Jr.
-          Dev for Aceiss Security.
+          I started taking it more seriously late in the summer of 2020 during
+          the covid pandemic. In the spring of 2021 I signed up for the
+          University of Utah's Fullstack Coding Boot-camp. I finished their
+          program in October of 2021. I then began doing freelance work for
+          people and companies in my immediate community. I'm currently working
+          as a Teaching Assistant through 2U and as an intern for Aceiss
+          Security.
         </AboutMeText>
         <DropDownToggleButton onClick={toggleDropdown}>
           {dropdown === false ? "More About Me..." : "Show Less..."}

@@ -2,7 +2,7 @@ import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
 
 const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
-  const tabs = ["Projects", "About"];
+  const tabs = ["About", "Projects"];
 
   return (
     <>
@@ -33,8 +33,8 @@ const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
 function getActiveProps() {
   return {
     style: {
-      backgroundColor: "hsl(var(--clr-sandy-brown))",
-      color: "white",
+      backgroundColor: "hsl(var(--clr-3-hsl))",
+      color: "hsl(var(--clr-mint-offwhite))",
     },
   };
 }
