@@ -45,7 +45,7 @@ const Navigation = () => {
         text-align: center;
         border-radius: 0;
         &:hover {
-          /* background-color: hsl(var(--clr-3-hsl)); */
+          background-color: hsl(var(--clr-3-hsl));
           /* margin-bottom: -15px; */
           /* border-bottom: 10px solid hsl(var(--clr-3-hsl), 08); */
         }
