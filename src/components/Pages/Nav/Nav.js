@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-location";
 import { useState, useEffect } from "react";
 import SideDrawer from "../../UI/Shared/SideDrawer";
-import logo from "../../UI/Images/logo.png";
+import logoLight from "../../UI/Images/jacek_logo_light.png";
+import logoDark from "../../UI/Images/jacek_logo_dark.png";
 import NavItems from "./NavItems";
 import styled from "styled-components";
 import Backdrop from "../../UI/Shared/Backdrop";
@@ -14,16 +15,16 @@ const Navigation = () => {
     width: 100%;
     top: 0;
     z-index: 1;
-    height: 50px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(var(--clr-light-gray));
-    border-bottom: 6px solid hsl(var(--clr-blue-gray));
+    background-color: hsl(var(--clr-6-hsl), 0.99);
+    /* border-bottom: 6px solid hsl(var(--clr-blue-gray)); */
 
     img {
       padding-top: 15px;
-      height: 50px;
+      height: 90px;
       width: auto;
     }
   `;
@@ -31,20 +32,22 @@ const Navigation = () => {
   const NavContainer = styled.div`
     display: flex;
     align-items: center;
-    padding: 4 15px;
+    margin: 0 0.4rem;
     font-family: var(--ff-cursive);
-    color: hsl(var(--clr-dark-gray));
+    color: hsl(var(--clr-mint-offwhite));
     font-size: 1.2rem;
     ul {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       > * {
-        padding: 0 15px;
-        border-radius: 3px;
-        border: 2px solid transparent;
+        margin: 0 10px;
+        text-align: center;
+        border-radius: 0;
         &:hover {
-          background-color: hsl(var(--clr-sandy-brown));
+          /* background-color: hsl(var(--clr-3-hsl)); */
+          /* margin-bottom: -15px; */
+          /* border-bottom: 10px solid hsl(var(--clr-3-hsl), 08); */
         }
       }
     }
@@ -59,7 +62,28 @@ const Navigation = () => {
       font-size: 1.5rem;
       ul {
         flex-direction: column;
+
+        a {
+          margin-top: 1rem;
+        }
+        li {
+          margin-top: 1rem;
+        }
       }
+    }
+  `;
+
+  const NavLogo = styled.div`
+    background-image: url(${logoLight});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90px;
+    width: 90px;
+    margin-top: 5px;
+
+    :hover {
+      background-image: url(${logoDark});
     }
   `;
 
@@ -81,7 +105,7 @@ const Navigation = () => {
     :hover {
       cursor: pointer;
       span {
-        background-color: hsl(var(--clr-sandy-brown));
+        background-color: hsl(var(--clr-3-hsl));
       }
     }
     @media (min-width: 1200px) {
@@ -118,7 +142,7 @@ const Navigation = () => {
   return (
     <NavWrapper>
       <Link to="/">
-        <img src={logo} alt="Logo" />
+        <NavLogo />
       </Link>
 
       <NavHamburger

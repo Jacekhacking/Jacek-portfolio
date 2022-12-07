@@ -10,17 +10,21 @@ const Footer = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(var(--clr-light-gray));
-    padding: 0 2rem;
+    background-color: var(--clr-6);
+    padding: 10px 20px;
 
     p {
       font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
       display: flex;
-      color: black;
+      color: hsl(var(--clr-mint-offwhite));
 
       a {
         color: inherit;
         font-size: inherit;
+      }
+
+      &:hover {
+        color: var(--clr-4);
       }
 
       @media (max-width: 300px) {
@@ -42,8 +46,8 @@ const Footer = () => {
         align-items: center;
 
         &:hover {
-          background-color: hsl(var(--clr-sandy-brown));
-          box-shadow: 0 0 10px hsl(var(--clr-sandy-brown));
+          background-color: var(--clr-3);
+          box-shadow: 0 0 10px var(--clr-3);
         }
       }
     }

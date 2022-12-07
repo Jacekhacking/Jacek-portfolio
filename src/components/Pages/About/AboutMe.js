@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
+
 import DropDownAboutMe from "./DropDownAboutMe";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import styled from "styled-components";
-import { Header2 } from "../../UI/Styles/Global.styles";
+import { OutLineStyledHeader } from "../../UI/Styles/Global.styles";
 
 const AboutMe = () => {
   //CSS and styled components
   const AboutMeBody = styled.div`
-    min-height: 95vh;
+    color: hsl(var(--clr-mint-offwhite));
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +20,7 @@ const AboutMe = () => {
   const AboutMeText = styled.p`
     text-align: center;
     margin: 1em;
-    font-size: clamp(var(--fs-300), 2vw, var(--fs-500));
+    font-size: clamp(var(--fs-400), 2vw, var(--fs-500));
     width: 80%;
   `;
 
@@ -28,7 +29,7 @@ const AboutMe = () => {
     border: none;
     border-bottom: 2px solid transparent;
     font-family: var(--ff-cursive);
-    color: hsl(var(--clr-dark-gray));
+    color: hsl(var(--clr-mint-offwhite));
 
     :hover {
       cursor: pointer;
@@ -38,58 +39,24 @@ const AboutMe = () => {
 
   const [listRef] = useAutoAnimate();
 
-  const PokemonButton = styled.img`
-    border: 4px solid transparent;
-    border-radius: 25% 10%;
-    width: 180px;
-    height: 180px;
-
-    :hover {
-      border: 3px solid hsl(var(--clr-sandy-brown));
-    }
-  `;
-
-  //  axios call to pokeAPI for a random pokemon sprite initial state of number is 59 because that's my favorite pokemon//
-  const [pokemon, setPokemon] = useState(null);
-  const [number, setNumber] = useState(59);
-
-  // dropdown on click event for more about me content
   const [dropdown, setDropdown] = useState(false);
-
-  useEffect(() => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${number}/`)
-      .then((response) => {
-        setPokemon(response.data);
-      });
-  }, [number]);
-
-  if (!pokemon) return null;
-
-  const changeSetNumber = () => {
-    setNumber(Math.round(Math.random() * (386 - 1) + 1));
-  };
 
   const toggleDropdown = () => setDropdown(!dropdown);
 
   return (
     <>
       <AboutMeBody>
-        <Header2>About Me</Header2>
-        <PokemonButton
-          onClick={changeSetNumber}
-          style={{ cursor: "pointer", float: "right" }}
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-        />
+        <OutLineStyledHeader>About Me</OutLineStyledHeader>
+
         <AboutMeText>
           I started teaching myself how to write code at the beginning of 2019.
-          About halfway through the covid pandemic I had some extra time and
-          decided to start going further with it. In the spring of 2021 I signed
-          up for the University of Utah's Fullstack Coding Boot-camp. I finished
-          their program in October of 2021. When I graduated I immediately went
-          to work cementing everything I learned there and started doing
-          freelance work to get practical experience.
+          I started taking it more seriously late in the summer of 2020 during
+          the covid pandemic. In the spring of 2021 I signed up for the
+          University of Utah's Fullstack Coding Boot-camp. I finished their
+          program in October of 2021. I then began doing freelance work for
+          people and companies in my immediate community. I'm currently working
+          as a Teaching Assistant through 2U and as an intern for Aceiss
+          Security.
         </AboutMeText>
         <DropDownToggleButton onClick={toggleDropdown}>
           {dropdown === false ? "More About Me..." : "Show Less..."}

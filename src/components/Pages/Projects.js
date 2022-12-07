@@ -4,19 +4,20 @@ import Skills from "../UI/Shared/Skills";
 import {
   FlexWrapContainer,
   FlexContainer,
-  Header2,
+  OutLineStyledHeader,
 } from "../UI/Styles/Global.styles";
 import styled from "styled-components";
 
 const Projects = () => {
   const ProjectDiv = styled.div`
-    border: 3px solid hsl(var(--clr-dark-gray));
+    border: 2px solid hsl(var(--clr-dark-gray));
     margin: 0.5em;
-    width: 50rem;
-    height: 30rem;
+    width: 37.7rem;
+    min-height: 22rem;
+
     background-color: hsl(var(--clr-blue-gray));
     background-image: url(${(props) => props.inputImg});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -32,6 +33,8 @@ const Projects = () => {
     }
 
     &:hover {
+      cursor: pointer;
+      border: 2px solid hsl(var(--clr-4-hsl));
       div {
         opacity: 1;
         visibility: visible;
@@ -47,13 +50,14 @@ const Projects = () => {
     width: 100%;
 
     text-align: center;
-    background-color: hsl(var(--clr-blue-gray), 0.95);
+    background-color: hsl(var(--clr-dark-gray), 0.95);
     color: hsl(var(--clr-mint-offwhite));
     transition: opacity 0.1s linear, visibility 0.1s linear;
+
     h2 {
       font-size: var(--fs-500);
       text-align: center;
-      border-bottom: 2px solid hsl(var(--clr-sandy-brown));
+      border-bottom: 2px solid var(--clr-4);
       color: hsl(var(--clr-mint-offwhite));
       font-family: var(--ff-cursive);
       @media (max-width: 330px) {
@@ -90,17 +94,19 @@ const Projects = () => {
       border-radius: 0;
 
       &:hover {
-        background-color: hsl(var(--clr-sandy-brown));
-        border: 4px solid hsl(var(--clr-sandy-brown));
-        color: white;
-        box-shadow: 0 0 10px hsl(var(--clr-sandy-brown));
+        background-color: var(--clr-4);
+        border: 4px solid var(--clr-4);
+        color: hsl(var(--clr-dark-gray));
+        box-shadow: 0 0 10px var(--clr-4);
       }
     }
   `;
   return (
     <>
-      <Header2 styles={{ paddingTop: "5rem" }}>Projects</Header2>
-      <Skills />
+      <OutLineStyledHeader styles={{ paddingTop: "5rem" }}>
+        Projects
+      </OutLineStyledHeader>
+      {/* <Skills /> */}
 
       <FlexWrapContainer>
         {projectData.map(
