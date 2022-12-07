@@ -8,11 +8,33 @@ const GlobalStyles = createGlobalStyle`
     /*Colors*/
     --clr-dark-gray: 200, 8%, 7%;
     --clr-blue-gray: 205, 8%, 45%;
-    --clr-mint-offwhite: 113, 31%, 95%;
+    --clr-mint-offwhite: 351, 8%, 92%;
     --clr-light-gray: 205, 8%, 65%;
     --clr-sandy-brown: 28, 83%, 61%;
     --clr-orange-soda: 10, 94%, 60%;
 
+
+   --white-100: 351, 8%, 92%;
+
+   --grey-100: ;
+   --grey-200: ;
+   --grey-300: ;
+   --grey-400: ;
+   --grey-500: ;
+   --grey-600: ;
+   --grey-700: ;
+   --grey-800: ;
+   --grey-900: ;
+
+   --primary-100: ;
+   --primary-200: ;
+   --primary-300: ;
+   --primary-400: ;
+   --primary-500: ;
+   --primary-600: ;
+   --primary-700: ;
+   --primary-800: ;
+   --primary-900: ;
 
     --clr-1: #41436a;
     --clr-1-hsl: 	237, 24%, 34%;

@@ -32,7 +32,7 @@ const Navigation = () => {
   const NavContainer = styled.div`
     display: flex;
     align-items: center;
-    padding: 4 15px;
+    margin: 0 0.4rem;
     font-family: var(--ff-cursive);
     color: hsl(var(--clr-mint-offwhite));
     font-size: 1.2rem;
@@ -41,12 +41,13 @@ const Navigation = () => {
       align-items: center;
       justify-content: space-evenly;
       > * {
-        padding: 0 15px;
-        margin: 0 5px;
-        border-radius: 3px;
-        border: 2px solid transparent;
+        margin: 0 10px;
+        text-align: center;
+        border-radius: 0;
         &:hover {
-          background-color: hsl(var(--clr-3-hsl));
+          /* background-color: hsl(var(--clr-3-hsl)); */
+          /* margin-bottom: -15px; */
+          /* border-bottom: 10px solid hsl(var(--clr-3-hsl), 08); */
         }
       }
     }

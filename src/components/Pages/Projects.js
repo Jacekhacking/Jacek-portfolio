@@ -12,11 +12,12 @@ const Projects = () => {
   const ProjectDiv = styled.div`
     border: 2px solid hsl(var(--clr-dark-gray));
     margin: 0.5em;
-    width: 50rem;
-    height: 30rem;
+    width: 37.7rem;
+    min-height: 22rem;
+
     background-color: hsl(var(--clr-blue-gray));
     background-image: url(${(props) => props.inputImg});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 
