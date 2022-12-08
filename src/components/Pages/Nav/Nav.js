@@ -22,10 +22,8 @@ const Navigation = () => {
     background-color: hsl(var(--clr-6-hsl), 0.99);
     /* border-bottom: 6px solid hsl(var(--clr-blue-gray)); */
 
-    img {
-      padding-top: 15px;
-      height: 90px;
-      width: auto;
+    @media (max-width: 550px) {
+      height: 50px;
     }
   `;
 
@@ -46,6 +44,7 @@ const Navigation = () => {
         border-radius: 0;
         &:hover {
           background-color: hsl(var(--clr-3-hsl));
+          color: black;
           /* margin-bottom: -15px; */
           /* border-bottom: 10px solid hsl(var(--clr-3-hsl), 08); */
         }
@@ -80,10 +79,15 @@ const Navigation = () => {
     background-size: cover;
     height: 90px;
     width: 90px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 
     :hover {
       background-image: url(${logoDark});
+    }
+
+    @media (max-width: 550px) {
+      height: 50px;
+      width: 50px;
     }
   `;
 
