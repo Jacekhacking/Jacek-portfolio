@@ -104,7 +104,7 @@ const Projects = () => {
   return (
     <>
       <OutLineStyledHeader styles={{ paddingTop: "5rem" }}>
-        Projects
+        Proj
       </OutLineStyledHeader>
       {/* <Skills /> */}
 

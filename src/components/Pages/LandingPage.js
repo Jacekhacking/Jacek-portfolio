@@ -18,6 +18,7 @@ const LandingPage = () => {
     }
     p {
       color: black;
+      text-align: center;
     }
 
     img {
@@ -27,18 +28,15 @@ const LandingPage = () => {
       /* border: 4px solid hsl(var(--clr-dark-gray)); */
       /* box-shadow: 0 0 20px var(--clr-4); */
     }
-    @media (max-width: 1000px) {
-      align-items: space-between;
-      img {
-        width: auto;
-        height: 30rem;
-      }
-    }
 
     @media (max-width: 550px) {
       img {
-        width: 100%;
-        height: auto;
+        margin-top: 5.5rem;
+        width: auto;
+        height: 20rem;
+      }
+      p {
+        font-size: 1.2rem;
       }
     }
   `;
@@ -46,7 +44,7 @@ const LandingPage = () => {
   const AboutText = styled.h2`
     /* max-width: 800px; */
     padding-right: 2rem;
-
+    text-align: center;
     -webkit-text-stroke: 2px black;
     -webkit-text-fill-color: transparent;
     /* writing-mode: vertical-lr; */
@@ -55,9 +53,9 @@ const LandingPage = () => {
     line-height: 1.2;
     font-family: var(--ff-cursive);
 
-    /* @media (max-width: 1300px) {
-      transform: rotate(90deg);
-    } */
+    @media (max-width: 550px) {
+      font-size: 4rem;
+    }
   `;
 
   return (
