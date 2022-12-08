@@ -2,7 +2,7 @@ import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
 
 const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
-  const tabs = ["About", "Projects"];
+  const tabs = ["About", "Projects", "Resume"];
 
   return (
     <>

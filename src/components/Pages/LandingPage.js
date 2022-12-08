@@ -2,6 +2,7 @@ import SelfieImg from "../UI/Images/IMG_9739.png";
 import styled from "styled-components";
 import Projects from "./Projects";
 import AboutMe from "./About/AboutMe";
+import Resume from "./About/Resume";
 const LandingPage = () => {
   const LandingPageWrapper = styled.div`
     display: flex;
