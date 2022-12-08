@@ -19,6 +19,7 @@ const LandingPage = () => {
     p {
       color: black;
       text-align: center;
+      margin: 0 4rem;
     }
 
     img {
@@ -45,13 +46,16 @@ const LandingPage = () => {
     /* max-width: 800px; */
     padding-right: 2rem;
     text-align: center;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 3px black;
     -webkit-text-fill-color: transparent;
     /* writing-mode: vertical-lr; */
     /* transform: rotate(180deg); */
     font-size: 9rem;
     line-height: 1.2;
     font-family: var(--ff-cursive);
+    @media (max-width: 800px) {
+      font-size: 5rem;
+    }
 
     @media (max-width: 550px) {
       font-size: 4rem;
