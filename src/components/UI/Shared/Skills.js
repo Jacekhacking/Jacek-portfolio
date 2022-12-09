@@ -23,6 +23,7 @@ const Skills = () => {
     }
   `;
 
+  //editing a comment for git merge practice.
   return (
     <>
       {/* <h2
