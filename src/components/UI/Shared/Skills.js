@@ -24,6 +24,7 @@ const Skills = () => {
   `;
   //this is the second comment to practice merging on same file
 
+  //editing a comment for git merge practice.
   return (
     <>
       {/* <h2
