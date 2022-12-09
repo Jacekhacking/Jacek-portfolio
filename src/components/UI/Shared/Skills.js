@@ -22,6 +22,7 @@ const Skills = () => {
       width: 50px;
     }
   `;
+  //this is the second comment to practice merging on same file
 
   //editing a comment for git merge practice.
   return (
