@@ -71,7 +71,7 @@ const LandingPage = () => {
 
           <AboutText>Hi, I'm Jacek!</AboutText>
 
-          <p>I'm a Front-End Web Developer from Salt Lake City Utah!</p>
+          <p>I'm a Web Developer from Salt Lake City, Utah!</p>
         </LandingPageWrapper>
       </section>
 

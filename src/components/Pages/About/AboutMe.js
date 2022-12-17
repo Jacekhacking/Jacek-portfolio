@@ -28,9 +28,8 @@ const AboutMe = () => {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid transparent;
-    font-family: var(--ff-cursive);
     color: hsl(var(--clr-mint-offwhite));
-
+    font-style: italic;
     :hover {
       cursor: pointer;
       border-bottom: 2px solid hsl(var(--clr-sandy-brown));
@@ -57,10 +56,13 @@ const AboutMe = () => {
           people and companies in my immediate community. I'm currently working
           as a Teaching Assistant through 2U and as an intern for Aceiss
           Security.
+          <strong>
+            <DropDownToggleButton onClick={toggleDropdown}>
+              {dropdown === false ? "More ..." : "Less..."}
+            </DropDownToggleButton>
+          </strong>
         </AboutMeText>
-        <DropDownToggleButton onClick={toggleDropdown}>
-          {dropdown === false ? "More About Me..." : "Show Less..."}
-        </DropDownToggleButton>
+
         <div ref={listRef}>{dropdown && <DropDownAboutMe />}</div>
       </AboutMeBody>
     </>
