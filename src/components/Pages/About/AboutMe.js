@@ -9,7 +9,7 @@ import { OutLineStyledHeader } from "../../UI/Styles/Global.styles";
 const AboutMe = () => {
   //CSS and styled components
   const AboutMeBody = styled.div`
-    color: hsl(var(--clr-mint-offwhite));
+    color: var(--clr-5);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
