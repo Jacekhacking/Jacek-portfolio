@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-4: #FF9677;
     --clr-4-hsl: 14, 100%, 73%;
     --clr-5:#b5b5b5;
-    --clr-6:#1e2024;
+    --clr-6:#1A1A1B;
     --clr-6-hsl: 220, 9%, 13%;
 
 

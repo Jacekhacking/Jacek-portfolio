@@ -12,9 +12,8 @@ const Projects = () => {
   const ProjectDiv = styled.div`
     border: 2px solid hsl(var(--clr-dark-gray));
     margin: 0.5em;
-    width: 37.7rem;
-    min-height: 22rem;
-
+    width: 500px;
+    height: 500px;
     background-color: hsl(var(--clr-blue-gray));
     background-image: url(${(props) => props.inputImg});
     background-size: contain;
@@ -44,10 +43,8 @@ const Projects = () => {
   `;
 
   const ProjectInfoDiv = styled.div`
-    opacity: 0;
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
+    height: 500px;
+    width: 500px;
 
     text-align: center;
     background-color: hsl(var(--clr-dark-gray), 0.95);
@@ -101,6 +98,11 @@ const Projects = () => {
       }
     }
   `;
+
+  const ProjectWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+  `;
   return (
     <>
       <OutLineStyledHeader styles={{ paddingTop: "5rem" }}>
@@ -108,26 +110,33 @@ const Projects = () => {
       </OutLineStyledHeader>
       {/* <Skills /> */}
 
-      <FlexWrapContainer>
+      <ProjectWrapper>
         {projectData.map(
           ({ Image, Name, Description, GitHub, Link, MobileImage }) => (
-            <ProjectDiv inputImg={Image} mobileImage={MobileImage}>
-              <ProjectInfoDiv>
-                <h2>{Name}</h2>
-                <p>{Description} </p>
-                <FlexContainer>
-                  <a href={GitHub} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                  <a href={Link} target="_blank" rel="noopener noreferrer">
-                    Live Site
-                  </a>
-                </FlexContainer>
-              </ProjectInfoDiv>
-            </ProjectDiv>
+            <FlexContainer key={Name}>
+              <ProjectDiv
+                inputImg={Image}
+                mobileImage={MobileImage}
+              ></ProjectDiv>
+
+              <div>
+                <ProjectInfoDiv>
+                  <h2>{Name}</h2>
+                  <p>{Description} </p>
+                  <FlexContainer>
+                    <a href={GitHub} target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                    <a href={Link} target="_blank" rel="noopener noreferrer">
+                      Live Site
+                    </a>
+                  </FlexContainer>
+                </ProjectInfoDiv>
+              </div>
+            </FlexContainer>
           )
         )}
-      </FlexWrapContainer>
+      </ProjectWrapper>
     </>
   );
 };
