@@ -9,8 +9,7 @@ const DropDownAboutMe = () => {
     margin: 2em 0.5em;
     background-color: hsl(var(--clr-blue-gray), 0.2);
     border: 5px solid hsl(var(--clr-dark-gray));
-    color: hsl(var(--clr-mint-offwhite));
-
+    color: var(--clr-5);
     @media (min-width: 900px) {
       margin-left: 2em;
       margin-right: 2em;
@@ -72,6 +71,13 @@ const DropDownAboutMe = () => {
     }
   `;
 
+  const DropDownH3 = styled.h3`
+    font-size: var(--fs-700);
+    font-family: var(--ff-cursive);
+    border-bottom: 5px solid hsl(var(--clr-dark-gray));
+    color: #b5b5b5;
+  `;
+
   const PokemonButton = styled.img`
     border: 3px solid transparent;
     border-radius: 25% 10%;
@@ -103,14 +109,7 @@ const DropDownAboutMe = () => {
   return (
     <>
       <DropDownContainerWrapper>
-        <h3
-          className={`fs-700 ff-cursive text-light`}
-          style={{
-            borderBottom: "5px solid hsl(var(--clr-dark-gray))",
-          }}
-        >
-          A Little more about me
-        </h3>
+        <DropDownH3>A Little more about me</DropDownH3>
 
         <DropdownContainer>
           <ImgParagraphDiv>

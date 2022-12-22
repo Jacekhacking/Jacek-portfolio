@@ -44,8 +44,8 @@ const GlobalStyles = createGlobalStyle`
     --clr-3-hsl: 348, 90%, 61%;
     --clr-4: #FF9677;
     --clr-4-hsl: 14, 100%, 73%;
-    --clr-5: #FAF9F6;
-    --clr-6:#1e2024;
+    --clr-5:#b5b5b5;
+    --clr-6:#1A1A1B;
     --clr-6-hsl: 220, 9%, 13%;
 
 
@@ -363,6 +363,23 @@ transition: all .4s ease-in-out;
 `;
 export default GlobalStyles;
 
+export const StyledHeader = styled.h2`
+  padding-right: 2rem;
+  text-align: center;
+  -webkit-text-stroke: 3px black;
+  -webkit-text-fill-color: transparent;
+  font-size: 9rem;
+  line-height: 1.2;
+  font-family: var(--ff-cursive);
+  @media (max-width: 800px) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 4rem;
+  }
+`;
+
 export const FlexWrapContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -391,9 +408,18 @@ export const Container = styled.div`
 `;
 
 export const OutLineStyledHeader = styled.h2`
-  -webkit-text-stroke: 0.75px var(--clr-3);
-  -webkit-text-fill-color: transparent;
+  padding-right: 2rem;
   text-align: center;
+  -webkit-text-stroke: 3px #b5b5b5;
+  -webkit-text-fill-color: transparent;
   font-size: 9rem;
+  line-height: 1.2;
   font-family: var(--ff-cursive);
+  @media (max-width: 800px) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 4rem;
+  }
 `;
