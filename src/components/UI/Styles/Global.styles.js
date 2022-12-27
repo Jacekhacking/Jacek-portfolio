@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-4-hsl: 14, 100%, 73%;
     --clr-5:#b5b5b5;
     --clr-6:#1A1A1B;
-    --clr-6-hsl: 220, 9%, 13%;
+    --clr-6-hsl: 240, 2%, 10%;
 
 
     /*font-sizes*/
@@ -412,9 +412,10 @@ export const OutLineStyledHeader = styled.h2`
   text-align: center;
   -webkit-text-stroke: 3px #b5b5b5;
   -webkit-text-fill-color: transparent;
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 1.2;
   font-family: var(--ff-cursive);
+  padding-top: 5rem;
   @media (max-width: 800px) {
     font-size: 5rem;
   }
