@@ -19,7 +19,7 @@ const Navigation = () => {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(var(--clr-6-hsl), 0.99);
+    background-color: hsl(var(--clr-6-hsl), 0.98);
     /* border-bottom: 6px solid hsl(var(--clr-blue-gray)); */
 
     @media (max-width: 550px) {

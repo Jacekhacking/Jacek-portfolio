@@ -1,6 +1,7 @@
 import twitter from "../UI/Images/SocialLogos/twitter.png";
 import github from "../UI/Images/SocialLogos/GitHub-Mark-64px.png";
 import linkedin from "../UI/Images/SocialLogos/linkedin.png";
+import Pdf from "../UI/Shared/JacekPortfolio.PDF";
 
 import styled from "styled-components";
 
@@ -11,7 +12,8 @@ const Footer = () => {
     justify-content: space-between;
     align-items: center;
     background-color: var(--clr-6);
-    padding: 10px 20px;
+    padding: 20px 20px;
+    padding-top: 100px;
 
     p {
       font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
@@ -63,10 +65,16 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <p>
-        Email:
-        <a href="mailto:Jacekhacking@gmail.com"> JacekHacking@gmail.com</a>
-      </p>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <a href={Pdf} target="_blank" rel="noreferrer">
+          Resume
+        </a>
+        <p>
+          Email:
+          <a href="mailto:Jacekhacking@gmail.com"> JacekHacking@gmail.com</a>
+        </p>
+      </div>
+
       <socialMediaContainer>
         <div
           style={{

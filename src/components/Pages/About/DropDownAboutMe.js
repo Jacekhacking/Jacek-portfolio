@@ -6,9 +6,9 @@ import axios from "axios";
 
 const DropDownAboutMe = () => {
   const DropDownContainerWrapper = styled.div`
-    margin: 2em 0.5em;
+    /* margin: 2em 0; */
     background-color: hsl(var(--clr-blue-gray), 0.2);
-    border: 5px solid hsl(var(--clr-dark-gray));
+    /* border: 5px solid hsl(var(--clr-dark-gray)); */
     color: var(--clr-5);
     @media (min-width: 900px) {
       margin-left: 2em;
@@ -33,7 +33,7 @@ const DropDownAboutMe = () => {
     width: 95%;
     height: 400px;
     object-fit: cover;
-    border: 2px solid hsl(var(--clr-orange-soda));
+    /* border: 2px solid hsl(var(--clr-orange-soda)); */
     border-radius: 5px;
 
     @media (min-width: 900px) {
@@ -52,7 +52,7 @@ const DropDownAboutMe = () => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 100rem;
+    /* max-width: 100rem; */
   `;
   const ImgParagraphDiv = styled.div`
     display: flex;
@@ -74,7 +74,7 @@ const DropDownAboutMe = () => {
   const DropDownH3 = styled.h3`
     font-size: var(--fs-700);
     font-family: var(--ff-cursive);
-    border-bottom: 5px solid hsl(var(--clr-dark-gray));
+    /* border-bottom: 5px solid hsl(var(--clr-dark-gray)); */
     color: #b5b5b5;
   `;
 
@@ -126,20 +126,34 @@ const DropDownAboutMe = () => {
           <ImgParagraphDiv direction="row-reverse">
             <DropDownImg src={AuriPic} alt="My Cute Dog Auri" />
             <div>
-              <p>
-                <h2>Fun Facts!</h2>
-                My favorite genre of books is fantasy{" "}
-                <span className={"text-brown"}>|</span>I have a licence to
-                practice massage therapy in the state of Utah
-                <span className={"text-brown"}>|</span>
-                My favorite childhood video game was Pokémon Puzzle
-                <span className={"text-brown"}>|</span>
-                Favorite food is Sushi <span className={"text-brown"}>|</span>
-                Favorite book series is the Wheel of Time
-                <span className={"text-brown"}>|</span>
-                Grew up on games like Warcraft 3, Diablo 2, and of course
-                Pokemon!
-              </p>
+              <h2>Fun Facts!</h2>
+
+              <ul>
+                <li>
+                  My favorite genre of books is fantasy
+                  <span className={"text-brown"}>|</span>
+                </li>
+                <li>
+                  I have a licence to practice massage therapy in the state of
+                  Utah
+                  <span className={"text-brown"}>|</span>
+                </li>
+                <li>
+                  My favorite childhood video game was Pokémon Puzzle
+                  <span className={"text-brown"}>|</span>
+                </li>
+                <li>
+                  Favorite food is Sushi <span className={"text-brown"}>|</span>
+                </li>
+                <li>
+                  Favorite book series is the Wheel of Time
+                  <span className={"text-brown"}>|</span>
+                </li>
+                <li>
+                  Grew up on games like Warcraft 3, Diablo 2, and of course
+                  Pokemon!
+                </li>
+              </ul>
               <PokemonButton
                 onClick={changeSetNumber}
                 style={{ cursor: "pointer", float: "right" }}

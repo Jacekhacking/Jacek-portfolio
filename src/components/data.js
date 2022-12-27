@@ -9,7 +9,7 @@ export const projectData = [
     GitHub: "https://github.com/Jacekhacking/BeeBetter",
   },
   {
-    Name: "Keaton's Portfolio",
+    Name: "Art Portfolio",
     Description:
       "Website for up and coming artist. Client designed the site himself and needed someone with technical skills to apply it.",
     Image: require("./UI/Images/keaton-port-ss.png"),
