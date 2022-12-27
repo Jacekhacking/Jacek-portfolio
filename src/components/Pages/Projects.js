@@ -12,13 +12,14 @@ const Projects = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 100px;
   `;
   const ProjectDiv = styled.div`
-    border: 2px solid hsl(var(--clr-dark-gray));
+    /* border: 2px solid hsl(var(--clr-dark-gray)); */
     margin: 0.5em;
     width: 500px;
     height: 500px;
-    background-color: hsl(var(--clr-blue-gray));
+    /* background-color: hsl(var(--clr-blue-gray)); */
     background-image: url(${(props) => props.inputImg});
     background-size: contain;
     background-repeat: no-repeat;
@@ -39,14 +40,14 @@ const Projects = () => {
     justify-content: space-between;
     text-align: center;
 
-    background-color: hsl(var(--clr-dark-gray), 0.95);
-    color: hsl(var(--clr-mint-offwhite));
+    /* background-color: hsl(var(--clr-dark-gray), 0.95); */
+    color: var(--clr-5);
 
     h2 {
-      font-size: var(--fs-500);
+      font-size: var(--fs-600);
       text-align: center;
-      border-bottom: 2px solid var(--clr-4);
-      color: hsl(var(--clr-mint-offwhite));
+      /* border-bottom: 2px solid var(--clr-4); */
+      color: var(--clr-5);
       font-family: var(--ff-cursive);
       @media (max-width: 330px) {
         font-size: var(--fs-400);
@@ -68,7 +69,7 @@ const Projects = () => {
       font-weight: 900;
       padding: 0 20px;
       margin: 1rem;
-      border: 4px solid hsl(var(--clr-mint-offwhite));
+      border: 4px solid var(--clr-5);
       box-shadow: none;
       border-radius: 0;
 
