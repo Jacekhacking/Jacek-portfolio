@@ -45,11 +45,11 @@ const Navigation = () => {
         border-left: 1px solid transparent;
         border-right: 1px solid transparent;
         border-top: 1px solid transparent;
-        border-bottom: 1px solid var(--clr-3);
+        border-bottom: 1px solid var(--clr-4);
         &:hover {
-          border-left: 1px solid var(--clr-3);
-          border-right: 1px solid var(--clr-3);
-          border-top: 1px solid var(--clr-3);
+          border-left: 1px solid var(--clr-4);
+          border-right: 1px solid var(--clr-4);
+          border-top: 1px solid var(--clr-4);
           border-bottom: 1px solid transparent;
         }
       }

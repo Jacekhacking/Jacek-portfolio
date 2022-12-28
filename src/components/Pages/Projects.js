@@ -8,21 +8,31 @@ const Projects = () => {
     display: flex;
     flex-direction: column;
     padding-bottom: 2em;
+
+    p {
+      color: var(--clr-5);
+      text-align: center;
+    }
   `;
   const ProjectContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 100px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      padding-top: 0;
+    }
   `;
   const ProjectDiv = styled.div`
     /* border: 2px solid hsl(var(--clr-dark-gray)); */
     margin: 0.5em;
-    width: 500px;
-    height: 500px;
+    width: 44rem;
+    height: 30rem;
     /* background-color: hsl(var(--clr-blue-gray)); */
     background-image: url(${(props) => props.inputImg});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -34,34 +44,26 @@ const Projects = () => {
   `;
 
   const ProjectInfoDiv = styled.div`
-    height: 500px;
-    width: 500px;
+    height: 30rem;
+    width: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-
-    /* background-color: hsl(var(--clr-dark-gray), 0.95); */
     color: var(--clr-5);
 
     h2 {
       font-size: var(--fs-600);
       text-align: center;
-      /* border-bottom: 2px solid var(--clr-4); */
       color: var(--clr-5);
       font-family: var(--ff-cursive);
-      @media (max-width: 330px) {
-        font-size: var(--fs-400);
+      @media (max-width: 400px) {
+        font-size: var(--fs-500);
       }
     }
     p {
       text-align: center;
       font-size: var(--fs-500);
-    }
-    @media (max-width: 600px) {
-      p {
-        font-size: var(--fs-300);
-      }
     }
 
     a {
@@ -81,11 +83,25 @@ const Projects = () => {
         box-shadow: 0 0 10px var(--clr-4);
       }
     }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+      padding: 1rem 1rem;
+      height: 45rem;
+      p {
+        margin-bottom: 40px;
+      }
+    }
   `;
   return (
     <>
       <OutLineStyledHeader>Projects</OutLineStyledHeader>
+
       <ProjectWrapper>
+        <p>
+          All projects shown were made for companies or persons inside of my
+          community or referrals.{" "}
+        </p>
         {projectData.map(
           ({ Image, Name, Description, GitHub, Link, MobileImage }) => (
             <ProjectContainer key={Name}>

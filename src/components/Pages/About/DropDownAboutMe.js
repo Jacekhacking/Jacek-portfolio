@@ -6,7 +6,7 @@ import axios from "axios";
 
 const DropDownAboutMe = () => {
   const DropDownContainerWrapper = styled.div`
-    /* margin: 2em 0; */
+    margin: 2em 0;
     background-color: hsl(var(--clr-blue-gray), 0.2);
     /* border: 5px solid hsl(var(--clr-dark-gray)); */
     color: var(--clr-5);

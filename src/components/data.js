@@ -2,16 +2,17 @@ export const projectData = [
   {
     Name: "Bee Better Massage",
     Description:
-      "Website for local massage therapist business Bee Better Massage. Client came in with a theme and general feel for website. ReactJS CSS and hosted with AWS Amplify",
+      "Website for local massage therapist business Bee Better Massage. ReactJS CSS and hosted with AWS Amplify",
     Image: require("./UI/Images/bee-better-ss.png"),
     MobileImage: require("./UI/Images/Small-bee-better-ss.png"),
     Link: "https://www.Beebettermassage.com",
     GitHub: "https://github.com/Jacekhacking/BeeBetter",
   },
+
   {
     Name: "Art Portfolio",
     Description:
-      "Website for up and coming artist. Client designed the site himself and needed someone with technical skills to apply it.",
+      "Website for local artist. Client designed the site himself and needed someone with technical skills to apply it.",
     Image: require("./UI/Images/keaton-port-ss.png"),
     MobileImage: require("./UI/Images/Small-keaton-port-ss.png"),
     GitHub: "https://github.com/jacekhacking/Keaton_Portfolio",

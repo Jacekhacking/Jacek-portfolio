@@ -9,6 +9,11 @@ const Resume = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5rem 0;
+    img {
+      width: auto;
+      height: auto;
+    }
   `;
   return (
     <>
