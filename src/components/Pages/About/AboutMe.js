@@ -51,11 +51,11 @@ const AboutMe = () => {
           I started teaching myself how to write code at the beginning of 2019.
           I started taking it more seriously late in the summer of 2020 during
           the covid pandemic. In the spring of 2021 I signed up for the
-          University of Utah's Fullstack Coding Boot-camp. I finished their
+          University of Utah's fullstack coding boot-camp. I finished their
           program in October of 2021. I then began doing freelance work for
           people and companies in my immediate community. I'm currently working
-          as a Teaching Assistant through 2U and as an intern for Aceiss
-          Security.
+          as a Teaching Assistant for a fullstack boot-camp through 2U and as an
+          intern for Aceiss Security.
           <strong>
             <DropDownToggleButton onClick={toggleDropdown}>
               {dropdown === false ? "More ..." : "Less..."}

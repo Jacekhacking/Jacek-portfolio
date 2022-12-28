@@ -6,7 +6,7 @@ import axios from "axios";
 
 const DropDownAboutMe = () => {
   const DropDownContainerWrapper = styled.div`
-    /* margin: 2em 0; */
+    margin: 2em 0;
     background-color: hsl(var(--clr-blue-gray), 0.2);
     /* border: 5px solid hsl(var(--clr-dark-gray)); */
     color: var(--clr-5);
@@ -23,21 +23,33 @@ const DropDownAboutMe = () => {
     }
 
     p {
-      font-size: clamp(var(--fs-400), 5vw, var(--fs-500));
-      max-width: 1200px;
       text-align: center;
+      margin: 1em;
+    }
+    div {
+      /* margin: 1em; */
+      ul {
+        margin: 1em;
+        padding: 0;
+      }
+    }
+    @media (max-width: 900px) {
+      div {
+        margin: 0;
+        ul {
+        }
+      }
     }
   `;
   const DropDownImg = styled.img`
     display: block;
-    width: 95%;
+    width: 100%;
     height: 400px;
     object-fit: cover;
-    /* border: 2px solid hsl(var(--clr-orange-soda)); */
     border-radius: 5px;
 
     @media (min-width: 900px) {
-      width: 80%;
+      width: 90%;
       height: 500px;
     }
     @media (min-width: 1200px) {
@@ -109,7 +121,7 @@ const DropDownAboutMe = () => {
   return (
     <>
       <DropDownContainerWrapper>
-        <DropDownH3>A Little more about me</DropDownH3>
+        <DropDownH3>A Little More</DropDownH3>
 
         <DropdownContainer>
           <ImgParagraphDiv>
@@ -129,26 +141,14 @@ const DropDownAboutMe = () => {
               <h2>Fun Facts!</h2>
 
               <ul>
-                <li>
-                  My favorite genre of books is fantasy
-                  <span className={"text-brown"}>|</span>
-                </li>
+                <li>My favorite genre of books is fantasy.</li>
                 <li>
                   I have a licence to practice massage therapy in the state of
-                  Utah
-                  <span className={"text-brown"}>|</span>
+                  Utah.
                 </li>
-                <li>
-                  My favorite childhood video game was Pokémon Puzzle
-                  <span className={"text-brown"}>|</span>
-                </li>
-                <li>
-                  Favorite food is Sushi <span className={"text-brown"}>|</span>
-                </li>
-                <li>
-                  Favorite book series is the Wheel of Time
-                  <span className={"text-brown"}>|</span>
-                </li>
+                <li>My favorite childhood video game was Pokémon Puzzle.</li>
+                <li>Favorite food is Sushi.</li>
+                <li>Favorite book series is the Wheel of Time.</li>
                 <li>
                   Grew up on games like Warcraft 3, Diablo 2, and of course
                   Pokemon!

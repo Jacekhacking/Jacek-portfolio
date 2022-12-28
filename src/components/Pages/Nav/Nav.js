@@ -20,7 +20,6 @@ const Navigation = () => {
     align-items: center;
     justify-content: space-between;
     background-color: hsl(var(--clr-6-hsl), 0.98);
-    /* border-bottom: 6px solid hsl(var(--clr-blue-gray)); */
 
     @media (max-width: 550px) {
       height: 50px;
@@ -40,24 +39,18 @@ const Navigation = () => {
       justify-content: space-evenly;
       > * {
         margin: 0 -0.8px;
-
         padding: 0 10px;
         text-align: center;
         border-radius: 0;
         border-left: 1px solid transparent;
         border-right: 1px solid transparent;
         border-top: 1px solid transparent;
-        border-bottom: 1px solid var(--clr-3);
+        border-bottom: 1px solid var(--clr-4);
         &:hover {
-          border-left: 1px solid var(--clr-3);
-          border-right: 1px solid var(--clr-3);
-          border-top: 1px solid var(--clr-3);
+          border-left: 1px solid var(--clr-4);
+          border-right: 1px solid var(--clr-4);
+          border-top: 1px solid var(--clr-4);
           border-bottom: 1px solid transparent;
-
-          /* background-color: hsl(var(--clr-3-hsl));
-          color: black; */
-          /* margin-bottom: -15px; */
-          /* border-bottom: 10px solid hsl(var(--clr-3-hsl), 08); */
         }
       }
     }
@@ -66,18 +59,28 @@ const Navigation = () => {
     }
   `;
 
-  const NavSideDrawer = styled(NavContainer)`
+  const NavSideDrawer = styled.div`
     @media (max-width: 1200px) {
       display: flex;
+      align-items: center;
+      margin: 0 0.4rem;
+      font-family: var(--ff-cursive);
+      color: hsl(var(--clr-mint-offwhite));
+
       font-size: 1.5rem;
       ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         flex-direction: column;
 
-        a {
+        > * {
           margin-top: 1rem;
-        }
-        li {
-          margin-top: 1rem;
+          border-radius: 0;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            border-bottom: 1px solid var(--clr-3);
+          }
         }
       }
     }

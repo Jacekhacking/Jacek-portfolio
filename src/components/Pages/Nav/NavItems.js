@@ -20,11 +20,6 @@ const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
             {tab}
           </Link>
         ))}
-        <li>
-          <a href={Pdf} target="_blank" rel="noreferrer">
-            Resume
-          </a>
-        </li>
       </ul>
     </>
   );
@@ -33,7 +28,7 @@ const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
 function getActiveProps() {
   return {
     style: {
-      color: "var(--clr-3)",
+      color: "var(--clr-4)",
       // borderLeft: "4px solid var(--clr-3)",
       // borderRight: "1px solid var(--clr-3)",
       // borderTop: "1px solid var(--clr-3)",

@@ -11,14 +11,15 @@ const Footer = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--clr-6);
-    padding: 20px 20px;
-    padding-top: 100px;
+
+    background-color: var(--clr-5);
+    padding: 1em 20px;
 
     p {
       font-size: clamp(var(--fs-200), 1.5vh, var(--fs-400));
       display: flex;
-      color: hsl(var(--clr-mint-offwhite));
+      color: var(--clr-6);
+      border-bottom: 1px solid transparent;
 
       a {
         color: inherit;
@@ -26,7 +27,7 @@ const Footer = () => {
       }
 
       &:hover {
-        color: var(--clr-4);
+        border-bottom: 1px solid var(--clr-6);
       }
 
       @media (max-width: 300px) {
@@ -48,8 +49,8 @@ const Footer = () => {
         align-items: center;
 
         &:hover {
-          background-color: var(--clr-3);
-          box-shadow: 0 0 10px var(--clr-3);
+          background-color: var(--clr-4);
+          box-shadow: 0 0 10px var(--clr-4);
         }
       }
     }
@@ -65,13 +66,15 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <a href={Pdf} target="_blank" rel="noreferrer">
-          Resume
-        </a>
+      <div style={{ flexDirection: "column" }}>
         <p>
           Email:
           <a href="mailto:Jacekhacking@gmail.com"> JacekHacking@gmail.com</a>
+        </p>
+        <p>
+          <a href={Pdf} target="_blank" rel="noreferrer">
+            Download Resume
+          </a>
         </p>
       </div>
 
