@@ -8,7 +8,6 @@ const SideDrawer = (props) => {
     height: 100vh;
     width: 80%;
 
-    /* background: hsl(var(--clr-light-gray), 0.95); */
     background: hsl(var(--clr-dark-gray), 0.95);
     box-shadow: -3px 5px 20px black;
     display: flex;
@@ -27,7 +26,5 @@ const SideDrawer = (props) => {
       {props.children}
     </SideDrawerContainer>
   );
-
-  // return ReactDOM.createPortal(content, document.getElementById("drawer-hook"));
 };
 export default SideDrawer;

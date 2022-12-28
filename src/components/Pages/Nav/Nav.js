@@ -79,7 +79,7 @@ const Navigation = () => {
           border-radius: 0;
           border-bottom: 1px solid transparent;
           &:hover {
-            border-bottom: 1px solid var(--clr-3);
+            border-bottom: 1px solid var(--clr-4);
           }
         }
       }
@@ -95,9 +95,9 @@ const Navigation = () => {
     width: 90px;
     /* margin-top: 5px; */
 
-    :hover {
+    /* :hover {
       background-image: url(${logoDark});
-    }
+    } */
 
     @media (max-width: 550px) {
       height: 50px;

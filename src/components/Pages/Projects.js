@@ -8,11 +8,8 @@ const Projects = () => {
     display: flex;
     flex-direction: column;
     padding-bottom: 2em;
-
-    p {
-      color: var(--clr-5);
-      text-align: center;
-    }
+    color: var(--clr-5);
+    text-align: center;
   `;
   const ProjectContainer = styled.div`
     display: flex;
@@ -26,17 +23,16 @@ const Projects = () => {
     }
   `;
   const ProjectDiv = styled.div`
-    /* border: 2px solid hsl(var(--clr-dark-gray)); */
     margin: 0.5em;
     width: 44rem;
     height: 30rem;
-    /* background-color: hsl(var(--clr-blue-gray)); */
     background-image: url(${(props) => props.inputImg});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     @media (max-width: 600px) {
+      background-color: white;
       background-image: url(${(props) => props.mobileImage});
       width: 100%;
       height: 30rem;
@@ -51,6 +47,7 @@ const Projects = () => {
     justify-content: space-between;
     text-align: center;
     color: var(--clr-5);
+    font-size: clamp(var(--fs-400), 2vw, var(--fs-500));
 
     h2 {
       font-size: var(--fs-600);
@@ -58,12 +55,11 @@ const Projects = () => {
       color: var(--clr-5);
       font-family: var(--ff-cursive);
       @media (max-width: 400px) {
-        font-size: var(--fs-500);
+        /* font-size: var(--fs-500); */
       }
     }
     p {
       text-align: center;
-      font-size: var(--fs-500);
     }
 
     a {
@@ -87,9 +83,16 @@ const Projects = () => {
     @media (max-width: 900px) {
       justify-content: center;
       padding: 1rem 1rem;
-      height: 45rem;
+      height: 40rem;
+      width: auto;
       p {
+        padding: 2rem;
         margin-bottom: 40px;
+      }
+      @media (max-width: 600px) {
+        p {
+          /* font-size: var(--fs-400); */
+        }
       }
     }
   `;
@@ -98,10 +101,6 @@ const Projects = () => {
       <OutLineStyledHeader>Projects</OutLineStyledHeader>
 
       <ProjectWrapper>
-        <p>
-          All projects shown were made for companies or persons inside of my
-          community or referrals.{" "}
-        </p>
         {projectData.map(
           ({ Image, Name, Description, GitHub, Link, MobileImage }) => (
             <ProjectContainer key={Name}>
