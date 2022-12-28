@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
 
 
    --white-100: 351, 8%, 92%;
-
-   --grey-100: ;
+/* eventually adding a more robust styling  */
+   /* --grey-100: ;
    --grey-200: ;
    --grey-300: ;
    --grey-400: ;
@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
    --primary-600: ;
    --primary-700: ;
    --primary-800: ;
-   --primary-900: ;
+   --primary-900: ; */
 
     --clr-1: #41436a;
     --clr-1-hsl: 	237, 24%, 34%;
@@ -363,23 +363,6 @@ transition: all .4s ease-in-out;
 `;
 export default GlobalStyles;
 
-export const StyledHeader = styled.h2`
-  padding-right: 2rem;
-  text-align: center;
-  -webkit-text-stroke: 3px black;
-  -webkit-text-fill-color: transparent;
-  font-size: 9rem;
-  line-height: 1.2;
-  font-family: var(--ff-cursive);
-  @media (max-width: 800px) {
-    font-size: 5rem;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 4rem;
-  }
-`;
-
 export const FlexWrapContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -408,7 +391,6 @@ export const Container = styled.div`
 `;
 
 export const OutLineStyledHeader = styled.h2`
-  padding-right: 2rem;
   text-align: center;
   -webkit-text-stroke: 3px #b5b5b5;
   -webkit-text-fill-color: transparent;
