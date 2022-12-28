@@ -7,6 +7,7 @@ const Projects = () => {
   const ProjectWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    padding-bottom: 2em;
   `;
   const ProjectContainer = styled.div`
     display: flex;
@@ -83,7 +84,7 @@ const Projects = () => {
   `;
   return (
     <>
-      <OutLineStyledHeader>Proj</OutLineStyledHeader>
+      <OutLineStyledHeader>Projects</OutLineStyledHeader>
       <ProjectWrapper>
         {projectData.map(
           ({ Image, Name, Description, GitHub, Link, MobileImage }) => (

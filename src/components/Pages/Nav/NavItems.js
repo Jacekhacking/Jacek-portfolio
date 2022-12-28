@@ -20,11 +20,6 @@ const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
             {tab}
           </Link>
         ))}
-        <li>
-          <a href={Pdf} target="_blank" rel="noreferrer">
-            Resume
-          </a>
-        </li>
       </ul>
     </>
   );

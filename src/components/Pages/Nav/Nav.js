@@ -20,7 +20,6 @@ const Navigation = () => {
     align-items: center;
     justify-content: space-between;
     background-color: hsl(var(--clr-6-hsl), 0.98);
-    /* border-bottom: 6px solid hsl(var(--clr-blue-gray)); */
 
     @media (max-width: 550px) {
       height: 50px;
@@ -40,7 +39,6 @@ const Navigation = () => {
       justify-content: space-evenly;
       > * {
         margin: 0 -0.8px;
-
         padding: 0 10px;
         text-align: center;
         border-radius: 0;
@@ -53,11 +51,6 @@ const Navigation = () => {
           border-right: 1px solid var(--clr-3);
           border-top: 1px solid var(--clr-3);
           border-bottom: 1px solid transparent;
-
-          /* background-color: hsl(var(--clr-3-hsl));
-          color: black; */
-          /* margin-bottom: -15px; */
-          /* border-bottom: 10px solid hsl(var(--clr-3-hsl), 08); */
         }
       }
     }
