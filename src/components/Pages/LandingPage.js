@@ -26,9 +26,6 @@ const LandingPage = () => {
     img {
       height: 35rem;
       width: auto;
-
-      /* border: 4px solid hsl(var(--clr-dark-gray)); */
-      /* box-shadow: 0 0 20px var(--clr-4); */
     }
 
     @media (max-width: 550px) {
@@ -44,13 +41,10 @@ const LandingPage = () => {
   `;
 
   const AboutText = styled.h2`
-    /* max-width: 800px; */
     padding-right: 2rem;
     text-align: center;
     -webkit-text-stroke: 3px black;
     -webkit-text-fill-color: transparent;
-    /* writing-mode: vertical-lr; */
-    /* transform: rotate(180deg); */
     font-size: 9rem;
     line-height: 1.2;
     font-family: var(--ff-cursive);
@@ -71,7 +65,7 @@ const LandingPage = () => {
 
           <AboutText>Hi, I'm Jacek!</AboutText>
 
-          <p>I'm a Web Developer from Salt Lake City, Utah!</p>
+          <p>A Web Developer from Salt Lake City, Utah!</p>
         </LandingPageWrapper>
       </section>
 

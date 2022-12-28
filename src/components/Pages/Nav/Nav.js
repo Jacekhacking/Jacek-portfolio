@@ -59,18 +59,28 @@ const Navigation = () => {
     }
   `;
 
-  const NavSideDrawer = styled(NavContainer)`
+  const NavSideDrawer = styled.div`
     @media (max-width: 1200px) {
       display: flex;
+      align-items: center;
+      margin: 0 0.4rem;
+      font-family: var(--ff-cursive);
+      color: hsl(var(--clr-mint-offwhite));
+
       font-size: 1.5rem;
       ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         flex-direction: column;
 
-        a {
+        > * {
           margin-top: 1rem;
-        }
-        li {
-          margin-top: 1rem;
+          border-radius: 0;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            border-bottom: 1px solid var(--clr-3);
+          }
         }
       }
     }
