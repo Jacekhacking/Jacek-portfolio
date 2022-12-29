@@ -1,13 +1,11 @@
 import { useState } from "react";
 
 import DropDownAboutMe from "./DropDownAboutMe";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import styled from "styled-components";
 import { OutLineStyledHeader } from "../../UI/Styles/Global.styles";
 
 const AboutMe = () => {
-  //CSS and styled components
   const AboutMeBody = styled.div`
     color: var(--clr-5);
     min-height: 100vh;
@@ -36,8 +34,6 @@ const AboutMe = () => {
     }
   `;
 
-  const [listRef] = useAutoAnimate();
-
   const [dropdown, setDropdown] = useState(false);
 
   const toggleDropdown = () => setDropdown(!dropdown);
@@ -63,7 +59,7 @@ const AboutMe = () => {
           </strong>
         </AboutMeText>
 
-        <div ref={listRef}>{dropdown && <DropDownAboutMe />}</div>
+        <div>{dropdown && <DropDownAboutMe />}</div>
       </AboutMeBody>
     </>
   );

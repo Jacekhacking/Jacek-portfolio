@@ -1,4 +1,3 @@
-import resumePdf from "../../UI/Shared/JacekPortfolio.PDF";
 import resumeSS from "../../UI/Images/Resume_SS.png";
 import styled from "styled-components";
 

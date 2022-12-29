@@ -8,7 +8,6 @@ const DropDownAboutMe = () => {
   const DropDownContainerWrapper = styled.div`
     margin: 2em 0;
     background-color: hsl(var(--clr-blue-gray), 0.2);
-    /* border: 5px solid hsl(var(--clr-dark-gray)); */
     color: var(--clr-5);
     @media (min-width: 900px) {
       margin-left: 2em;
@@ -64,7 +63,6 @@ const DropDownAboutMe = () => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* max-width: 100rem; */
   `;
   const ImgParagraphDiv = styled.div`
     display: flex;
@@ -86,7 +84,6 @@ const DropDownAboutMe = () => {
   const DropDownH3 = styled.h3`
     font-size: var(--fs-700);
     font-family: var(--ff-cursive);
-    /* border-bottom: 5px solid hsl(var(--clr-dark-gray)); */
     color: #b5b5b5;
   `;
 
