@@ -8,7 +8,7 @@ const Backdrop = (props) => {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.75);
+    background: hsl(var(--clr-6-hsl), 80%);
     z-index: 0;
     @media (min-width: 1200px) {
       display: none;

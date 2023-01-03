@@ -6,36 +6,15 @@ const GlobalStyles = createGlobalStyle`
   :root {
 
     /*Colors*/
-    --clr-dark-gray: 200, 8%, 7%;
+    /* --clr-dark-gray: 200, 8%, 7%;
     --clr-blue-gray: 205, 8%, 45%;
     --clr-mint-offwhite: 351, 8%, 92%;
     --clr-light-gray: 205, 8%, 65%;
     --clr-sandy-brown: 28, 83%, 61%;
-    --clr-orange-soda: 10, 94%, 60%;
+    --clr-orange-soda: 10, 94%, 60%; */
 
 
-   --white-100: 351, 8%, 92%;
-/* eventually adding a more robust styling  */
-   /* --grey-100: ;
-   --grey-200: ;
-   --grey-300: ;
-   --grey-400: ;
-   --grey-500: ;
-   --grey-600: ;
-   --grey-700: ;
-   --grey-800: ;
-   --grey-900: ;
-
-   --primary-100: ;
-   --primary-200: ;
-   --primary-300: ;
-   --primary-400: ;
-   --primary-500: ;
-   --primary-600: ;
-   --primary-700: ;
-   --primary-800: ;
-   --primary-900: ; */
-
+    --white-100: 351, 8%, 92%;
     --clr-1: #41436a;
     --clr-1-hsl: 	237, 24%, 34%;
     --clr-2: #974063;
@@ -45,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-4: #FF9677;
     --clr-4-hsl: 14, 100%, 73%;
     --clr-5:#b5b5b5;
+    --clr-5-hsl: 0, 0%, 71%;
     --clr-6:#1A1A1B;
     --clr-6-hsl: 240, 2%, 10%;
 
@@ -380,14 +360,6 @@ export const Header2 = styled.h2`
   justify-content: center;
   margin: 3rem;
   text-align: center;
-`;
-
-export const Container = styled.div`
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 90rem;
-  background-color: ${(props) =>
-    props.bgColor || "hsl(var(--clr-mint-offwhite))"};
 `;
 
 export const OutLineStyledHeader = styled.h2`
