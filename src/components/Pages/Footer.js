@@ -1,7 +1,7 @@
 import twitter from "../UI/Images/SocialLogos/twitter.png";
 import github from "../UI/Images/SocialLogos/GitHub-Mark-64px.png";
 import linkedin from "../UI/Images/SocialLogos/linkedin.png";
-import Pdf from "../UI/Shared/JacekPortfolio.PDF";
+import Pdf from "../UI/Shared/JacekWebDevPortfolio.PDF";
 
 import styled from "styled-components";
 
