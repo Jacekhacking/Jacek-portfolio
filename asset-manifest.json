@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.js": "/static/js/main.93e3fab1.js",
+    "static/js/241.434f37af.chunk.js": "/static/js/241.434f37af.chunk.js",
+    "static/js/686.df0b38f5.chunk.js": "/static/js/686.df0b38f5.chunk.js",
+    "static/js/689.c9731218.chunk.js": "/static/js/689.c9731218.chunk.js",
+    "static/js/173.3d1866a0.chunk.js": "/static/js/173.3d1866a0.chunk.js",
+    "static/js/787.8d4efb73.chunk.js": "/static/js/787.8d4efb73.chunk.js",
+    "static/js/569.6b862a99.chunk.js": "/static/js/569.6b862a99.chunk.js",
+    "static/media/bee-better-ss.png": "/static/media/bee-better-ss.b3474bafbfb3b1e1e3c8.png",
+    "static/media/jacek_logo_light.png": "/static/media/jacek_logo_light.a3dda995337135fd9a29.png",
+    "static/media/keaton-port-ss.png": "/static/media/keaton-port-ss.34781776d68b94bc59e9.png",
+    "static/media/Small-keaton-port-ss.png": "/static/media/Small-keaton-port-ss.b77fa5a9af97ccc0b524.png",
+    "static/media/Small-bee-better-ss.png": "/static/media/Small-bee-better-ss.011451a8d1193fc2b256.png",
+    "static/media/onewavegolf.png": "/static/media/onewavegolf.a3c3b17f43c96154748e.png",
+    "static/media/AuriPic_2.jpeg": "/static/media/AuriPic_2.ef6c17d83c35183834c4.jpeg",
+    "static/media/IMG_9739.png": "/static/media/IMG_9739.5e10934cab20be61d55b.png",
+    "static/media/gc-rafting-picture.jpeg": "/static/media/gc-rafting-picture.d5b1b03a6093492b85e2.jpeg",
+    "static/media/LCBodyworkSC.png": "/static/media/LCBodyworkSC.83e5bb7ad47d8983e2ff.png",
+    "static/media/Small-LCBodyworkSC.png": "/static/media/Small-LCBodyworkSC.67ade98591327e2b2fe4.png",
+    "static/media/Small-onewavegolf.png": "/static/media/Small-onewavegolf.cb8758193b15fdb839d1.png",
+    "static/media/Resume_SS.png": "/static/media/Resume_SS.462afed3fbba8a0c747f.png",
+    "static/media/JacekPortfolio.PDF": "/static/media/JacekPortfolio.44af25ca862e8e8867db.PDF",
+    "static/media/twitter.png": "/static/media/twitter.9685c410a6499b9ebc16.png",
+    "index.html": "/index.html",
+    "main.93e3fab1.js.map": "/static/js/main.93e3fab1.js.map",
+    "241.434f37af.chunk.js.map": "/static/js/241.434f37af.chunk.js.map",
+    "686.df0b38f5.chunk.js.map": "/static/js/686.df0b38f5.chunk.js.map",
+    "689.c9731218.chunk.js.map": "/static/js/689.c9731218.chunk.js.map",
+    "173.3d1866a0.chunk.js.map": "/static/js/173.3d1866a0.chunk.js.map",
+    "787.8d4efb73.chunk.js.map": "/static/js/787.8d4efb73.chunk.js.map",
+    "569.6b862a99.chunk.js.map": "/static/js/569.6b862a99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.93e3fab1.js"
+  ]
+}
