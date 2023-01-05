@@ -2,7 +2,7 @@ import SelfieImg from "../UI/Images/IMG_9739.png";
 import styled from "styled-components";
 import Projects from "./Projects";
 import AboutMe from "./About/AboutMe";
-import Resume from "./About/Resume";
+
 const LandingPage = () => {
   const LandingPageWrapper = styled.div`
     display: flex;
@@ -11,7 +11,6 @@ const LandingPage = () => {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    /* padding: 0 2rem; */
     color: hsl(var(--clr-dark-gray));
     background-color: #b5b5b5;
     div {
