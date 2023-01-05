@@ -1,4 +1,4 @@
-import Pdf from "../Shared/JacekPortfolio.PDF";
+import Pdf from "../Shared/JacekWebDevPortfolio.PDF";
 import styled from "styled-components";
 
 const Resume = () => {
