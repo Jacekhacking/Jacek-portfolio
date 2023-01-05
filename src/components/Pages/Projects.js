@@ -55,7 +55,6 @@ const Projects = () => {
       color: var(--clr-5);
       font-family: var(--ff-cursive);
       @media (max-width: 400px) {
-        /* font-size: var(--fs-500); */
       }
     }
     p {
