@@ -7,13 +7,13 @@ const SideDrawer = (props) => {
     top: 0;
     height: 100vh;
     width: 80%;
-
-    background: hsl(var(--clr-dark-gray), 0.95);
+    background: hsl(var(--clr-6-hsl));
     box-shadow: -3px 5px 20px black;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: var(--clr-5);
 
     @media (min-width: 1200px) {
       display: none;

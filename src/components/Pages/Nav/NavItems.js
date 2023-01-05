@@ -1,4 +1,3 @@
-import Pdf from "../../UI/Shared/JacekPortfolio.PDF";
 import { Link } from "@tanstack/react-location";
 
 const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
@@ -29,10 +28,6 @@ function getActiveProps() {
   return {
     style: {
       color: "var(--clr-4)",
-      // borderLeft: "4px solid var(--clr-3)",
-      // borderRight: "1px solid var(--clr-3)",
-      // borderTop: "1px solid var(--clr-3)",
-      // borderBottom: "4px solid var(--clr-3)",
     },
   };
 }

@@ -75,7 +75,7 @@ const Projects = () => {
       &:hover {
         background-color: var(--clr-4);
         border: 4px solid var(--clr-4);
-        color: hsl(var(--clr-dark-gray));
+        color: var(--clr-6);
         box-shadow: 0 0 10px var(--clr-4);
       }
     }

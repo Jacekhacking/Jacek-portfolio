@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-location";
 import { useState, useEffect } from "react";
 import SideDrawer from "../../UI/Shared/SideDrawer";
 import logoLight from "../../UI/Images/jacek_logo_light.png";
-import logoDark from "../../UI/Images/jacek_logo_dark.png";
 import NavItems from "./NavItems";
 import styled from "styled-components";
 import Backdrop from "../../UI/Shared/Backdrop";
@@ -31,7 +30,7 @@ const Navigation = () => {
     align-items: center;
     margin: 0 0.4rem;
     font-family: var(--ff-cursive);
-    color: hsl(var(--clr-mint-offwhite));
+    color: var(--clr-5);
     font-size: 1.2rem;
     ul {
       display: flex;
@@ -93,12 +92,6 @@ const Navigation = () => {
     background-size: cover;
     height: 90px;
     width: 90px;
-    /* margin-top: 5px; */
-
-    /* :hover {
-      background-image: url(${logoDark});
-    } */
-
     @media (max-width: 550px) {
       height: 50px;
       width: 50px;
@@ -123,7 +116,7 @@ const Navigation = () => {
     :hover {
       cursor: pointer;
       span {
-        background-color: hsl(var(--clr-3-hsl));
+        background-color: hsl(var(--clr-4-hsl));
       }
     }
     @media (min-width: 1200px) {
@@ -194,7 +187,10 @@ const Navigation = () => {
         </SideDrawer>
       )}
       <NavContainer>
-        <NavItems />
+        <NavItems
+          toggleSideDrawer={toggleSideDrawer}
+          toggleHamburger={toggleHamburger}
+        />
       </NavContainer>
     </NavWrapper>
   );

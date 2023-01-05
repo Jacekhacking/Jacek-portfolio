@@ -78,7 +78,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <socialMediaContainer>
+      <>
         <div
           style={{
             display: "flex",
@@ -115,7 +115,7 @@ const Footer = () => {
             </div>
           </a>
         </div>
-      </socialMediaContainer>
+      </>
     </FooterContainer>
   );
 };

@@ -52,9 +52,9 @@ function App() {
       <header>
         <Navigation />
       </header>
-      <body>
+      <div>
         <Outlet />
-      </body>
+      </div>
       <FooterComponent />
     </Router>
   );
