@@ -1,12 +1,20 @@
 import GlobalStyles from "./components/UI/Styles/Global.styles";
 import Navigation from "./components/Pages/Nav/Nav";
 import FooterComponent from "./components/Pages/Footer";
+// import PageNotFound from "./components/Pages/PageNotFound";
 
-import { Router, ReactLocation, Outlet } from "@tanstack/react-location";
+import {
+  Router,
+  ReactLocation,
+  Outlet,
+  createHashHistory,
+} from "@tanstack/react-location";
 
 function App() {
+  // Create a hash history
+  const hashHistory = createHashHistory();
   //Set up a ReactLocation Instance
-  const location = new ReactLocation();
+  const location = new ReactLocation({ history: hashHistory });
 
   return (
     <Router
