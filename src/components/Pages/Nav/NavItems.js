@@ -12,6 +12,7 @@ const NavItems = ({ toggleSideDrawer, toggleHamburger }) => {
             key={tab}
             getActiveProps={getActiveProps}
             onClick={() => {
+              window.scrollTo(0, 0);
               toggleSideDrawer(false);
               toggleHamburger();
             }}

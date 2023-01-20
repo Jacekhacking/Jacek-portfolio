@@ -9,6 +9,8 @@ const DropDownAboutMe = () => {
     margin: 2em 0;
     background-color: hsl(var(--clr-blue-gray), 0.2);
     color: var(--clr-5);
+    font-size: clamp(var(--fs-400), 2vw, var(--fs-500));
+
     @media (min-width: 900px) {
       margin-left: 2em;
       margin-right: 2em;
@@ -65,6 +67,7 @@ const DropDownAboutMe = () => {
     justify-content: center;
   `;
   const ImgParagraphDiv = styled.div`
+    max-width: 1500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +97,7 @@ const DropDownAboutMe = () => {
     height: 180px;
 
     :hover {
-      border: 3px solid hsl(var(--clr-sandy-brown));
+      border: 3px solid var(--clr-4);
     }
   `;
 

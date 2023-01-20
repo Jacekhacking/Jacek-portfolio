@@ -1,5 +1,23 @@
 export const projectData = [
   {
+    Name: "LCBodywork",
+    Description:
+      "Professional Website for LC Bodyworks. A local massage therapist looking for a professional website.",
+    Image: require("./UI/Images/LCBodyworkSC.png"),
+    MobileImage: require("./UI/Images/Small-LCBodyworkSC.png"),
+    Link: "https://www.lcbodywork.com",
+    GitHub: "https://github.com/jacekhacking/lc-bodywork",
+  },
+  {
+    Name: "YouTube Clone",
+    Description:
+      " YouTube Clone built alongside JavascriptMastery youtube video. Built with ReactJS, ReactRouter, MUI, RapidAPI",
+    Image: require("./UI/Images/YoutubeSS.png"),
+    MobileImage: require("./UI/Images/YoutubeSS.png"),
+    Link: "https://glittering-scone-de1925.netlify.app",
+    GitHub: "https://github.com/jacekhacking/jsm_youtube_clone",
+  },
+  {
     Name: "Bee Better Massage",
     Description:
       "Website for local massage therapist business Bee Better Massage. ReactJS CSS and hosted with AWS Amplify",
@@ -25,14 +43,5 @@ export const projectData = [
     MobileImage: require("./UI/Images/Small-onewavegolf.png"),
     Link: "https://www.onewavegolf.com",
     GitHub: "https://github.com/jacekhacking/OneWaveGolf",
-  },
-  {
-    Name: "LCBodywork",
-    Description:
-      "Professional Website for LC Bodyworks. A local massage therapist looking for a professional website.",
-    Image: require("./UI/Images/LCBodyworkSC.png"),
-    MobileImage: require("./UI/Images/Small-LCBodyworkSC.png"),
-    Link: "https://www.lcbodywork.com",
-    GitHub: "https://github.com/jacekhacking/lc-bodywork",
   },
 ];
