@@ -27,7 +27,7 @@ const Footer = () => {
   //     width: 40px;
 
   return (
-    <footer className="  flex w-full justify-between items-center  h-20 py-5 px-5 flex-col ">
+    <footer className=" flex flex-col md:flex-row w-full justify-between items-center  h-20 py-5 px-5  ">
       <p className="text-xl">
         Email:
         <a href="mailto:Jacekhacking@gmail.com"> JacekHacking@gmail.com</a>
