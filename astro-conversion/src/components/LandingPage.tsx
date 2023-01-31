@@ -1,9 +1,11 @@
+import SelfieImg from "../images/landing_page_selfie.png";
+
 const LandingPage = () => {
   return (
     <>
-      <section>
-        <div>
-          {/* <img src={SelfieImg} alt="Me!" /> */}
+      <section className="flex align-middle justify-center items-center h-full">
+        <div className="flex items-center justify-center flex-col  w-full h-screen">
+          <img src={SelfieImg} alt="Me" className="object-cover h-auto w-96" />
 
           <h1>Hi, I'm Jacek!</h1>
 
