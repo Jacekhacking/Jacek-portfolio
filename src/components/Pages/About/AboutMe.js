@@ -34,9 +34,9 @@ const AboutMe = () => {
     }
   `;
 
-  const [dropdown, setDropdown] = useState(false);
+  const [isDropdown, setIsDropdown] = useState(false);
 
-  const toggleDropdown = () => setDropdown(!dropdown);
+  const toggleDropdown = () => setIsDropdown(!isDropdown);
 
   return (
     <>
@@ -54,12 +54,12 @@ const AboutMe = () => {
           intern for Aceiss Security.
           <strong>
             <DropDownToggleButton onClick={toggleDropdown}>
-              {dropdown === false ? "More ..." : "Less..."}
+              {isDropdown === false ? "More ..." : "Less..."}
             </DropDownToggleButton>
           </strong>
         </AboutMeText>
 
-        <div>{dropdown && <DropDownAboutMe />}</div>
+        <div>{isDropdown && <DropDownAboutMe />}</div>
       </AboutMeBody>
     </>
   );
