@@ -152,7 +152,12 @@ const Navigation = () => {
 
   return (
     <NavWrapper>
-      <Link to="/">
+      <Link
+        to="/"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
         <NavLogo />
       </Link>
 

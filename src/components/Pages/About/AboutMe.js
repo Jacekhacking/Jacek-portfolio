@@ -8,7 +8,7 @@ import { OutLineStyledHeader } from "../../UI/Styles/Global.styles";
 const AboutMe = () => {
   const AboutMeBody = styled.div`
     color: var(--clr-5);
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@ const AboutMe = () => {
     text-align: center;
     margin: 1em;
     font-size: clamp(var(--fs-400), 2vw, var(--fs-500));
-    width: 80%;
+    max-width: 52em;
   `;
 
   const DropDownToggleButton = styled.button`
@@ -34,9 +34,9 @@ const AboutMe = () => {
     }
   `;
 
-  const [dropdown, setDropdown] = useState(false);
+  const [isDropdown, setIsDropdown] = useState(false);
 
-  const toggleDropdown = () => setDropdown(!dropdown);
+  const toggleDropdown = () => setIsDropdown(!isDropdown);
 
   return (
     <>
@@ -54,12 +54,12 @@ const AboutMe = () => {
           intern for Aceiss Security.
           <strong>
             <DropDownToggleButton onClick={toggleDropdown}>
-              {dropdown === false ? "More ..." : "Less..."}
+              {isDropdown === false ? "More ..." : "Less..."}
             </DropDownToggleButton>
           </strong>
         </AboutMeText>
 
-        <div>{dropdown && <DropDownAboutMe />}</div>
+        <div>{isDropdown && <DropDownAboutMe />}</div>
       </AboutMeBody>
     </>
   );

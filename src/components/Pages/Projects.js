@@ -1,4 +1,4 @@
-import { projectData } from "../data";
+import { projectData } from "../data.js";
 
 import { OutLineStyledHeader } from "../UI/Styles/Global.styles";
 import styled from "styled-components";
@@ -24,10 +24,10 @@ const Projects = () => {
   `;
   const ProjectDiv = styled.div`
     margin: 0.5em;
-    width: 44rem;
-    height: 30rem;
+    width: 640px;
+    height: 388px;
     background-image: url(${(props) => props.inputImg});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -99,34 +99,36 @@ const Projects = () => {
     <>
       <OutLineStyledHeader>Projects</OutLineStyledHeader>
 
-      <ProjectWrapper>
-        {projectData.map(
-          ({ Image, Name, Description, GitHub, Link, MobileImage }) => (
-            <ProjectContainer key={Name}>
-              <ProjectInfoDiv>
-                <div>
-                  <h2>{Name}</h2>
-                  <p>{Description} </p>
-                </div>
+      {projectData && (
+        <ProjectWrapper>
+          {projectData.map(
+            ({ Image, MobileImage, Name, Description, GitHub, Link }) => (
+              <ProjectContainer key={Name}>
+                <ProjectInfoDiv>
+                  <div>
+                    <h2>{Name}</h2>
+                    <p>{Description} </p>
+                  </div>
 
-                <div>
-                  <a href={GitHub} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                  <a href={Link} target="_blank" rel="noopener noreferrer">
-                    Live Site
-                  </a>
-                </div>
-              </ProjectInfoDiv>
+                  <div>
+                    <a href={GitHub} target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                    <a href={Link} target="_blank" rel="noopener noreferrer">
+                      Live Site
+                    </a>
+                  </div>
+                </ProjectInfoDiv>
 
-              <ProjectDiv
-                inputImg={Image}
-                mobileImage={MobileImage}
-              ></ProjectDiv>
-            </ProjectContainer>
-          )
-        )}
-      </ProjectWrapper>
+                <ProjectDiv
+                  inputImg={Image}
+                  mobileImage={MobileImage}
+                ></ProjectDiv>
+              </ProjectContainer>
+            )
+          )}
+        </ProjectWrapper>
+      )}
     </>
   );
 };
