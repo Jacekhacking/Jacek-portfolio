@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/About/AboutMe";
 ---
 
-<Layout title="About">About</Layout>
+<Layout title="About">
+  <AboutMe client:idle />
+</Layout>

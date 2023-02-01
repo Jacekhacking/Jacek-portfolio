@@ -12,7 +12,7 @@ const NavItems = () => {
       </a>
       <ul className="flex">
         {tabs.map((tab) => (
-          <div className=" -m-[1.5px] border-2 rounded-sm border-transparent border-b-blue-400 hover:border-b-transparent hover:border-x-blue-300 hover:border-t-blue-300">
+          <div className=" -m-[1.5px] border-2 rounded-sm border-transparent border-b-red-400 hover:border-b-transparent hover:border-x-red-400 hover:border-t-red-400">
             <a
               href={tab}
               onClick={() => {

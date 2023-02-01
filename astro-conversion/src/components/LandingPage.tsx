@@ -5,7 +5,7 @@ const LandingPage = () => {
     <>
       <section className="flex align-middle justify-center items-center h-full">
         <div className="flex items-center justify-center flex-col  w-full h-screen">
-          <img src={SelfieImg} alt="Me" className="object-cover h-auto w-96" />
+          <img src={SelfieImg} alt="Me" className="object-contain h-96 w-96" />
 
           <h1>Hi, I'm Jacek!</h1>
 
@@ -13,9 +13,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section>{/* <AboutMe /> */}</section>
+      {/* <section><AboutMe /></section> */}
 
-      <section>{/* <Projects /> */}</section>
+      {/* <section><Projects /></section> */}
     </>
   );
 };
