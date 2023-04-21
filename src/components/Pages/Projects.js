@@ -1,7 +1,7 @@
-import { projectData } from "../data.js";
+import { projectData } from '../data.js';
 
-import { OutLineStyledHeader } from "../UI/Styles/Global.styles";
-import styled from "styled-components";
+import { OutLineStyledHeader } from '../UI/Styles/Global.styles';
+import styled from 'styled-components';
 
 const Projects = () => {
   const ProjectWrapper = styled.div`
@@ -27,7 +27,7 @@ const Projects = () => {
     width: 640px;
     height: 388px;
     background-image: url(${(props) => props.inputImg});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
