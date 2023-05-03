@@ -101,22 +101,22 @@ const DropDownAboutMe = () => {
     }
   `;
 
-  const [pokemon, setPokemon] = useState(null);
-  const [number, setNumber] = useState(59);
+  // const [pokemon, setPokemon] = useState(null);
+  // const [number, setNumber] = useState(59);
+  //
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://pokeapi.co/api/v2/pokemon/${number}/`)
+  //     .then((response) => {
+  //       setPokemon(response.data);
+  //     });
+  // }, [number]);
 
-  useEffect(() => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${number}/`)
-      .then((response) => {
-        setPokemon(response.data);
-      });
-  }, [number]);
-
-  if (!pokemon) return null;
-
-  const changeSetNumber = () => {
-    setNumber(Math.round(Math.random() * (386 - 1) + 1));
-  };
+  // if (!pokemon) return null;
+  //
+  // const changeSetNumber = () => {
+  //   setNumber(Math.round(Math.random() * (386 - 1) + 1));
+  // };
 
   return (
     <>
@@ -154,12 +154,12 @@ const DropDownAboutMe = () => {
                   Pokemon!
                 </li>
               </ul>
-              <PokemonButton
-                onClick={changeSetNumber}
-                style={{ cursor: "pointer", float: "right" }}
-                src={pokemon.sprites.front_default}
-                alt={pokemon.name}
-              />
+              {/*<PokemonButton*/}
+              {/*  onClick={changeSetNumber}*/}
+              {/*  style={{ cursor: "pointer", float: "right" }}*/}
+              {/*  src={pokemon.sprites.front_default}*/}
+              {/*  alt={pokemon.name}*/}
+              {/*/>*/}
             </div>
           </ImgParagraphDiv>
         </DropdownContainer>
