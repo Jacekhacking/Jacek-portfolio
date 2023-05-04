@@ -1,8 +1,8 @@
 import GCPic from "../../UI/Images/gc-rafting-picture.jpeg";
 import AuriPic from "../../UI/Images/AuriPic_2.jpeg";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
-import axios from "axios";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
 
 const DropDownAboutMe = () => {
   const DropDownContainerWrapper = styled.div`
