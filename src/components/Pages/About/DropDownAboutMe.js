@@ -90,16 +90,16 @@ const DropDownAboutMe = () => {
     color: #b5b5b5;
   `;
 
-  const PokemonButton = styled.img`
-    border: 3px solid transparent;
-    border-radius: 25% 10%;
-    width: 180px;
-    height: 180px;
-
-    :hover {
-      border: 3px solid var(--clr-4);
-    }
-  `;
+  // const PokemonButton = styled.img`
+  //   border: 3px solid transparent;
+  //   border-radius: 25% 10%;
+  //   width: 180px;
+  //   height: 180px;
+  //
+  //   :hover {
+  //     border: 3px solid var(--clr-4);
+  //   }
+  // `;
 
   // const [pokemon, setPokemon] = useState(null);
   // const [number, setNumber] = useState(59);
