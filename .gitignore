@@ -1,20 +1,72 @@
-#amplify-do-not-edit-begin
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/logs
-amplify/mock-data
-amplify/backend/amplify-meta.json
-amplify/backend/.temp
-build/
-dist/
+# --------------------
+# OS / editor junk
+# --------------------
+.DS_Store
+Thumbs.db
+
+# JetBrains / VS Code / others
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --------------------
+# Node / package managers
+# --------------------
 node_modules/
-aws-exports.js
-awsconfiguration.json
-amplifyconfiguration.json
-amplifyconfiguration.dart
-amplify-build-config.json
-amplify-gradle-config.json
-amplifytools.xcconfig
-.secret-*
-**.sample
-#amplify-do-not-edit-end
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# If you **want** to commit a specific lockfile, remove it from here.
+
+# --------------------
+# Build output
+# --------------------
+dist/
+build/
+.tmp/
+.temp/
+
+# Vite
+.vite/
+vite.config.timestamp-*.mjs
+
+# --------------------
+# Test / coverage
+# --------------------
+coverage/
+.nyc_output/
+jest-html-reporters-*.html
+jest-coverage/
+
+# --------------------
+# Env / secrets
+# --------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --------------------
+# Misc tools
+# --------------------
+*.log
+*.tgz
+.cache/
+.parcel-cache/
+.eslintcache
+
+# TanStack / generator junk (if recreated)
+.cta.json
+.cursorrules
+
+# Mac Finder config
+.AppleDouble
+.LSOverride
+
