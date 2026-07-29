@@ -6,13 +6,13 @@ const GlobalStyles = createGlobalStyle`
   :root {
 
     /*Colors*/
-    /* --clr-dark-gray: 200, 8%, 7%;
+    /* Legacy aliases — restored to fix broken hsl(var(--clr-*)) references across components */
+    --clr-dark-gray: 0, 0%, 33%;
     --clr-blue-gray: 205, 8%, 45%;
-    --clr-mint-offwhite: 351, 8%, 92%;
+    --clr-mint-offwhite: 113, 31%, 95%;
     --clr-light-gray: 205, 8%, 65%;
     --clr-sandy-brown: 28, 83%, 61%;
-    --clr-orange-soda: 10, 94%, 60%; */
-
+    --clr-orange-soda: 10, 94%, 60%;
 
     --white-100: 351, 8%, 92%;
     --clr-1: #41436a;

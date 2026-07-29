@@ -18,3 +18,34 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
+# macOS / OS metadata files
+**/.DS_Store
+.DS_Store
+
+# wave froundry stuff
+.claude/
+.gitattributes
+.mcp.json
+.wavefoundry/
+.docs/
+docs/
+# >>> wavefoundry runtime (managed by render_platform_surfaces.py — edits here are overwritten) >>>
+# Wavefoundry runtime state files (host-local — never commit)
+.wavefoundry/dashboard-server.json
+.wavefoundry/upgrade-in-progress.json
+.wavefoundry/guard-overrides.json
+
+# Wavefoundry runtime lock files (host-local process/test locks — never commit)
+.wavefoundry/**/*.lock
+
+# Wavefoundry runtime logs (upgrade, index build, dashboard)
+.wavefoundry/logs/
+
+# Wavefoundry semantic index (binary + per-machine — never commit)
+.wavefoundry/index/
+.wavefoundry/framework/index/
+
+# Wavefoundry framework pack archives (tracked source lives under .wavefoundry/framework/; do not commit zip drops)
+/wavefoundry-*.zip
+# <<< wavefoundry runtime <<<

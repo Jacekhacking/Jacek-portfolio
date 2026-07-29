@@ -31,7 +31,7 @@ const Navigation = () => {
     margin: 0 0.4rem;
     font-family: var(--ff-cursive);
     color: var(--clr-5);
-    font-size: 1.2rem;
+    font-size: var(--fs-400);
     ul {
       display: flex;
       align-items: center;
@@ -66,7 +66,7 @@ const Navigation = () => {
       font-family: var(--ff-cursive);
       color: hsl(var(--clr-mint-offwhite));
 
-      font-size: 1.5rem;
+      font-size: var(--fs-500);
       ul {
         display: flex;
         align-items: center;

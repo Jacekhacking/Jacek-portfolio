@@ -44,14 +44,19 @@ const AboutMe = () => {
         <OutLineStyledHeader>About Me</OutLineStyledHeader>
 
         <AboutMeText>
-          I started teaching myself how to write code at the beginning of 2019.
-          I started taking it more seriously late in the summer of 2020 during
-          the covid pandemic. In the spring of 2021 I signed up for the
-          University of Utah's fullstack coding boot-camp. I finished their
-          program in October of 2021. I then began doing freelance work for
-          people and companies in my immediate community. I'm currently working
-          as a Teaching Assistant for a fullstack boot-camp through 2U and as an
-          intern for Aceiss Security.
+          I'm a software developer based in Utah, finishing up my Computer
+          Science degree — one semester left. I started coding in 2019, took it
+          seriously during the pandemic, and completed the University of Utah's
+          fullstack bootcamp in 2021. Since then I've shipped websites for real
+          businesses, contributed to enterprise Java APIs during internships, and
+          started pushing into competitive programming and C++.
+          <br />
+          <br />
+          My stack today is React on the frontend and Java/Spring Boot on the
+          backend, with C++ on the side — because I want to understand what's
+          actually happening under the hood, not just what the framework hands
+          me. I'm actively transitioning toward backend engineering and looking
+          for roles where I can go deeper.
           <strong>
             <DropDownToggleButton onClick={toggleDropdown}>
               {isDropdown === false ? "More ..." : "Less..."}
