@@ -5,6 +5,7 @@ import SideDrawer from "../../UI/Shared/SideDrawer";
 
 const NAV_LINKS = [
   { label: "about", to: "about" },
+  { label: "experience", to: "experience" },
   { label: "resume", to: "resume" },
 ];
 

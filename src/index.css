@@ -134,8 +134,8 @@
     @apply text-text-secondary text-nav-link tracking-wide
            cursor-pointer transition-colors duration-150;
   }
-  .nav .nav-link:hover {
-    color: var(--color-crimson) !important;
+  .nav-link:hover {
+    color: var(--color-crimson);
   }
   .nav-link-active {
     @apply text-text-primary;
@@ -144,8 +144,8 @@
     @apply text-nav-cta tracking-wider
            rounded-lg px-5 py-2
            bg-transparent cursor-pointer transition-all duration-150;
-    color: var(--color-crimson) !important;
-    border: 2px solid var(--color-crimson) !important;
+    color: var(--color-crimson);
+    border: 2px solid var(--color-crimson);
   }
   .nav-cta:hover {
     background-color: var(--color-crimson-dim);

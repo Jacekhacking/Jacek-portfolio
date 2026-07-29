@@ -1,7 +1,5 @@
-import GlobalStyles from "./components/UI/Styles/Global.styles";
 import Navigation from "./components/Pages/Nav/Nav";
 import FooterComponent from "./components/Pages/Footer";
-// import PageNotFound from "./components/Pages/PageNotFound";
 
 import {
   Router,
@@ -11,9 +9,7 @@ import {
 } from "@tanstack/react-location";
 
 function App() {
-  // Create a hash history
   const hashHistory = createHashHistory();
-  //Set up a ReactLocation Instance
   const location = new ReactLocation({ history: hashHistory });
 
   return (
@@ -23,46 +19,38 @@ function App() {
         {
           path: "/",
           element: () =>
-            import("./components/Pages/LandingPage").then((module) => (
-              <module.default />
-            )),
+            import("./components/Pages/LandingPage").then((m) => <m.default />),
         },
         {
           path: "about",
           element: () =>
-            import("./components/Pages/About/AboutMe").then((module) => (
-              <module.default />
-            )),
+            import("./components/Pages/About/AboutMe").then((m) => <m.default />),
         },
         {
           path: "projects",
           element: () =>
-            import("./components/Pages/Projects").then((module) => (
-              <module.default />
-            )),
+            import("./components/Pages/Projects").then((m) => <m.default />),
+        },
+        {
+          path: "experience",
+          element: () =>
+            import("./components/Pages/Experience").then((m) => <m.default />),
         },
         {
           path: "resume",
           element: () =>
-            import("./components/Pages/About/Resume").then((module) => (
-              <module.default />
-            )),
+            import("./components/Pages/About/Resume").then((m) => <m.default />),
         },
         {
           element: () =>
-            import("./components/Pages/LandingPage").then((module) => (
-              <module.default />
-            )),
+            import("./components/Pages/LandingPage").then((m) => <m.default />),
         },
       ]}
     >
-      <GlobalStyles />
       <header>
         <Navigation />
       </header>
-      <div>
-        <Outlet />
-      </div>
+      <Outlet />
       <FooterComponent />
     </Router>
   );
