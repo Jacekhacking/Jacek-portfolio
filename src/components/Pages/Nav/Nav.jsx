@@ -1,203 +1,112 @@
 import { Link } from "@tanstack/react-location";
 import { useState, useEffect } from "react";
-import SideDrawer from "../../UI/Shared/SideDrawer";
-import logoLight from "../../UI/Images/jacek_logo_light.png";
-import NavItems from "./NavItems";
-import styled from "styled-components";
 import Backdrop from "../../UI/Shared/Backdrop";
+import SideDrawer from "../../UI/Shared/SideDrawer";
+
+const NAV_LINKS = [
+  { label: "about", to: "about" },
+  { label: "resume", to: "resume" },
+];
 
 const Navigation = () => {
-  // STYLES
-  const NavWrapper = styled.div`
-    padding: 5px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: hsl(var(--clr-6-hsl), 0.98);
-
-    @media (max-width: 550px) {
-      height: 50px;
-    }
-  `;
-
-  const NavContainer = styled.div`
-    display: flex;
-    align-items: center;
-    margin: 0 0.4rem;
-    font-family: var(--ff-cursive);
-    color: var(--clr-5);
-    font-size: var(--fs-400);
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      > * {
-        margin: 0 -0.8px;
-        padding: 0 10px;
-        text-align: center;
-        border-radius: 0;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid var(--clr-4);
-        &:hover {
-          border-left: 1px solid var(--clr-4);
-          border-right: 1px solid var(--clr-4);
-          border-top: 1px solid var(--clr-4);
-          border-bottom: 1px solid transparent;
-        }
-      }
-    }
-    @media (max-width: 1200px) {
-      display: none;
-    }
-  `;
-
-  const NavSideDrawer = styled.div`
-    @media (max-width: 1200px) {
-      display: flex;
-      align-items: center;
-      margin: 0 0.4rem;
-      font-family: var(--ff-cursive);
-      color: hsl(var(--clr-mint-offwhite));
-
-      font-size: var(--fs-500);
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-
-        > * {
-          margin-top: 1rem;
-          border-radius: 0;
-          border-bottom: 1px solid transparent;
-          &:hover {
-            border-bottom: 1px solid var(--clr-4);
-          }
-        }
-      }
-    }
-  `;
-
-  const NavLogo = styled.div`
-    background-image: url(${logoLight});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90px;
-    width: 90px;
-    @media (max-width: 550px) {
-      height: 50px;
-      width: 50px;
-    }
-  `;
-
-  const NavHamburger = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
-    transition: all 0.4s ease-in-out;
-    z-index: 101;
-    span {
-      height: 2px;
-      width: 28px;
-      background-color: white;
-      transition: all 0.4s ease-in-out;
-    }
-    span:not(:last-child) {
-      margin-bottom: 7px;
-    }
-    :hover {
-      cursor: pointer;
-      span {
-        background-color: hsl(var(--clr-4-hsl));
-      }
-    }
-    @media (min-width: 1200px) {
-      display: none;
-    }
-  `;
-
-  //state and toggle for sideDrawer
   const [sideDrawer, setSideDrawer] = useState(false);
   const [hamburger, setHamburger] = useState(false);
 
-  const toggleHamburger = () => {
-    setHamburger((current) => !current);
-  };
-  const toggleSideDrawer = () => {
-    setSideDrawer((current) => !current);
+  const closeMenu = () => {
+    setSideDrawer(false);
+    setHamburger(false);
   };
 
-  let hamburgerActive = hamburger ? "hamburger-active" : null;
+  const toggleMenu = () => {
+    setSideDrawer((c) => !c);
+    setHamburger((c) => !c);
+  };
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1200) {
-        setHamburger(false);
-        setSideDrawer(false);
-      }
+      if (window.innerWidth >= 1024) closeMenu();
     };
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <NavWrapper>
-      <Link
-        to="/"
-        onClick={() => {
-          window.scrollTo(0, 0);
-        }}
-      >
-        <NavLogo />
+    <nav className="nav fixed top-0 left-0 right-0 z-50 bg-bg">
+      {/* Logo */}
+      <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+        <span className="logo">
+          <span className="logo-bracket">{"{"}</span>
+          <span className="logo-initials">JH</span>
+          <span className="logo-bracket">{"}"}</span>
+        </span>
       </Link>
 
-      <NavHamburger
-        className={hamburgerActive}
-        onClick={() => {
-          toggleSideDrawer();
-          toggleHamburger();
-        }}
-      >
-        <span />
-        <span />
-        <span />
-      </NavHamburger>
+      {/* Desktop links */}
+      <div className="hidden lg:flex items-center gap-8">
+        {NAV_LINKS.map(({ label, to }) => (
+          <Link
+            key={to}
+            to={to}
+            className="nav-link"
+            getActiveProps={() => ({ className: "nav-link nav-link-active" })}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            {label}
+          </Link>
+        ))}
+        <a href="mailto:jacekhacking@gmail.com" className="nav-cta">
+          contact
+        </a>
+      </div>
 
+      {/* Hamburger (mobile only) */}
+      <button
+        className="lg:hidden p-2 cursor-pointer"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <div className="flex flex-col gap-[6px]">
+          <span
+            className={`block h-px w-6 bg-text-secondary transition-all duration-300 origin-center ${
+              hamburger ? "translate-y-[7px] rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`block h-px w-6 bg-text-secondary transition-all duration-300 ${
+              hamburger ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-px w-6 bg-text-secondary transition-all duration-300 origin-center ${
+              hamburger ? "-translate-y-[7px] -rotate-45" : ""
+            }`}
+          />
+        </div>
+      </button>
+
+      {/* Mobile drawer */}
+      {sideDrawer && <Backdrop onClick={closeMenu} />}
       {sideDrawer && (
-        <Backdrop
-          onClick={() => {
-            toggleSideDrawer();
-            toggleHamburger();
-          }}
-        />
-      )}
-      {sideDrawer && (
-        <SideDrawer>
-          <NavSideDrawer>
-            <NavItems
-              toggleSideDrawer={toggleSideDrawer}
-              toggleHamburger={toggleHamburger}
-            />
-          </NavSideDrawer>
+        <SideDrawer onClick={closeMenu}>
+          <div className="flex flex-col items-center gap-8">
+            {NAV_LINKS.map(({ label, to }) => (
+              <Link
+                key={to}
+                to={to}
+                className="nav-link text-base"
+                onClick={closeMenu}
+              >
+                {label}
+              </Link>
+            ))}
+            <a href="mailto:jacekhacking@gmail.com" className="nav-cta">
+              contact
+            </a>
+          </div>
         </SideDrawer>
       )}
-      <NavContainer>
-        <NavItems
-          toggleSideDrawer={toggleSideDrawer}
-          toggleHamburger={toggleHamburger}
-        />
-      </NavContainer>
-    </NavWrapper>
+    </nav>
   );
 };
+
 export default Navigation;

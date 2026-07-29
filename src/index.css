@@ -1,1 +1,208 @@
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Theme tokens — Tailwind v4 CSS-first config (replaces tailwind.config.js)
+   ───────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-bg:          #111113;
+  --color-bg-surface:  #1a1a1e;
+  --color-bg-card:     #16161a;
+
+  --color-border:        #2a2a2e;
+  --color-border-subtle: #1e1e22;
+  --color-border-strong: #3a3a40;
+
+  --color-text-primary:   #e8e8ec;
+  --color-text-secondary: #b0b0be;
+  --color-text-muted:     #888894;
+  --color-text-faint:     #666674;
+
+  --color-crimson:              #c0392b;
+  --color-crimson-hover:        #e04535;
+  --color-crimson-dim:          #c0392b18;
+  --color-crimson-border:       #c0392b44;
+  --color-crimson-border-hover: #c0392b88;
+
+  /* Font families */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace,
+    SFMono-Regular, monospace;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Font sizes */
+  --text-nav-label: 17px;
+  --text-nav-label--letter-spacing: 0.12em;
+
+  --text-nav-link: 22px;
+  --text-nav-link--letter-spacing: 0.02em;
+
+  --text-nav-cta: 20px;
+  --text-nav-cta--letter-spacing: 0.04em;
+
+  --text-hero-label: 20px;
+  --text-hero-label--letter-spacing: 0.12em;
+
+  --text-hero: 26px;
+  --text-hero--line-height: 1.25;
+  --text-hero--font-weight: 500;
+
+  --text-body: 26px;
+  --text-body--line-height: 1.7;
+
+  --text-hint: 20px;
+  --text-hint--line-height: 1.5;
+
+  --text-note: 17px;
+  --text-note--line-height: 1.5;
+
+  /* Spacing */
+  --spacing-nav: 72px;
+
+  /* Border radius */
+  --radius-tag: 4px;
+
+  /* Border widths */
+  --border-width-hairline: 0.5px;
+
+  /* Animations */
+  --animate-vim-blink:    vimblink    1.1s step-end infinite;
+  --animate-cursor-blink: cursorblink 1.1s step-end infinite;
+}
+
+@keyframes vimblink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+@keyframes cursorblink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base
+   ───────────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    background-color: #111113;
+    color: #e8e8ec;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #c0392b44;
+    color: #e8e8ec;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Components
+   ───────────────────────────────────────────────────────────────────────── */
+@layer components {
+
+  /* ── Nav ──────────────────────────────────────── */
+  .nav {
+    @apply flex items-center justify-between px-8 h-[72px] border-b border-border;
+  }
+
+  .logo {
+    @apply flex items-center cursor-pointer select-none font-mono;
+  }
+  .logo-bracket {
+    @apply text-text-secondary text-[34px] font-light leading-none
+           transition-colors duration-200;
+  }
+  .logo-initials {
+    @apply text-text-primary text-[30px] font-medium leading-none
+           tracking-widest mx-1 transition-colors duration-200;
+  }
+  .logo:hover .logo-bracket {
+    @apply text-crimson;
+  }
+  .logo:hover .logo-initials {
+    @apply text-white;
+  }
+
+  .nav-link {
+    @apply text-text-secondary text-nav-link tracking-wide
+           cursor-pointer transition-colors duration-150;
+  }
+  .nav .nav-link:hover {
+    color: var(--color-crimson) !important;
+  }
+  .nav-link-active {
+    @apply text-text-primary;
+  }
+  .nav-cta {
+    @apply text-nav-cta tracking-wider
+           rounded-lg px-5 py-2
+           bg-transparent cursor-pointer transition-all duration-150;
+    color: var(--color-crimson) !important;
+    border: 2px solid var(--color-crimson) !important;
+  }
+  .nav-cta:hover {
+    background-color: var(--color-crimson-dim);
+  }
+
+  /* ── Hero ─────────────────────────────────────── */
+  .hero-label {
+    @apply text-crimson text-hero-label tracking-[0.12em] font-mono mb-3;
+  }
+  .hero-heading {
+    @apply text-text-primary text-hero font-medium leading-tight mb-4;
+  }
+  .hero-body {
+    @apply text-text-muted text-body leading-relaxed max-w-md;
+  }
+
+  /* Vim block cursor */
+  .vim-cursor {
+    @apply inline-block w-[0.55em] h-[1em] bg-crimson
+           align-text-bottom ml-1 animate-vim-blink;
+  }
+
+  /* ── Cards ────────────────────────────────────── */
+  .card {
+    @apply bg-bg-card border border-border rounded-lg p-5;
+  }
+  .card-label {
+    @apply text-text-faint text-note tracking-[0.08em] font-sans mb-2;
+  }
+
+  /* ── Section divider ──────────────────────────── */
+  .divider {
+    @apply border-t border-border-subtle;
+  }
+
+  /* ── Tag / badge ──────────────────────────────── */
+  .tag {
+    @apply text-crimson text-[11px] tracking-wider font-mono
+           border border-crimson-border rounded-tag px-2 py-0.5;
+  }
+
+  /* ── Red accent dot ───────────────────────────── */
+  .accent-dot {
+    @apply w-1.5 h-1.5 rounded-full bg-crimson flex-shrink-0;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Utilities
+   ───────────────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .border-hairline {
+    border-width: 0.5px;
+  }
+
+  .font-code {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+}

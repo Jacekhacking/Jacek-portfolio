@@ -1,81 +1,57 @@
 import SelfieImg from "../UI/Images/IMG_9739.png";
-import styled from "styled-components";
 import Projects from "./Projects";
 import AboutMe from "./About/AboutMe";
 
 const LandingPage = () => {
-  const LandingPageWrapper = styled.div`
-    display: flex;
-    padding: 0rem;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    color: hsl(var(--clr-dark-gray));
-    background-color: #b5b5b5;
-    div {
-      display: flex;
-    }
-    p {
-      color: black;
-      text-align: center;
-      margin: 0 4rem;
-    }
-
-    img {
-      height: 35rem;
-      width: auto;
-    }
-
-    @media (max-width: 550px) {
-      img {
-        margin-top: 5.5rem;
-        width: auto;
-        height: 20rem;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-    }
-  `;
-
-  const AboutText = styled.h2`
-    padding-right: 2rem;
-    text-align: center;
-    -webkit-text-stroke: 3px black;
-    -webkit-text-fill-color: transparent;
-    font-size: 9rem;
-    line-height: 1.2;
-    font-family: var(--ff-cursive);
-    @media (max-width: 800px) {
-      font-size: 5rem;
-    }
-
-    @media (max-width: 550px) {
-      font-size: 4rem;
-    }
-  `;
-
   return (
     <>
-      <section>
-        <LandingPageWrapper>
-          <img src={SelfieImg} alt="Me!" />
+      {/* ── Hero ────────────────────────────────────────────────── */}
+      <section className="min-h-[calc(100vh-72px)] mt-[72px] flex items-center justify-center
+                          px-8 lg:px-20 py-16 bg-bg">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-          <AboutText>Hi, I'm Jacek!</AboutText>
+          {/* Left — text */}
+          <div className="max-w-xl lg:max-w-2xl">
+            <p className="hero-label">software engineer · salt lake city, ut.</p>
 
-          <p>A Web Developer from Salt Lake City, Utah!</p>
-        </LandingPageWrapper>
+            <h1 className="text-text-primary font-medium leading-tight
+                           tracking-tight mb-8
+                           text-6xl lg:text-8xl">
+              Jacek Hacking
+            </h1>
+
+            <p className="hero-body">
+              Building reliable systems — Java, Spring Boot, distributed
+              architecture. Currently finishing CS at University of Utah.
+              Interested in HPC, quant, and anything that runs fast.
+              <span className="vim-cursor" />
+            </p>
+          </div>
+
+          {/* Right — photo */}
+          <div className="flex-shrink-0">
+            <img
+              src={SelfieImg}
+              alt="Jacek Hacking"
+              className="w-72 h-96 lg:w-96 lg:h-[480px] object-cover object-top rounded-lg"
+            />
+          </div>
+        </div>
       </section>
 
+      <div className="divider" />
+
+      {/* ── About ───────────────────────────────────────────────── */}
       <section>
         <AboutMe />
       </section>
 
+      {/* ── Projects ────────────────────────────────────────────── */}
       <section>
         <Projects />
       </section>
     </>
   );
 };
+
 export default LandingPage;

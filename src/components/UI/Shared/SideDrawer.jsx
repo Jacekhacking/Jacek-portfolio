@@ -1,30 +1,11 @@
-import styled from "styled-components";
+const SideDrawer = ({ children, onClick }) => (
+  <div
+    onClick={onClick}
+    className="fixed right-0 top-0 h-screen w-4/5 max-w-sm bg-bg-surface border-l border-border
+               flex items-center justify-center z-50 lg:hidden shadow-2xl"
+  >
+    {children}
+  </div>
+);
 
-const SideDrawer = (props) => {
-  const SideDrawerContainer = styled.div`
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 80%;
-    background: hsl(var(--clr-6-hsl));
-    box-shadow: -3px 5px 20px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: var(--clr-5);
-
-    @media (min-width: 1200px) {
-      display: none;
-    }
-    @media (max-width: 800px) {
-    }
-  `;
-  return (
-    <SideDrawerContainer onClick={props.onClick}>
-      {props.children}
-    </SideDrawerContainer>
-  );
-};
 export default SideDrawer;

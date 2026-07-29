@@ -1,24 +1,12 @@
 import ReactDOM from "react-dom";
-import styled from "styled-components";
 
-const Backdrop = (props) => {
-  const BackdropDiv = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: hsl(var(--clr-6-hsl), 80%);
-    z-index: 0;
-    @media (min-width: 1200px) {
-      display: none;
-    }
-  `;
-
-  return ReactDOM.createPortal(
-    <BackdropDiv onClick={props.onClick}></BackdropDiv>,
+const Backdrop = ({ onClick }) =>
+  ReactDOM.createPortal(
+    <div
+      onClick={onClick}
+      className="fixed inset-0 bg-bg/80 z-40 lg:hidden"
+    />,
     document.getElementById("backdrop-hook")
   );
-};
 
 export default Backdrop;
