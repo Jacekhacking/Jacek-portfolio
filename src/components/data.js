@@ -1,10 +1,18 @@
+import middleGroundFull from './UI/Images/middle-ground-full-ss.png';
+import middleGroundMobile from './UI/Images/middle-ground-ss.png';
+import lcBodywork from './UI/Images/LCBodyworkSC.png';
+import lcBodyworkMobile from './UI/Images/Small-LCBodyworkSC.png';
+import youtubeSS from './UI/Images/YoutubeSS.png';
+import oneWaveGolf from './UI/Images/onewavegolf.png';
+import oneWaveGolfMobile from './UI/Images/Small-onewavegolf.png';
+
 export const projectData = [
   {
     Name: 'Middle Ground ',
     Description:
       'Website for local massage therapist business Middle Ground Treatment & Training. ReactJS CSS and hosted with AWS Amplify',
-    Image: require('./UI/Images/middle-ground-full-ss.png'),
-    MobileImage: require('./UI/Images/middle-ground-ss.png'),
+    Image: middleGroundFull,
+    MobileImage: middleGroundMobile,
     Link: 'https://middle-ground-production.up.railway.app/',
     GitHub: 'https://github.com/Jacekhacking/Middle-Ground',
   },
@@ -12,8 +20,8 @@ export const projectData = [
     Name: 'LCBodywork',
     Description:
       'Professional Website for LC Bodyworks. A local massage therapist looking for a professional website.',
-    Image: require('./UI/Images/LCBodyworkSC.png'),
-    MobileImage: require('./UI/Images/Small-LCBodyworkSC.png'),
+    Image: lcBodywork,
+    MobileImage: lcBodyworkMobile,
     Link: 'https://www.lcbodywork.com',
     GitHub: 'https://github.com/jacekhacking/lc-bodywork',
   },
@@ -21,26 +29,17 @@ export const projectData = [
     Name: 'YouTube Clone',
     Description:
       ' YouTube Clone built alongside JavascriptMastery youtube video. Built with ReactJS, ReactRouter, MUI, RapidAPI',
-    Image: require('./UI/Images/YoutubeSS.png'),
-    MobileImage: require('./UI/Images/YoutubeSS.png'),
+    Image: youtubeSS,
+    MobileImage: youtubeSS,
     Link: 'https://glittering-scone-de1925.netlify.app',
     GitHub: 'https://github.com/jacekhacking/jsm_youtube_clone',
   },
-
-  // {
-  //   Name: 'Art Portfolio',
-  //   Description:
-  //     'Website for local artist. Client designed the site himself and needed someone with technical skills to apply it.',
-  //   Image: require('./UI/Images/keaton-port-ss.png'),
-  //   MobileImage: require('./UI/Images/Small-keaton-port-ss.png'),
-  //   GitHub: 'https://github.com/jacekhacking/Keaton_Portfolio',
-  // },
   {
     Name: 'OneWaveGolf',
     Description:
       'Website for OneWaveGolf. A company based out of Bandon Oregon specializing in recyclable golf goods, professional caddying, and lessons.',
-    Image: require('./UI/Images/onewavegolf.png'),
-    MobileImage: require('./UI/Images/Small-onewavegolf.png'),
+    Image: oneWaveGolf,
+    MobileImage: oneWaveGolfMobile,
     Link: 'https://www.onewavegolf.com',
     GitHub: 'https://github.com/jacekhacking/OneWaveGolf',
   },
