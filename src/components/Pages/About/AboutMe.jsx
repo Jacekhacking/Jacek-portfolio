@@ -1,72 +1,160 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-import DropDownAboutMe from "./DropDownAboutMe";
+import rafting1 from "../../UI/Images/gc-rafting-picture.jpeg";
+import rafting2 from "../../UI/Images/cat-rafting-picture.jpeg";
+import auri1   from "../../UI/Images/AuriPic_1.jpeg";
+import auri2   from "../../UI/Images/AuriPic_2.jpeg";
 
-import styled from "styled-components";
-import { OutLineStyledHeader } from "../../UI/Styles/Global.styles";
+const CAROUSEL = [
+  { src: rafting1, caption: "Navajo Bridge — Colorado River, Grand Canyon trip" },
+  { src: rafting2, caption: "Cataract Canyon — a few too many rapids" },
+  { src: auri1,   caption: "Auri, aka the best dog" },
+  { src: auri2,   caption: "Auri doing Auri things" },
+];
+
+const FUN_FACTS = [
+  "Licensed massage therapist in Utah — and I run an LLC for it",
+  "Favorite book series is Wheel of Time",
+  "Grew up on Warcraft 3, Diablo 2, and Pokémon",
+  "Favorite food is sushi",
+  "My dog's name is Auri",
+];
 
 const AboutMe = () => {
-  const AboutMeBody = styled.div`
-    color: var(--clr-5);
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  `;
+  const [open,   setOpen]   = useState(false);
+  const [imgIdx, setImgIdx] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const AboutMeText = styled.p`
-    text-align: center;
-    margin: 1em;
-    font-size: clamp(var(--fs-400), 2vw, var(--fs-500));
-    max-width: 52em;
-  `;
+  const next = useCallback(
+    () => setImgIdx((i) => (i + 1) % CAROUSEL.length),
+    []
+  );
 
-  const DropDownToggleButton = styled.button`
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid transparent;
-    color: hsl(var(--clr-mint-offwhite));
-    font-style: italic;
-    :hover {
-      cursor: pointer;
-      border-bottom: 2px solid hsl(var(--clr-sandy-brown));
-    }
-  `;
-
-  const [isDropdown, setIsDropdown] = useState(false);
-
-  const toggleDropdown = () => setIsDropdown(!isDropdown);
+  useEffect(() => {
+    if (!open || paused) return;
+    const t = setInterval(next, 5000);
+    return () => clearInterval(t);
+  }, [open, paused, next]);
 
   return (
-    <>
-      <AboutMeBody>
-        <OutLineStyledHeader>About Me</OutLineStyledHeader>
+    <section className="bg-bg py-24 px-8 lg:px-20">
+      <div className="max-w-3xl mx-auto">
 
-        <AboutMeText>
-          I'm a software developer based in Utah, finishing up my Computer
-          Science degree — one semester left. I started coding in 2019, took it
-          seriously during the pandemic, and completed the University of Utah's
-          fullstack bootcamp in 2021. Since then I've shipped websites for real
-          businesses, contributed to enterprise Java APIs during internships, and
-          started pushing into competitive programming and C++.
-          <br />
-          <br />
-          My stack today is React on the frontend and Java/Spring Boot on the
-          backend, with C++ on the side — because I want to understand what's
-          actually happening under the hood, not just what the framework hands
-          me. I'm actively transitioning toward backend engineering and looking
-          for roles where I can go deeper.
-          <strong>
-            <DropDownToggleButton onClick={toggleDropdown}>
-              {isDropdown === false ? "More ..." : "Less..."}
-            </DropDownToggleButton>
-          </strong>
-        </AboutMeText>
+        {/* Header */}
+        <h2 className="hero-label mb-2 text-3xl">about</h2>
+        <h2 className="text-text-primary text-5xl font-medium leading-tight
+                       tracking-tight mb-10">
+          Who I am
+        </h2>
 
-        <div>{isDropdown && <DropDownAboutMe />}</div>
-      </AboutMeBody>
-    </>
+        {/* Bio */}
+        <p className="text-text-muted text-xl leading-relaxed mb-7">
+          <span className="text-text-primary font-medium">
+            Software developer based in Salt Lake City
+          </span>
+          , finishing a CS degree at the University of Utah — one semester left.
+          I started coding in 2020, took it seriously during the pandemic, and
+          haven't stopped since. Since then I've shipped sites for real
+          businesses, built enterprise Java APIs, and started pushing into
+          competitive programming and C++.
+        </p>
+
+        <p className="text-text-muted text-xl leading-relaxed mb-10">
+          My stack today is{" "}
+          <span className="text-text-primary font-medium">
+            React on the front end and Java / Spring Boot on the back end
+          </span>
+          , with C++ on the side — because I want to understand what's actually
+          happening under the hood, not just what the framework hands me.
+          Actively transitioning toward backend engineering and looking for
+          roles where I can go deeper.
+        </p>
+
+        {/* Toggle */}
+        <button
+          onClick={() => setOpen((o) => !o)}
+          className="font-mono text-base text-text-primary cursor-pointer
+                     border border-border rounded px-5 py-2.5 bg-transparent
+                     transition-colors duration-150 hover:border-border-strong
+                     mb-12"
+        >
+          a little {open ? "less": "more"} {open ? "▲" : "▼"}
+        </button>
+
+        {/* Dropdown */}
+        {open && (
+          <div className="flex flex-col lg:flex-row gap-12 pt-2">
+
+            {/* Left — carousel */}
+            <div
+              className="flex-shrink-0 w-full lg:w-[380px]"
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+            >
+              <div className="rounded-lg overflow-hidden bg-bg-card
+                              border border-border h-72 lg:h-[360px]">
+                <img
+                  key={imgIdx}
+                  src={CAROUSEL[imgIdx].src}
+                  alt={CAROUSEL[imgIdx].caption}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Caption */}
+              <p className="text-center text-text-faint text-sm font-mono
+                            tracking-wide mt-3 px-2">
+                {CAROUSEL[imgIdx].caption}
+              </p>
+
+              {/* Dots */}
+              <div className="flex justify-center gap-2 mt-3">
+                {CAROUSEL.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setImgIdx(i)}
+                    className={`h-2 rounded-full cursor-pointer transition-all duration-300
+                                ${i === imgIdx
+                                  ? "w-8 bg-text-secondary"
+                                  : "w-5 bg-border-strong"
+                                }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Right — text */}
+            <div className="flex-1 min-w-0">
+              <p className="text-text-faint text-xs tracking-[0.14em] uppercase
+                            font-mono mb-3">
+                outside of code
+              </p>
+              <p className="text-text-muted text-lg leading-relaxed mb-8">
+                From Salt Lake City — so skiing, hiking, and rafting are
+                basically required. Also into basketball, golf, and rock
+                climbing. Picked guitar back up recently. I play video games
+                with my family and read a lot of{" "}
+                <span className="text-text-primary">speculative fiction</span>.
+              </p>
+
+              <p className="text-text-faint text-xs tracking-[0.14em] uppercase
+                            font-mono mb-4">
+                fun facts
+              </p>
+              <ul className="space-y-3">
+                {FUN_FACTS.map((fact) => (
+                  <li key={fact} className="flex gap-3 items-start
+                                            text-text-muted text-lg">
+                    <span className="accent-dot mt-[0.5em]" />
+                    <span>{fact}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 

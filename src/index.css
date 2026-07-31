@@ -30,29 +30,29 @@
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* Font sizes */
-  --text-nav-label: 17px;
+  --text-nav-label: 19px;
   --text-nav-label--letter-spacing: 0.12em;
 
-  --text-nav-link: 22px;
+  --text-nav-link: 20px;
   --text-nav-link--letter-spacing: 0.02em;
 
-  --text-nav-cta: 20px;
+  --text-nav-cta: 18px;
   --text-nav-cta--letter-spacing: 0.04em;
 
-  --text-hero-label: 20px;
+  --text-hero-label: 22px;
   --text-hero-label--letter-spacing: 0.12em;
 
-  --text-hero: 26px;
+  --text-hero: 28px;
   --text-hero--line-height: 1.25;
   --text-hero--font-weight: 500;
 
-  --text-body: 26px;
+  --text-body: 22px;
   --text-body--line-height: 1.7;
 
   --text-hint: 20px;
   --text-hint--line-height: 1.5;
 
-  --text-note: 17px;
+  --text-note: 18px;
   --text-note--line-height: 1.5;
 
   /* Spacing */
@@ -83,6 +83,7 @@
    ───────────────────────────────────────────────────────────────────────── */
 @layer base {
   html {
+    font-size: 18px;
     background-color: #111113;
     color: #e8e8ec;
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -109,7 +110,7 @@
 
   /* ── Nav ──────────────────────────────────────── */
   .nav {
-    @apply flex items-center justify-between px-8 h-[72px] border-b border-border;
+    @apply flex items-center justify-between px-8 h-[72px];
   }
 
   .logo {
@@ -138,7 +139,7 @@
     color: var(--color-crimson);
   }
   .nav-link-active {
-    @apply text-text-primary;
+    color: var(--color-crimson) !important;
   }
   .nav-cta {
     @apply text-nav-cta tracking-wider

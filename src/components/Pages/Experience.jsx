@@ -73,13 +73,18 @@ const Dot = ({ type }) =>
 
 const Experience = () => (
   <main className="min-h-screen pt-[72px] bg-bg flex justify-center">
-    <div className="w-full max-w-3xl px-8 py-16">
+    <div className="w-full max-w-3xl px-8 py-20">
 
       {/* Header */}
+      <p className="hero-label mb-2">career</p>
       <h1 className="text-text-primary text-5xl lg:text-6xl font-medium
-                     leading-tight tracking-tight mb-14">
+                     leading-tight tracking-tight mb-6">
         Experience
       </h1>
+
+      {/* Gradient separator under header */}
+      <div className="w-full h-px mb-16"
+           style={{ background: "radial-gradient(ellipse at 50% 0%, var(--color-crimson) 0%, transparent 70%)" }} />
 
       {/* Timeline */}
       <div className="relative">

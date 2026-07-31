@@ -24,12 +24,19 @@ function App() {
         {
           path: "about",
           element: () =>
-            import("./components/Pages/About/AboutMe").then((m) => <m.default />),
+            import("./components/Pages/About/AboutMe").then((m) => (
+              <div className="pt-[72px]"><m.default /></div>
+            )),
         },
         {
           path: "projects",
           element: () =>
             import("./components/Pages/Projects").then((m) => <m.default />),
+        },
+        {
+          path: "project/:slug",
+          element: () =>
+            import("./components/Pages/ProjectDetail").then((m) => <m.default />),
         },
         {
           path: "experience",
