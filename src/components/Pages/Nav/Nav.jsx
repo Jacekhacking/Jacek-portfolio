@@ -33,7 +33,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className="nav fixed top-0 left-0 right-0 z-50 bg-bg relative">
+    <nav className="nav fixed top-0 left-0 right-0 z-50 bg-[#111113cc] backdrop-blur-[8px]">
 
       {/* Logo */}
       <Link to="/" onClick={() => window.scrollTo(0, 0)}>

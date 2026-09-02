@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
+import PageContainer from "../../UI/Shared/PageContainer";
 import rafting1 from "../../UI/Images/gc-rafting-picture.jpeg";
 import rafting2 from "../../UI/Images/cat-rafting-picture.jpeg";
 import auri1   from "../../UI/Images/AuriPic_1.jpeg";
@@ -37,15 +38,12 @@ const AboutMe = () => {
   }, [open, paused, next]);
 
   return (
-    <section className="bg-bg py-24 px-8 lg:px-20">
-      <div className="max-w-3xl mx-auto">
+    <section className="py-24">
+      <PageContainer>
+      <div className="max-w-3xl">
 
         {/* Header */}
-        <h2 className="hero-label mb-2 text-3xl">about</h2>
-        <h2 className="text-text-primary text-5xl font-medium leading-tight
-                       tracking-tight mb-10">
-          Who I am
-        </h2>
+        <h2 className="hero-label mb-10 text-4xl">about</h2>
 
         {/* Bio */}
         <p className="text-text-muted text-xl leading-relaxed mb-7">
@@ -154,6 +152,7 @@ const AboutMe = () => {
           </div>
         )}
       </div>
+      </PageContainer>
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "@tanstack/react-location";
 import { projectData } from "../data";
+import PageContainer from "../UI/Shared/PageContainer";
 
 const GitHubIcon = () => (
   <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
@@ -129,23 +130,16 @@ const ProjectCard = ({ project }) => (
 const Projects = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
-  <main className="min-h-screen bg-bg flex justify-center pt-[72px]">
-    <div className="w-full max-w-5xl px-8 py-20">
-      <p className="hero-label mb-2">work</p>
-      <h1 className="text-text-primary text-5xl font-medium leading-tight
-                     tracking-tight mb-6">
-        Projects
-      </h1>
-
-      <div className="w-full h-px mb-16"
-           style={{ background: "radial-gradient(ellipse at 50% 0%, var(--color-crimson) 0%, transparent 70%)" }} />
+  <main className="min-h-screen pt-[72px]">
+    <PageContainer className="py-20">
+      <p className="hero-label mb-16 text-4xl">work</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {projectData.map((p) => (
           <ProjectCard key={p.slug} project={p} />
         ))}
       </div>
-    </div>
+    </PageContainer>
   </main>
   );
 };

@@ -1,3 +1,5 @@
+import PageContainer from "../UI/Shared/PageContainer";
+
 const BADGE = {
   upcoming:  "border border-crimson text-crimson",
   education: "bg-border-strong text-text-secondary",
@@ -72,19 +74,12 @@ const Dot = ({ type }) =>
   );
 
 const Experience = () => (
-  <main className="min-h-screen pt-[72px] bg-bg flex justify-center">
-    <div className="w-full max-w-3xl px-8 py-20">
+  <main className="min-h-screen pt-[72px]">
+    <PageContainer className="py-20">
+    <div className="max-w-3xl">
 
       {/* Header */}
-      <p className="hero-label mb-2">career</p>
-      <h1 className="text-text-primary text-5xl lg:text-6xl font-medium
-                     leading-tight tracking-tight mb-6">
-        Experience
-      </h1>
-
-      {/* Gradient separator under header */}
-      <div className="w-full h-px mb-16"
-           style={{ background: "radial-gradient(ellipse at 50% 0%, var(--color-crimson) 0%, transparent 70%)" }} />
+      <p className="hero-label mb-16 text-4xl">career</p>
 
       {/* Timeline */}
       <div className="relative">
@@ -147,6 +142,7 @@ const Experience = () => (
         </div>
       </div>
     </div>
+    </PageContainer>
   </main>
 );
 

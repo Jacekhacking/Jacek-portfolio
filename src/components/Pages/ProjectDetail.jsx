@@ -88,7 +88,7 @@ const ScreenshotCarousel = ({ screenshots }) => {
 
 /* ── Layout A — visual (hero image + two-column) ──────────────── */
 const LayoutVisual = ({ project }) => (
-  <div className="bg-bg min-h-screen">
+  <div className="min-h-screen">
     <div className="max-w-5xl mx-auto">
       <div className="bg-bg-card border border-border rounded-xl overflow-hidden mt-8 mx-4 mb-12">
 
@@ -206,7 +206,7 @@ const LayoutVisual = ({ project }) => (
 
 /* ── Layout B — editorial (full-width writeup) ────────────────── */
 const LayoutEditorial = ({ project }) => (
-  <div className="bg-bg min-h-screen">
+  <div className="min-h-screen">
     <div className="max-w-4xl mx-auto px-4 mb-12">
       <div className="bg-bg-card border border-border rounded-xl overflow-hidden mt-8">
 
@@ -300,7 +300,7 @@ const ProjectDetail = () => {
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
 
   if (!project) return (
-    <main className="min-h-screen bg-bg flex items-center justify-center pt-[72px]">
+    <main className="min-h-screen flex items-center justify-center pt-[72px]">
       <div className="text-center">
         <p className="text-text-muted text-xl mb-4">Project not found.</p>
         <Link to="../../projects" className="text-crimson font-mono"
