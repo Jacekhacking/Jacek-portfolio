@@ -1,6 +1,7 @@
 import github from "../UI/Images/SocialLogos/GitHub-Mark-64px.png";
 import linkedin from "../UI/Images/SocialLogos/linkedin.png";
 import PageContainer from "../UI/Shared/PageContainer";
+import VimCursor from "../UI/Shared/VimCursor";
 
 const MailIcon = () => (
   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none"
@@ -17,7 +18,7 @@ const Footer = () => (
         <p className="font-mono text-nav-link flex items-center">
           <span className="text-text-faint mr-2">$</span>
           <span className="text-text-primary font-medium">./contact</span>
-          <span className="vim-cursor" />
+          <VimCursor />
         </p>
 
         <div className="flex items-center gap-5">

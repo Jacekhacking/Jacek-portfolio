@@ -3,6 +3,7 @@ import Projects from "./Projects";
 import AboutMe from "./About/AboutMe";
 import Experience from "./Experience.jsx";
 import PageContainer from "../UI/Shared/PageContainer";
+import VimCursor from "../UI/Shared/VimCursor";
 
 const LandingPage = () => (
   <>
@@ -20,7 +21,7 @@ const LandingPage = () => (
             Building reliable systems — Java, Spring Boot, distributed
             architecture. Currently finishing CS at University of Utah.
             Interested in HPC, quant, and anything that runs fast.
-            <span className="vim-cursor" />
+            <VimCursor />
           </p>
         </div>
 
