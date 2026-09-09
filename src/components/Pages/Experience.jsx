@@ -76,10 +76,10 @@ const Dot = ({ type }) =>
 const Experience = () => (
   <main className="min-h-screen pt-[72px]">
     <PageContainer className="py-20">
-    <div className="max-w-3xl">
+    <div className="max-w-3xl xl:max-w-4xl mx-auto">
 
       {/* Header */}
-      <p className="hero-label mb-16 text-4xl">career</p>
+      <p className="hero-label mb-16 text-4xl lg:text-5xl xl:text-6xl">career</p>
 
       {/* Timeline */}
       <div className="relative">
@@ -101,7 +101,7 @@ const Experience = () => (
                                 sm:justify-between gap-2 mb-1">
 
                   {/* Left: title */}
-                  <h2 className="text-text-primary text-2xl font-medium leading-snug">
+                  <h2 className="text-text-primary text-2xl xl:text-3xl font-medium leading-snug">
                     {entry.title}
                     {entry.cursor && <span className="vim-cursor ml-1" />}
                   </h2>
@@ -124,7 +124,7 @@ const Experience = () => (
                 </p>
 
                 {/* Description */}
-                <p className="text-text-muted leading-relaxed mb-5 text-lg">
+                <p className="text-text-muted leading-relaxed mb-5 text-lg xl:text-xl">
                   {entry.description}
                 </p>
 

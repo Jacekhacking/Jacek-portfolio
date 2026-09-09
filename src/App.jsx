@@ -26,7 +26,7 @@ function App() {
           path: "about",
           element: () =>
             import("./components/Pages/About/AboutMe").then((m) => (
-              <div className="pt-[72px]"><m.default /></div>
+              <div className="pt-[72px]"><m.default defaultOpen /></div>
             )),
         },
         {
@@ -56,11 +56,13 @@ function App() {
       ]}
     >
       <AmbientBackground />
-      <div className="relative z-[1]">
+      <div className="min-h-screen flex flex-col">
         <header>
           <Navigation />
         </header>
-        <Outlet />
+        <div className="flex-1">
+          <Outlet />
+        </div>
         <FooterComponent />
       </div>
     </Router>

@@ -52,7 +52,8 @@ const PreviewIcon = ({ category }) =>
   category === "backend" ? <BackendIcon /> : <WebIcon />;
 
 const ProjectCard = ({ project }) => (
-  <div className="bg-bg-card border border-border rounded-xl overflow-hidden
+  <div className="col-span-4 sm:col-span-8 lg:col-span-6
+                  bg-bg-card border border-border rounded-xl overflow-hidden
                   flex flex-col hover:border-border-strong transition-colors duration-200">
 
     {/* Preview area */}
@@ -69,14 +70,14 @@ const ProjectCard = ({ project }) => (
 
       {/* Title + category */}
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-text-primary font-semibold text-xl leading-snug">
+        <h3 className="text-text-primary font-semibold text-xl xl:text-2xl leading-snug">
           {project.name}
         </h3>
         <span className="tag flex-shrink-0 mt-0.5">{project.category}</span>
       </div>
 
       {/* Description */}
-      <p className="text-text-muted leading-relaxed flex-1" style={{ fontSize: "16px" }}>
+      <p className="text-text-muted leading-relaxed flex-1 text-base xl:text-lg">
         {project.shortDesc}
       </p>
 
@@ -127,18 +128,20 @@ const ProjectCard = ({ project }) => (
   </div>
 );
 
-const Projects = () => {
+const Projects = ({ onlyImportant = false }) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
+  const projects = onlyImportant
+    ? projectData.filter((p) => p.important)
+    : projectData;
   return (
   <main className="min-h-screen pt-[72px]">
-    <PageContainer className="py-20">
-      <p className="hero-label mb-16 text-4xl">work</p>
+    <PageContainer className="py-20" grid>
+      <p className="hero-label mb-10 text-4xl lg:text-5xl xl:text-6xl
+                   col-span-4 sm:col-span-8 lg:col-span-12">work</p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {projectData.map((p) => (
-          <ProjectCard key={p.slug} project={p} />
-        ))}
-      </div>
+      {projects.map((p) => (
+        <ProjectCard key={p.slug} project={p} />
+      ))}
     </PageContainer>
   </main>
   );

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 import PageContainer from "../../UI/Shared/PageContainer";
 import rafting1 from "../../UI/Images/gc-rafting-picture.jpeg";
@@ -21,13 +21,18 @@ const FUN_FACTS = [
   "My dog's name is Auri",
 ];
 
-const AboutMe = () => {
-  const [open,   setOpen]   = useState(false);
+const AboutMe = ({ defaultOpen = false }) => {
+  const [open,   setOpen]   = useState(defaultOpen);
   const [imgIdx, setImgIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+  const dragRef = useRef({ startX: 0, dragging: false });
 
   const next = useCallback(
     () => setImgIdx((i) => (i + 1) % CAROUSEL.length),
+    []
+  );
+  const prev = useCallback(
+    () => setImgIdx((i) => (i - 1 + CAROUSEL.length) % CAROUSEL.length),
     []
   );
 
@@ -37,16 +42,36 @@ const AboutMe = () => {
     return () => clearInterval(t);
   }, [open, paused, next]);
 
+  const handlePointerDown = (e) => {
+    dragRef.current = { startX: e.clientX, dragging: true };
+  };
+
+  const handlePointerUp = (e) => {
+    if (!dragRef.current.dragging) return;
+    dragRef.current.dragging = false;
+
+    const deltaX = e.clientX - dragRef.current.startX;
+    const SWIPE_THRESHOLD = 40;
+
+    if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+      deltaX < 0 ? next() : prev();
+    } else {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      clickX > rect.width / 2 ? next() : prev();
+    }
+  };
+
   return (
     <section className="py-24">
       <PageContainer>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl xl:max-w-4xl mx-auto text-center lg:text-left">
 
         {/* Header */}
-        <h2 className="hero-label mb-10 text-4xl">about</h2>
+        <h2 className="hero-label mb-10 text-4xl lg:text-5xl xl:text-6xl">about</h2>
 
         {/* Bio */}
-        <p className="text-text-muted text-xl leading-relaxed mb-7">
+        <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-7">
           <span className="text-text-primary font-medium">
             Software developer based in Salt Lake City
           </span>
@@ -57,7 +82,7 @@ const AboutMe = () => {
           competitive programming and C++.
         </p>
 
-        <p className="text-text-muted text-xl leading-relaxed mb-10">
+        <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-10">
           My stack today is{" "}
           <span className="text-text-primary font-medium">
             React on the front end and Java / Spring Boot on the back end
@@ -81,27 +106,33 @@ const AboutMe = () => {
 
         {/* Dropdown */}
         {open && (
-          <div className="flex flex-col lg:flex-row gap-12 pt-2">
+          <div className="flex flex-col lg:flex-row gap-12 pt-2 text-left">
 
             {/* Left — carousel */}
             <div
-              className="flex-shrink-0 w-full lg:w-[380px]"
+              className="flex-shrink-0 w-full max-w-[440px] mx-auto lg:mx-0 lg:w-[440px]"
               onMouseEnter={() => setPaused(true)}
               onMouseLeave={() => setPaused(false)}
             >
-              <div className="rounded-lg overflow-hidden bg-bg-card
-                              border border-border h-72 lg:h-[360px]">
+              <div
+                onPointerDown={handlePointerDown}
+                onPointerUp={handlePointerUp}
+                className="rounded-lg overflow-hidden bg-bg-card select-none
+                           border border-border h-[440px] cursor-pointer touch-pan-y"
+              >
                 <img
                   key={imgIdx}
                   src={CAROUSEL[imgIdx].src}
                   alt={CAROUSEL[imgIdx].caption}
-                  className="w-full h-full object-cover"
+                  draggable={false}
+                  className="w-full h-full object-cover pointer-events-none"
                 />
               </div>
 
               {/* Caption */}
               <p className="text-center text-text-faint text-sm font-mono
-                            tracking-wide mt-3 px-2">
+                            tracking-wide mt-3 px-2 h-10 flex items-center
+                            justify-center line-clamp-2">
                 {CAROUSEL[imgIdx].caption}
               </p>
 
@@ -127,7 +158,7 @@ const AboutMe = () => {
                             font-mono mb-3">
                 outside of code
               </p>
-              <p className="text-text-muted text-lg leading-relaxed mb-8">
+              <p className="text-text-muted text-lg xl:text-xl leading-relaxed mb-8">
                 From Salt Lake City — so skiing, hiking, and rafting are
                 basically required. Also into basketball, golf, and rock
                 climbing. Picked guitar back up recently. I play video games
@@ -142,7 +173,7 @@ const AboutMe = () => {
               <ul className="space-y-3">
                 {FUN_FACTS.map((fact) => (
                   <li key={fact} className="flex gap-3 items-start
-                                            text-text-muted text-lg">
+                                            text-text-muted text-lg xl:text-xl">
                     <span className="accent-dot mt-[0.5em]" />
                     <span>{fact}</span>
                   </li>

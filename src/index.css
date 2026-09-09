@@ -101,6 +101,10 @@
     margin: 0;
     padding: 0;
   }
+
+  h1, h2, h3, h4, h5, h6, p, li {
+    @apply text-pretty;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -160,7 +164,8 @@
     @apply text-text-primary text-hero font-medium leading-tight mb-4;
   }
   .hero-body {
-    @apply text-text-muted text-body leading-relaxed max-w-md;
+    @apply text-text-muted text-body leading-relaxed
+           max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0;
   }
 
   /* Vim block cursor */
