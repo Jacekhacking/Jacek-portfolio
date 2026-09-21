@@ -193,9 +193,9 @@
            border border-crimson-border rounded-tag px-2 py-0.5;
   }
 
-  /* ── Red accent dot ───────────────────────────── */
+  /* ── Accent dot ───────────────────────────────── */
   .accent-dot {
-    @apply w-1.5 h-1.5 rounded-full bg-crimson flex-shrink-0;
+    @apply w-1.5 h-1.5 rounded-full bg-text-faint flex-shrink-0;
   }
 }
 

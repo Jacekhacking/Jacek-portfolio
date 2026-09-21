@@ -27,7 +27,9 @@ const LandingPage = () => (
 
         <div className="col-span-4 sm:col-span-8 lg:col-span-5 flex justify-center lg:justify-end">
           <img src={SelfieImg2} alt="Jacek Hacking"
-               className="w-72 h-96 lg:w-96 lg:h-[480px] object-cover object-top rounded-lg" />
+               className="w-72 h-[360px] lg:w-96 lg:h-[480px]
+                          xl:w-[420px] xl:h-[525px] 2xl:w-[460px] 2xl:h-[575px]
+                          object-cover object-top rounded-lg" />
         </div>
       </PageContainer>
     </section>

@@ -110,7 +110,9 @@ const AboutMe = ({ defaultOpen = false }) => {
 
             {/* Left — carousel */}
             <div
-              className="flex-shrink-0 w-full max-w-[440px] mx-auto lg:mx-0 lg:w-[440px]"
+              className="flex-shrink-0 w-full max-w-[440px] xl:max-w-[480px] 2xl:max-w-[520px]
+                         mx-auto lg:mx-0
+                         lg:w-[440px] xl:w-[480px] 2xl:w-[520px]"
               onMouseEnter={() => setPaused(true)}
               onMouseLeave={() => setPaused(false)}
             >
@@ -118,7 +120,8 @@ const AboutMe = ({ defaultOpen = false }) => {
                 onPointerDown={handlePointerDown}
                 onPointerUp={handlePointerUp}
                 className="rounded-lg overflow-hidden bg-bg-card select-none
-                           border border-border h-[440px] cursor-pointer touch-pan-y"
+                           border border-border h-[440px] xl:h-[480px] 2xl:h-[520px]
+                           cursor-pointer touch-pan-y"
               >
                 <img
                   key={imgIdx}
@@ -158,7 +161,7 @@ const AboutMe = ({ defaultOpen = false }) => {
                             font-mono mb-3">
                 outside of code
               </p>
-              <p className="text-text-muted text-lg xl:text-xl leading-relaxed mb-8">
+              <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-8">
                 From Salt Lake City — so skiing, hiking, and rafting are
                 basically required. Also into basketball, golf, and rock
                 climbing. Picked guitar back up recently. I play video games
@@ -173,8 +176,8 @@ const AboutMe = ({ defaultOpen = false }) => {
               <ul className="space-y-3">
                 {FUN_FACTS.map((fact) => (
                   <li key={fact} className="flex gap-3 items-start
-                                            text-text-muted text-lg xl:text-xl">
-                    <span className="accent-dot mt-[0.5em]" />
+                                            text-text-muted text-xl xl:text-2xl">
+                    <span className="accent-dot mt-[0.65em]" />
                     <span>{fact}</span>
                   </li>
                 ))}
