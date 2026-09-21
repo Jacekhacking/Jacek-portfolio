@@ -1,6 +1,5 @@
 import Navigation from "./components/Pages/Nav/Nav";
 import FooterComponent from "./components/Pages/Footer";
-import AmbientBackground from "./components/AmbientBackground";
 
 import {
   Router,
@@ -55,7 +54,6 @@ function App() {
         },
       ]}
     >
-      <AmbientBackground />
       <div className="min-h-screen flex flex-col">
         <header>
           <Navigation />
