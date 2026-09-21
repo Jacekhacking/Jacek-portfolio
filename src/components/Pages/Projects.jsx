@@ -137,7 +137,7 @@ const Projects = ({ onlyImportant = false }) => {
   <main className="min-h-screen pt-[72px]">
     <PageContainer className="py-20" grid>
       <p className="hero-label mb-10 text-4xl lg:text-5xl xl:text-6xl
-                   col-span-4 sm:col-span-8 lg:col-span-12">work</p>
+                   col-span-4 sm:col-span-8 lg:col-span-12">projects</p>
 
       {projects.map((p) => (
         <ProjectCard key={p.slug} project={p} />
