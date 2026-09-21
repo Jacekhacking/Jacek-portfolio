@@ -14,11 +14,11 @@ const CAROUSEL = [
 ];
 
 const FUN_FACTS = [
-  "Licensed massage therapist in Utah — and I run an LLC for it",
+  "Licensed massage therapist in Utah",
   "Favorite book series is Wheel of Time",
   "Grew up on Warcraft 3, Diablo 2, and Pokémon",
   "Favorite food is sushi",
-  "My dog's name is Auri",
+  "My dog's names are Auri and Kal",
 ];
 
 const AboutMe = ({ defaultOpen = false }) => {
@@ -72,23 +72,19 @@ const AboutMe = ({ defaultOpen = false }) => {
 
         {/* Bio */}
         <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-7">
-          <span className="text-text-primary font-medium">
-            Software developer based in Salt Lake City
-          </span>
-          , finishing a CS degree at the University of Utah — one semester left.
-          I started coding in 2020, took it seriously during the pandemic, and
-          haven't stopped since. Since then I've shipped sites for real
-          businesses, built enterprise Java APIs, and started pushing into
-          competitive programming and C++.
+            I'm a software developer based in Utah, with a Computer Science degree
+            from the University of Utah.         
+            I started learning to code in 2020 and
+          haven't stopped since. Since then I've shipped sites for local 
+          businesses, built enterprise Java APIs, and even started exploring
+          competitive programming and C++. Basically anything that will push my 
+            skills / knowledge forward.
         </p>
 
         <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-10">
-          My stack today is{" "}
-          <span className="text-text-primary font-medium">
-            React on the front end and Java / Spring Boot on the back end
-          </span>
-          , with C++ on the side — because I want to understand what's actually
-          happening under the hood, not just what the framework hands me.
+          My stack today is React on the front end and Java / Spring Boot with
+          some sort of relational DB  on the back end. As well as expanding more into C and 
+          C++.
           Actively transitioning toward backend engineering and looking for
           roles where I can go deeper.
         </p>
@@ -162,11 +158,10 @@ const AboutMe = ({ defaultOpen = false }) => {
                 outside of code
               </p>
               <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-8">
-                From Salt Lake City — so skiing, hiking, and rafting are
-                basically required. Also into basketball, golf, and rock
-                climbing. Picked guitar back up recently. I play video games
-                with my family and read a lot of{" "}
-                <span className="text-text-primary">speculative fiction</span>.
+                I'm from Salt Lake City so a lot of skiing, hiking, and rafting and any sort of outdoor activites.
+                I'm also a big sports guy love playing basketball and golf specifically. 
+                I  love playing video games and chess with my family and friends.
+                with my family and I read a lot of speculative fiction.
               </p>
 
               <p className="text-text-faint text-xs tracking-[0.14em] uppercase
