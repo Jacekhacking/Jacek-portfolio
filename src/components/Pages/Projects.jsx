@@ -58,7 +58,7 @@ const SystemsIcon = () => (
 
 const PreviewIcon = ({ category }) =>
   category === "backend" ? <BackendIcon />
-    : category === "systems" ? <SystemsIcon />
+    : category === "systems" || category === "security" ? <SystemsIcon />
     : <WebIcon />;
 
 const ProjectCard = ({ project }) => (
@@ -105,14 +105,16 @@ const ProjectCard = ({ project }) => (
 
       {/* Actions */}
       <div className="flex items-center gap-2 pt-1">
-        <a href={project.github} target="_blank" rel="noopener noreferrer"
-           className="flex items-center gap-2 font-mono text-text-secondary
-                      border border-border rounded px-3 py-1.5
-                      hover:border-border-strong hover:text-text-primary
-                      transition-colors duration-150"
-           style={{ fontSize: "13px" }}>
-          <GitHubIcon /> GitHub
-        </a>
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-2 font-mono text-text-secondary
+                        border border-border rounded px-3 py-1.5
+                        hover:border-border-strong hover:text-text-primary
+                        transition-colors duration-150"
+             style={{ fontSize: "13px" }}>
+            <GitHubIcon /> GitHub
+          </a>
+        )}
 
         {project.live && (
           <a href={project.live} target="_blank" rel="noopener noreferrer"
@@ -140,18 +142,32 @@ const ProjectCard = ({ project }) => (
 
 const Projects = ({ onlyImportant = false }) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  const projects = onlyImportant
-    ? projectData.filter((p) => p.important)
-    : projectData;
+  const featuredProjects = projectData.filter((p) => p.important);
+  const additionalProjects = projectData.filter((p) => !p.important);
+
   return (
   <main className="min-h-screen pt-[72px]">
     <PageContainer className="py-20" grid>
       <p className="hero-label mb-10 text-4xl lg:text-5xl xl:text-6xl
-                   col-span-4 sm:col-span-8 lg:col-span-12">projects</p>
+                   col-span-4 sm:col-span-8 lg:col-span-12">
+        {onlyImportant ? "projects" : "featured work"}
+      </p>
 
-      {projects.map((p) => (
+      {featuredProjects.map((p) => (
         <ProjectCard key={p.slug} project={p} />
       ))}
+
+      {!onlyImportant && additionalProjects.length > 0 && (
+        <>
+          <p className="hero-label mt-16 mb-10 text-2xl lg:text-3xl
+                       col-span-4 sm:col-span-8 lg:col-span-12">
+            additional work
+          </p>
+          {additionalProjects.map((p) => (
+            <ProjectCard key={p.slug} project={p} />
+          ))}
+        </>
+      )}
     </PageContainer>
   </main>
   );

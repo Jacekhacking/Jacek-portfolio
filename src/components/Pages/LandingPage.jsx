@@ -18,9 +18,9 @@ const LandingPage = () => (
           </h1>
           <p className="hero-label mb-6 lg:text-2xl xl:text-3xl">software engineer · salt lake city, ut.</p>
           <p className="hero-body xl:text-2xl">
-            Building reliable systems — Java, Spring Boot, distributed
-            architecture. Currently finishing CS at University of Utah.
-            Interested in HPC, quant, and anything that runs fast.
+            I build backend and performance-minded software with Java, Spring Boot,
+            and C++. I am finishing my CS degree at the University of Utah and
+            exploring systems, HPC, and low-latency work.
             <VimCursor />
           </p>
         </div>

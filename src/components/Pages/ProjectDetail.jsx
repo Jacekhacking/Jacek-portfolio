@@ -117,14 +117,16 @@ const LayoutVisual = ({ project }) => (
             </p>
           </div>
           <div className="flex gap-2 flex-shrink-0 mt-1">
-            <a href={project.github} target="_blank" rel="noopener noreferrer"
-               className="flex items-center gap-2 font-mono text-text-secondary
-                          border border-border rounded px-3 py-1.5
-                          hover:border-border-strong hover:text-text-primary
-                          transition-colors duration-150"
-               style={{ fontSize: "13px" }}>
-              <GitHubIcon /> github
-            </a>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer"
+                 className="flex items-center gap-2 font-mono text-text-secondary
+                            border border-border rounded px-3 py-1.5
+                            hover:border-border-strong hover:text-text-primary
+                            transition-colors duration-150"
+                 style={{ fontSize: "13px" }}>
+                <GitHubIcon /> github
+              </a>
+            )}
             {project.live && (
               <a href={project.live} target="_blank" rel="noopener noreferrer"
                  className="flex items-center gap-2 font-mono text-text-secondary
@@ -265,14 +267,16 @@ const LayoutEditorial = ({ project }) => (
 
           {/* Bottom actions */}
           <div className="flex gap-3 pt-2">
-            <a href={project.github} target="_blank" rel="noopener noreferrer"
-               className="flex items-center gap-2 font-mono text-text-secondary
-                          border border-border rounded px-4 py-2
-                          hover:border-border-strong hover:text-text-primary
-                          transition-colors duration-150"
-               style={{ fontSize: "14px" }}>
-              <GitHubIcon /> github
-            </a>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer"
+                 className="flex items-center gap-2 font-mono text-text-secondary
+                            border border-border rounded px-4 py-2
+                            hover:border-border-strong hover:text-text-primary
+                            transition-colors duration-150"
+                 style={{ fontSize: "14px" }}>
+                <GitHubIcon /> github
+              </a>
+            )}
             {project.live && (
               <a href={project.live} target="_blank" rel="noopener noreferrer"
                  className="flex items-center gap-2 font-mono cursor-pointer

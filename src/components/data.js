@@ -1,10 +1,3 @@
-import middleGroundSS  from './UI/Images/middle-ground-full-ss.png';
-import middleGroundSS2 from './UI/Images/middle-ground-ss.png';
-import lcBodyworkSS    from './UI/Images/LCBodyworkSC.png';
-import lcBodyworkSS2   from './UI/Images/Small-LCBodyworkSC.png';
-import oneWaveGolfSS   from './UI/Images/onewavegolf.png';
-import oneWaveGolfSS2  from './UI/Images/Small-onewavegolf.png';
-
 export const projectData = [
   {
     slug:        "start-or-bench",
@@ -12,8 +5,8 @@ export const projectData = [
     category:    "backend",
     layout:      "editorial",
     previewText: "java 21 · spring boot · postgresql · pyspark",
-    subtitle:    "senior capstone · fantasy sports platform · 2025–present",
-    shortDesc:   "A full-stack fantasy sports platform with authenticated league management, a PostgreSQL data layer, and an offline PySpark prediction pipeline.",
+    subtitle:    "senior capstone · fantasy sports platform · 2025 - present",
+    shortDesc:   "A fantasy sports platform with league management, an NFL data backend, and offline player-projection jobs.",
     tech:        ["Java 21", "Spring Boot", "PostgreSQL", "Flyway", "React", "PySpark"],
     github:      "https://github.com/jacekhacking/start-or-bench",
     live:        null,
@@ -21,19 +14,19 @@ export const projectData = [
     sections: [
       {
         title:   "overview",
-        content: "Start or Bench is a senior-capstone fantasy football platform built by a three-person team. It brings together league and roster management, NFL statistics, player projections, and a responsive web experience. I lead backend development and contribute to the data and prediction workflows that turn raw football data into product features.",
+        content: "Start or Bench is a senior capstone built by a three-person team. The app combines league and roster management, NFL statistics, player projections, and a responsive web experience. I lead backend development and contribute to the data and prediction workflows behind the product.",
       },
       {
         title:   "backend platform",
-        content: "The API is built with Java 21, Spring Boot, PostgreSQL, and Flyway. It exposes REST endpoints for users, players, teams, statistics, leagues, rosters, and projections. My work includes JWT and Google sign-in flows, security and CORS configuration, SQL-backed repositories, league and roster workflows, external-provider imports, and automated controller and repository tests.",
+        content: "The API uses Java 21, Spring Boot, PostgreSQL, and Flyway. It has endpoints for users, players, teams, statistics, leagues, rosters, and projections. My work includes JWT and Google sign-in, security and CORS configuration, SQL-backed repositories, league and roster workflows, external-provider imports, and controller and repository tests.",
       },
       {
         title:   "prediction pipeline",
-        content: "The prediction work uses PySpark to build leakage-aware rolling features from prior player, matchup, and team performance. A Random Forest model is evaluated against a simple rolling-average baseline using time-based train, validation, and test splits; completed predictions are written back to PostgreSQL for the application to serve. I am expanding the evaluation to report position-level error, baseline comparisons, and early-season performance before presenting it as a production recommendation system.",
+        content: "The prediction pipeline uses PySpark to build rolling features from prior player, matchup, and team performance without leaking future results into training. A Random Forest model is compared with a rolling-average baseline using time-based train, validation, and test splits. Finished predictions are written to PostgreSQL for the application to serve. I am expanding the evaluation with position-level error, baseline comparisons, and early-season results before presenting it as a production recommendation system.",
       },
       {
         title:   "current release work",
-        content: "The team is completing a demo-ready release: end-to-end authentication and league workflows, live score updates, CI/CD checks, and a reproducible prediction evaluation. The platform is active development, but the core backend, data model, and ML integration are already implemented and testable locally.",
+        content: "The team is preparing a demo-ready release with end-to-end authentication and league workflows, live score updates, CI/CD checks, and a reproducible prediction evaluation. The core backend, data model, and ML integration are in place and testable locally.",
       },
     ],
     highlights: [
@@ -48,8 +41,8 @@ export const projectData = [
     category:    "systems",
     layout:      "editorial",
     previewText: "c++ · qt 6 · wayland · glsl",
-    subtitle:    "Linux accessibility prototype · 2026–present",
-    shortDesc:   "A native Wayland overlay and GPU color-transform prototype for people who need color-shift accessibility without disrupting normal desktop input.",
+    subtitle:    "Linux accessibility prototype · 2026 - present",
+    shortDesc:   "A native Wayland overlay and GPU color transform for people who need color-shift accessibility without losing normal desktop input.",
     tech:        ["C++", "Qt 6", "Wayland", "LayerShellQt", "GLSL", "KWin"],
     github:      "https://github.com/Jacekhacking/veil",
     live:        null,
@@ -57,15 +50,15 @@ export const projectData = [
     sections: [
       {
         title:   "overview",
-        content: "Veil is a Linux accessibility tool in development for users who benefit from a system-wide color shift. The project combines a native C++/Qt overlay with a GPU shader path so the visual transform can run in real time while ordinary desktop applications remain usable.",
+        content: "Veil is a Linux accessibility tool for people who benefit from a system-wide color shift. I am building a native C++ and Qt overlay with a GPU shader path so the effect can run in real time while ordinary desktop applications remain usable.",
       },
       {
         title:   "systems design",
-        content: "The current prototype uses Wayland layer-shell surfaces to place a transparent overlay above the desktop without taking focus. A separate masked input layer exposes only resize handles, leaving the rest of the display click-through. The rendering path uses an OKLab/OKLCh GLSL transform, which is a better basis for controlled hue changes than directly rotating RGB channels.",
+        content: "The prototype uses Wayland layer-shell surfaces to place a transparent overlay above the desktop without taking focus. A separate masked input layer exposes only resize handles, leaving the rest of the display click-through. The rendering path uses an OKLab and OKLCh GLSL transform so color shifts are more controlled than a direct RGB rotation.",
       },
       {
         title:   "MVP target",
-        content: "The next milestone is a working Linux MVP with adjustable color shifting, explicit preservation of black and neutral pixels, and a clean install and demo path. I am also designing a parallel-computing comparison: a serial CPU reference, an OpenMP implementation, and the production GPU shader, measured for correctness and frame-time performance.",
+        content: "The next milestone is a working Linux MVP with adjustable color shifting, preserved black and neutral pixels, and a clean install and demo path. I am also planning a parallel-computing comparison between a serial CPU reference, an OpenMP implementation, and the production GPU shader. The comparison will measure correctness and frame time.",
       },
     ],
     highlights: [
@@ -75,70 +68,93 @@ export const projectData = [
     important: true,
   },
   {
-    slug:        "lc-bodywork",
-    name:        "LC Bodywork",
-    category:    "web",
-    layout:      "visual",
-    previewText: "lcbodywork.com",
-    subtitle:    "massage therapy website · 2023–2024",
-    shortDesc:   "Professional site for a local massage therapy practice — booking integration, service pages, and mobile-first layout.",
-    tech:        ["React", "Node.js", "Express"],
-    github:      "https://github.com/jacekhacking/lc-bodywork",
-    live:        "https://www.lcbodywork.com",
-    screenshots: [lcBodyworkSS, lcBodyworkSS2],
+    slug:        "salt-platform",
+    name:        "SALT Platform",
+    category:    "full stack",
+    layout:      "editorial",
+    previewText: "react · node.js · postgresql · auth0",
+    subtitle:    "professional product work · 2024 - 2026",
+    shortDesc:   "A multi-tenant point-of-sale and service platform with customer, staff, and administrative workflows.",
+    tech:        ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Auth0"],
+    github:      null,
+    live:        null,
+    screenshots: [],
     sections: [
       {
         title:   "overview",
-        content: "Built a complete marketing and booking site for LC Bodywork, a local massage therapy practice. Designed mobile-first with a focus on clean service presentation and a frictionless contact flow. The client needed something professional they could confidently hand to potential customers.",
+        content: "At ZYA Tech, I worked on SALT, a multi-tenant product for point-of-sale and service businesses. The platform included customer-facing workflows, a staff register, administrative tools, and a PostgreSQL-backed API.",
       },
       {
-        title:   "technical details",
-        content: "React frontend with an Express backend handling contact form submissions. Deployed on a custom domain with SSL. Responsive layout tuned for mobile-first usage since most of the client's traffic comes from phones. Ongoing client updates managed without any downtime.",
+        title:   "my contribution",
+        content: "My work centered on React and TypeScript application development, scheduling and checkout flows, authenticated API integration, shared client state, and internal dashboards. I also led the frontend move to a monorepo-style setup that let multiple tenants run from one shared React application instead of maintaining separate copies of the same product.",
       },
-    ],
-    highlights:  [],
-    important:   true,
-  },
-  {
-    slug:        "middle-ground",
-    name:        "Middle Ground",
-    category:    "web",
-    layout:      "visual",
-    previewText: "middle-ground-production.up.railway.app",
-    subtitle:    "massage therapy website · 2022–2023",
-    shortDesc:   "Website for a local massage therapy business — service pages, contact flow, and Railway hosting.",
-    tech:        ["React", "CSS", "Railway"],
-    github:      "https://github.com/Jacekhacking/Middle-Ground",
-    live:        "https://middle-ground-production.up.railway.app/",
-    screenshots: [middleGroundSS, middleGroundSS2],
-    sections: [
       {
-        title:   "overview",
-        content: "Marketing site for Middle Ground Treatment & Training, a local massage therapy business. Built a service-focused layout with a contact form and clear calls to action. One of my first production client sites — shipped and maintained on Railway with a custom domain.",
+        title:   "engineering work",
+        content: "The shared frontend reduced duplicate code, lowered hosting overhead, and made future feature work easier to maintain across tenants. It also required tenant-aware configuration and careful shared-component boundaries. The project gave me experience with production constraints such as authentication and roles, payment and scheduling edge cases, and maintaining a codebase shared by multiple engineers. The source is not public, so this page focuses on my role rather than linking to internal code.",
       },
     ],
     highlights: [],
     important: true,
   },
   {
-    slug:        "onewavegolf",
-    name:        "OneWave Golf",
-    category:    "web",
-    layout:      "visual",
-    previewText: "onewavegolf.com",
-    subtitle:    "golf company website · 2022",
-    shortDesc:   "Website for a golf company specializing in recyclable golf goods, caddying, and lessons.",
-    tech:        ["React", "CSS"],
-    github:      "https://github.com/jacekhacking/OneWaveGolf",
-    live:        "https://www.onewavegolf.com",
-    screenshots: [oneWaveGolfSS, oneWaveGolfSS2],
+    slug:        "devilutionx-fuzzing",
+    name:        "DevilutionX Fuzzing",
+    category:    "security",
+    layout:      "editorial",
+    previewText: "c++ · afl++ · asan · ubsan",
+    subtitle:    "software security project · 2025",
+    shortDesc:   "A fuzzing campaign that found and helped fix memory-safety bugs in an open-source game engine's save-file handling.",
+    tech:        ["C++", "AFL++", "AddressSanitizer", "UBSan", "Fuzzing"],
+    github:      null,
+    live:        null,
+    screenshots: [],
     sections: [
       {
         title:   "overview",
-        content: "Marketing website for OneWave Golf, a company based in Bandon, Oregon. Covers their recyclable goods line, professional caddying services, and lesson booking. Designed for a clean outdoors-oriented aesthetic that matched their brand identity.",
+        content: "On a three-person team, I helped build a fuzzing campaign for DevilutionX, an open-source engine for Diablo. We narrowed an initially broad save and load target into four focused fuzz targets for player loading, spawning, game-state wrapping, and archive framing.",
+      },
+      {
+        title:   "approach",
+        content: "The harnesses ran headlessly through the project's internal test tooling and varied game context through a small custom input header. We used AddressSanitizer and UndefinedBehaviorSanitizer to replay crash inputs and separate duplicate failures from distinct root causes.",
+      },
+      {
+        title:   "results",
+        content: "A 24-hour campaign produced more than 100 crash files. After triage, the team isolated three root causes involving unchecked player-class values, out-of-bounds light identifiers, and invalid spell identifiers. The resulting validation fixes reduced the observed sanitizer crashes to zero and were reported upstream.",
+      },
+    ],
+    highlights: [
+      { label: "crash files triaged", value: "100+" },
+      { label: "root causes isolated", value: "3" },
+    ],
+    important: false,
+  },
+  {
+    slug:        "poker-teacher",
+    name:        "Poker Teacher",
+    category:    "systems",
+    layout:      "editorial",
+    previewText: "c++ · qt · box2d",
+    subtitle:    "interactive educational application · 2025",
+    shortDesc:   "A C++ and Qt app that teaches Texas Hold'em through guided lessons, hand evaluation, and an interactive practice mode.",
+    tech:        ["C++17", "Qt Widgets", "Box2D", "Qt Designer"],
+    github:      "https://github.com/Jacekhacking/pokerTeacher",
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "Poker Teacher is a four-person C++ course project built to help new players learn Texas Hold'em. It includes guided lessons on cards, rules, and hand rankings, then lets users practice by choosing the winning hand from a simulated final-round scenario.",
+      },
+      {
+        title:   "technical work",
+        content: "The application separates game state from the Qt interface. The game model evaluates seven-card hands, resolves ties, and emits signals that drive the UI. The interface uses Qt Widgets and Designer forms, while Box2D powers the animated chip stack and card movement.",
+      },
+      {
+        title:   "my contribution",
+        content: "I contributed heavily to the learning flow, practice-mode interaction, hand display, animation work, and final UI polish. It was an early C++ project, but it gave me hands-on experience with event-driven desktop applications, game logic, and collaborative code review.",
       },
     ],
     highlights: [],
-    important: true,
+    important: false,
   },
 ];

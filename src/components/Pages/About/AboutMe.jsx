@@ -7,8 +7,8 @@ import auri1   from "../../UI/Images/AuriPic_1.jpeg";
 import auri2   from "../../UI/Images/AuriPic_2.jpeg";
 
 const CAROUSEL = [
-  { src: rafting1, caption: "Navajo Bridge — Colorado River, Grand Canyon trip" },
-  { src: rafting2, caption: "Cataract Canyon — a few too many rapids" },
+  { src: rafting1, caption: "Navajo Bridge, Colorado River on a Grand Canyon trip" },
+  { src: rafting2, caption: "Cataract Canyon, a few too many rapids" },
   { src: auri1,   caption: "Auri, aka the best dog" },
   { src: auri2,   caption: "Auri doing Auri things" },
 ];
@@ -18,7 +18,7 @@ const FUN_FACTS = [
   "Favorite book series is Wheel of Time",
   "Grew up on Warcraft 3, Diablo 2, and Pokémon",
   "Favorite food is sushi",
-  "My dog's names are Auri and Kal",
+  "My dogs are Auri and Kal",
 ];
 
 const AboutMe = ({ defaultOpen = false }) => {
@@ -72,21 +72,17 @@ const AboutMe = ({ defaultOpen = false }) => {
 
         {/* Bio */}
         <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-7">
-            I'm a software developer based in Utah, with a Computer Science degree
-            from the University of Utah.         
-            I started learning to code in 2020 and
-          haven't stopped since. Since then I've shipped sites for local 
-          businesses, built enterprise Java APIs, and even started exploring
-          competitive programming and C++. Basically anything that will push my 
-            skills / knowledge forward.
+          I am a software engineer and University of Utah Computer Science student
+          based in Salt Lake City. I started coding in 2020 and have been building
+          ever since. Since then, I have shipped sites for local businesses, worked
+          on production applications, and moved into Java backend and C++ systems work.
         </p>
 
         <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-10">
-          My stack today is React on the front end and Java / Spring Boot with
-          some sort of relational DB  on the back end. As well as expanding more into C and 
-          C++.
-          Actively transitioning toward backend engineering and looking for
-          roles where I can go deeper.
+          My day-to-day stack is React on the front end and Java, Spring Boot, and
+          relational databases on the back end. I am also going deeper into C++ and
+          Linux systems work. I am looking for backend and systems roles where I can
+          keep building depth.
         </p>
 
         {/* Toggle */}
@@ -158,10 +154,9 @@ const AboutMe = ({ defaultOpen = false }) => {
                 outside of code
               </p>
               <p className="text-text-muted text-xl xl:text-2xl leading-relaxed mb-8">
-                I'm from Salt Lake City so a lot of skiing, hiking, and rafting and any sort of outdoor activites.
-                I'm also a big sports guy love playing basketball and golf specifically. 
-                I  love playing video games and chess with my family and friends.
-                with my family and I read a lot of speculative fiction.
+                Outside of code, I spend a lot of time skiing, hiking, and rafting.
+                I also enjoy basketball, golf, video games, chess with family and
+                friends, and speculative fiction.
               </p>
 
               <p className="text-text-faint text-xs tracking-[0.14em] uppercase
