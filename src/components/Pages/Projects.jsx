@@ -48,8 +48,18 @@ const BackendIcon = () => (
   </svg>
 );
 
+const SystemsIcon = () => (
+  <svg className="w-8 h-8 text-border-strong" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2"/>
+    <path d="M8 9l3 3-3 3M14 15h3"/>
+  </svg>
+);
+
 const PreviewIcon = ({ category }) =>
-  category === "backend" ? <BackendIcon /> : <WebIcon />;
+  category === "backend" ? <BackendIcon />
+    : category === "systems" ? <SystemsIcon />
+    : <WebIcon />;
 
 const ProjectCard = ({ project }) => (
   <div className="col-span-4 sm:col-span-8 lg:col-span-6

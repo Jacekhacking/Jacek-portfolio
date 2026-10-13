@@ -7,6 +7,74 @@ import oneWaveGolfSS2  from './UI/Images/Small-onewavegolf.png';
 
 export const projectData = [
   {
+    slug:        "start-or-bench",
+    name:        "Start or Bench",
+    category:    "backend",
+    layout:      "editorial",
+    previewText: "java 21 · spring boot · postgresql · pyspark",
+    subtitle:    "senior capstone · fantasy sports platform · 2025–present",
+    shortDesc:   "A full-stack fantasy sports platform with authenticated league management, a PostgreSQL data layer, and an offline PySpark prediction pipeline.",
+    tech:        ["Java 21", "Spring Boot", "PostgreSQL", "Flyway", "React", "PySpark"],
+    github:      "https://github.com/jacekhacking/start-or-bench",
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "Start or Bench is a senior-capstone fantasy football platform built by a three-person team. It brings together league and roster management, NFL statistics, player projections, and a responsive web experience. I lead backend development and contribute to the data and prediction workflows that turn raw football data into product features.",
+      },
+      {
+        title:   "backend platform",
+        content: "The API is built with Java 21, Spring Boot, PostgreSQL, and Flyway. It exposes REST endpoints for users, players, teams, statistics, leagues, rosters, and projections. My work includes JWT and Google sign-in flows, security and CORS configuration, SQL-backed repositories, league and roster workflows, external-provider imports, and automated controller and repository tests.",
+      },
+      {
+        title:   "prediction pipeline",
+        content: "The prediction work uses PySpark to build leakage-aware rolling features from prior player, matchup, and team performance. A Random Forest model is evaluated against a simple rolling-average baseline using time-based train, validation, and test splits; completed predictions are written back to PostgreSQL for the application to serve. I am expanding the evaluation to report position-level error, baseline comparisons, and early-season performance before presenting it as a production recommendation system.",
+      },
+      {
+        title:   "current release work",
+        content: "The team is completing a demo-ready release: end-to-end authentication and league workflows, live score updates, CI/CD checks, and a reproducible prediction evaluation. The platform is active development, but the core backend, data model, and ML integration are already implemented and testable locally.",
+      },
+    ],
+    highlights: [
+      { label: "WR model RMSE", value: "6.39" },
+      { label: "rolling baseline RMSE", value: "6.93" },
+    ],
+    important: true,
+  },
+  {
+    slug:        "veil",
+    name:        "Veil",
+    category:    "systems",
+    layout:      "editorial",
+    previewText: "c++ · qt 6 · wayland · glsl",
+    subtitle:    "Linux accessibility prototype · 2026–present",
+    shortDesc:   "A native Wayland overlay and GPU color-transform prototype for people who need color-shift accessibility without disrupting normal desktop input.",
+    tech:        ["C++", "Qt 6", "Wayland", "LayerShellQt", "GLSL", "KWin"],
+    github:      "https://github.com/Jacekhacking/veil",
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "Veil is a Linux accessibility tool in development for users who benefit from a system-wide color shift. The project combines a native C++/Qt overlay with a GPU shader path so the visual transform can run in real time while ordinary desktop applications remain usable.",
+      },
+      {
+        title:   "systems design",
+        content: "The current prototype uses Wayland layer-shell surfaces to place a transparent overlay above the desktop without taking focus. A separate masked input layer exposes only resize handles, leaving the rest of the display click-through. The rendering path uses an OKLab/OKLCh GLSL transform, which is a better basis for controlled hue changes than directly rotating RGB channels.",
+      },
+      {
+        title:   "MVP target",
+        content: "The next milestone is a working Linux MVP with adjustable color shifting, explicit preservation of black and neutral pixels, and a clean install and demo path. I am also designing a parallel-computing comparison: a serial CPU reference, an OpenMP implementation, and the production GPU shader, measured for correctness and frame-time performance.",
+      },
+    ],
+    highlights: [
+      { label: "input behavior", value: "click-through" },
+      { label: "rendering goal", value: "real-time GPU" },
+    ],
+    important: true,
+  },
+  {
     slug:        "lc-bodywork",
     name:        "LC Bodywork",
     category:    "web",
@@ -30,38 +98,6 @@ export const projectData = [
     ],
     highlights:  [],
     important:   true,
-  },
-  {
-    slug:        "start-or-bench",
-    name:        "Start or Bench",
-    category:    "backend",
-    layout:      "visual",
-    previewText: "spring boot · postgresql · redis",
-    subtitle:    "fantasy football platform · 2025–2026",
-    shortDesc:   "Fantasy football platform with JWT auth, ML-powered WR predictions via PySpark, and a vector DB scouting report pipeline.",
-    tech:        ["Java", "Spring Boot", "PostgreSQL", "Redis", "PySpark", "React", "Auth0"],
-    github:      "https://github.com/jacekhacking/start-or-bench",
-    live:        null,
-    screenshots: [],
-    sections: [
-      {
-        title:   "overview",
-        content: "Full-stack fantasy football platform built as a CS capstone. Users manage rosters, draft players, and get ML-powered start/sit recommendations for wide receivers. Built with a collaborator over two semesters.",
-      },
-      {
-        title:   "technical challenges",
-        content: "Feature engineering across historical player stats, matchup data, and defensive rankings in PySpark was the hardest part. Getting the Random Forest tuned to beat the naive baseline took several iterations of feature selection and hyperparameter search. Also built a Vector DB scouting report pipeline where player descriptions are embedded and queried semantically.",
-      },
-      {
-        title:   "architecture",
-        content: "Spring Boot REST API backed by PostgreSQL with Redis caching for hot player data. Auth0 JWT for authentication. React frontend with a real-time draft board. PySpark jobs run offline and predictions are stored in the DB — no online inference at request time.",
-      },
-    ],
-    highlights: [
-      { label: "ml model rmse",  value: "6.39" },
-      { label: "baseline rmse",  value: "6.93" },
-    ],
-    important: true,
   },
   {
     slug:        "middle-ground",
@@ -104,68 +140,5 @@ export const projectData = [
     ],
     highlights: [],
     important: true,
-  },
-  {
-    slug:        "project-five",
-    name:        "Project Five",
-    category:    "web",
-    layout:      "visual",
-    previewText: "TODO",
-    subtitle:    "TODO · 20XX",
-    shortDesc:   "TODO — placeholder project, fill in details.",
-    tech:        ["TODO"],
-    github:      "https://github.com/jacekhacking",
-    live:        null,
-    screenshots: [],
-    sections: [
-      {
-        title:   "overview",
-        content: "TODO — placeholder project, fill in details.",
-      },
-    ],
-    highlights: [],
-    important:  false,
-  },
-  {
-    slug:        "project-six",
-    name:        "Project Six",
-    category:    "backend",
-    layout:      "visual",
-    previewText: "TODO",
-    subtitle:    "TODO · 20XX",
-    shortDesc:   "TODO — placeholder project, fill in details.",
-    tech:        ["TODO"],
-    github:      "https://github.com/jacekhacking",
-    live:        null,
-    screenshots: [],
-    sections: [
-      {
-        title:   "overview",
-        content: "TODO — placeholder project, fill in details.",
-      },
-    ],
-    highlights: [],
-    important:  false,
-  },
-  {
-    slug:        "project-seven",
-    name:        "Project Seven",
-    category:    "web",
-    layout:      "visual",
-    previewText: "TODO",
-    subtitle:    "TODO · 20XX",
-    shortDesc:   "TODO — placeholder project, fill in details.",
-    tech:        ["TODO"],
-    github:      "https://github.com/jacekhacking",
-    live:        null,
-    screenshots: [],
-    sections: [
-      {
-        title:   "overview",
-        content: "TODO — placeholder project, fill in details.",
-      },
-    ],
-    highlights: [],
-    important:  false,
   },
 ];
