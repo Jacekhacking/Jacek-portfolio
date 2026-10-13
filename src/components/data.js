@@ -1,47 +1,160 @@
 export const projectData = [
   {
-    Name: 'Middle Ground ',
-    Description:
-      'Website for local massage therapist business Middle Ground Treatment & Training. ReactJS CSS and hosted with AWS Amplify',
-    Image: require('./UI/Images/middle-ground-full-ss.png'),
-    MobileImage: require('./UI/Images/middle-ground-ss.png'),
-    Link: 'https://middle-ground-production.up.railway.app/',
-    GitHub: 'https://github.com/Jacekhacking/Middle-Ground',
+    slug:        "start-or-bench",
+    name:        "Start or Bench",
+    category:    "backend",
+    layout:      "editorial",
+    previewText: "java 21 · spring boot · postgresql · pyspark",
+    subtitle:    "senior capstone · fantasy sports platform · 2025 - present",
+    shortDesc:   "A fantasy sports platform with league management, an NFL data backend, and offline player-projection jobs.",
+    tech:        ["Java 21", "Spring Boot", "PostgreSQL", "Flyway", "React", "PySpark"],
+    github:      "https://github.com/jacekhacking/start-or-bench",
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "Start or Bench is a senior capstone built by a three-person team. The app combines league and roster management, NFL statistics, player projections, and a responsive web experience. I lead backend development and contribute to the data and prediction workflows behind the product.",
+      },
+      {
+        title:   "backend platform",
+        content: "The API uses Java 21, Spring Boot, PostgreSQL, and Flyway. It has endpoints for users, players, teams, statistics, leagues, rosters, and projections. My work includes JWT and Google sign-in, security and CORS configuration, SQL-backed repositories, league and roster workflows, external-provider imports, and controller and repository tests.",
+      },
+      {
+        title:   "prediction pipeline",
+        content: "The prediction pipeline uses PySpark to build rolling features from prior player, matchup, and team performance without leaking future results into training. A Random Forest model is compared with a rolling-average baseline using time-based train, validation, and test splits. Finished predictions are written to PostgreSQL for the application to serve. I am expanding the evaluation with position-level error, baseline comparisons, and early-season results before presenting it as a production recommendation system.",
+      },
+      {
+        title:   "current release work",
+        content: "The team is preparing a demo-ready release with end-to-end authentication and league workflows, live score updates, CI/CD checks, and a reproducible prediction evaluation. The core backend, data model, and ML integration are in place and testable locally.",
+      },
+    ],
+    highlights: [
+      { label: "WR model RMSE", value: "6.39" },
+      { label: "rolling baseline RMSE", value: "6.93" },
+    ],
+    important: true,
   },
   {
-    Name: 'LCBodywork',
-    Description:
-      'Professional Website for LC Bodyworks. A local massage therapist looking for a professional website.',
-    Image: require('./UI/Images/LCBodyworkSC.png'),
-    MobileImage: require('./UI/Images/Small-LCBodyworkSC.png'),
-    Link: 'https://www.lcbodywork.com',
-    GitHub: 'https://github.com/jacekhacking/lc-bodywork',
+    slug:        "veil",
+    name:        "Veil",
+    category:    "systems",
+    layout:      "editorial",
+    previewText: "c++ · qt 6 · wayland · glsl",
+    subtitle:    "Linux accessibility prototype · 2026 - present",
+    shortDesc:   "A native Wayland overlay and GPU color transform for people who need color-shift accessibility without losing normal desktop input.",
+    tech:        ["C++", "Qt 6", "Wayland", "LayerShellQt", "GLSL", "KWin"],
+    github:      "https://github.com/Jacekhacking/veil",
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "Veil is a Linux accessibility tool for people who benefit from a system-wide color shift. I am building a native C++ and Qt overlay with a GPU shader path so the effect can run in real time while ordinary desktop applications remain usable.",
+      },
+      {
+        title:   "systems design",
+        content: "The prototype uses Wayland layer-shell surfaces to place a transparent overlay above the desktop without taking focus. A separate masked input layer exposes only resize handles, leaving the rest of the display click-through. The rendering path uses an OKLab and OKLCh GLSL transform so color shifts are more controlled than a direct RGB rotation.",
+      },
+      {
+        title:   "MVP target",
+        content: "The next milestone is a working Linux MVP with adjustable color shifting, preserved black and neutral pixels, and a clean install and demo path. I am also planning a parallel-computing comparison between a serial CPU reference, an OpenMP implementation, and the production GPU shader. The comparison will measure correctness and frame time.",
+      },
+    ],
+    highlights: [
+      { label: "input behavior", value: "click-through" },
+      { label: "rendering goal", value: "real-time GPU" },
+    ],
+    important: true,
   },
   {
-    Name: 'YouTube Clone',
-    Description:
-      ' YouTube Clone built alongside JavascriptMastery youtube video. Built with ReactJS, ReactRouter, MUI, RapidAPI',
-    Image: require('./UI/Images/YoutubeSS.png'),
-    MobileImage: require('./UI/Images/YoutubeSS.png'),
-    Link: 'https://glittering-scone-de1925.netlify.app',
-    GitHub: 'https://github.com/jacekhacking/jsm_youtube_clone',
+    slug:        "salt-platform",
+    name:        "SALT Platform",
+    category:    "full stack",
+    layout:      "editorial",
+    previewText: "react · node.js · postgresql · auth0",
+    subtitle:    "professional product work · 2024 - 2026",
+    shortDesc:   "A multi-tenant point-of-sale and service platform with customer, staff, and administrative workflows.",
+    tech:        ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Auth0"],
+    github:      null,
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "At ZYA Tech, I worked on SALT, a multi-tenant product for point-of-sale and service businesses. The platform included customer-facing workflows, a staff register, administrative tools, and a PostgreSQL-backed API.",
+      },
+      {
+        title:   "my contribution",
+        content: "My work centered on React and TypeScript application development, scheduling and checkout flows, authenticated API integration, shared client state, and internal dashboards. I also led the frontend move to a monorepo-style setup that let multiple tenants run from one shared React application instead of maintaining separate copies of the same product.",
+      },
+      {
+        title:   "engineering work",
+        content: "The shared frontend reduced duplicate code, lowered hosting overhead, and made future feature work easier to maintain across tenants. It also required tenant-aware configuration and careful shared-component boundaries. The project gave me experience with production constraints such as authentication and roles, payment and scheduling edge cases, and maintaining a codebase shared by multiple engineers. The source is not public, so this page focuses on my role rather than linking to internal code.",
+      },
+    ],
+    highlights: [],
+    important: true,
   },
-
-  // {
-  //   Name: 'Art Portfolio',
-  //   Description:
-  //     'Website for local artist. Client designed the site himself and needed someone with technical skills to apply it.',
-  //   Image: require('./UI/Images/keaton-port-ss.png'),
-  //   MobileImage: require('./UI/Images/Small-keaton-port-ss.png'),
-  //   GitHub: 'https://github.com/jacekhacking/Keaton_Portfolio',
-  // },
   {
-    Name: 'OneWaveGolf',
-    Description:
-      'Website for OneWaveGolf. A company based out of Bandon Oregon specializing in recyclable golf goods, professional caddying, and lessons.',
-    Image: require('./UI/Images/onewavegolf.png'),
-    MobileImage: require('./UI/Images/Small-onewavegolf.png'),
-    Link: 'https://www.onewavegolf.com',
-    GitHub: 'https://github.com/jacekhacking/OneWaveGolf',
+    slug:        "devilutionx-fuzzing",
+    name:        "DevilutionX Fuzzing",
+    category:    "security",
+    layout:      "editorial",
+    previewText: "c++ · afl++ · asan · ubsan",
+    subtitle:    "software security project · 2025",
+    shortDesc:   "A fuzzing campaign that found and helped fix memory-safety bugs in an open-source game engine's save-file handling.",
+    tech:        ["C++", "AFL++", "AddressSanitizer", "UBSan", "Fuzzing"],
+    github:      null,
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "On a three-person team, I helped build a fuzzing campaign for DevilutionX, an open-source engine for Diablo. We narrowed an initially broad save and load target into four focused fuzz targets for player loading, spawning, game-state wrapping, and archive framing.",
+      },
+      {
+        title:   "approach",
+        content: "The harnesses ran headlessly through the project's internal test tooling and varied game context through a small custom input header. We used AddressSanitizer and UndefinedBehaviorSanitizer to replay crash inputs and separate duplicate failures from distinct root causes.",
+      },
+      {
+        title:   "results",
+        content: "A 24-hour campaign produced more than 100 crash files. After triage, the team isolated three root causes involving unchecked player-class values, out-of-bounds light identifiers, and invalid spell identifiers. The resulting validation fixes reduced the observed sanitizer crashes to zero and were reported upstream.",
+      },
+    ],
+    highlights: [
+      { label: "crash files triaged", value: "100+" },
+      { label: "root causes isolated", value: "3" },
+    ],
+    important: false,
+  },
+  {
+    slug:        "poker-teacher",
+    name:        "Poker Teacher",
+    category:    "systems",
+    layout:      "editorial",
+    previewText: "c++ · qt · box2d",
+    subtitle:    "interactive educational application · 2025",
+    shortDesc:   "A C++ and Qt app that teaches Texas Hold'em through guided lessons, hand evaluation, and an interactive practice mode.",
+    tech:        ["C++17", "Qt Widgets", "Box2D", "Qt Designer"],
+    github:      "https://github.com/Jacekhacking/pokerTeacher",
+    live:        null,
+    screenshots: [],
+    sections: [
+      {
+        title:   "overview",
+        content: "Poker Teacher is a four-person C++ course project built to help new players learn Texas Hold'em. It includes guided lessons on cards, rules, and hand rankings, then lets users practice by choosing the winning hand from a simulated final-round scenario.",
+      },
+      {
+        title:   "technical work",
+        content: "The application separates game state from the Qt interface. The game model evaluates seven-card hands, resolves ties, and emits signals that drive the UI. The interface uses Qt Widgets and Designer forms, while Box2D powers the animated chip stack and card movement.",
+      },
+      {
+        title:   "my contribution",
+        content: "I contributed heavily to the learning flow, practice-mode interaction, hand display, animation work, and final UI polish. It was an early C++ project, but it gave me hands-on experience with event-driven desktop applications, game logic, and collaborative code review.",
+      },
+    ],
+    highlights: [],
+    important: false,
   },
 ];
